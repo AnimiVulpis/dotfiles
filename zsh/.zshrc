@@ -8,6 +8,28 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # brew coreutils man
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+### history options
+# history sizes (see `man zshoptions` under `HIST_EXPIRE_DUPS_FIRST`)
+export HISTSIZE=20000
+export SAVEHIST=10000
+
+# to ignore adjacent history entries
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+
+### directory options
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_MINUS
+
+### completion options
+setopt ALWAYS_TO_END
+
+### zplug
 # load zplug (https://github.com/zplug/zplug)
 source $ZPLUG_HOME/init.zsh
 
@@ -52,8 +74,6 @@ zplug load #--verbose
 zmodload zsh/terminfo
 bindkey "$terminfo[cuu1]" history-substring-search-up
 bindkey "$terminfo[cud1]" history-substring-search-down
-# to ignore adjacent history entries
-setopt HIST_FIND_NO_DUPS
 
 # source things that should not be in the dotfiles repository
 [ -f ~/.zsh-more ] && source ~/.zsh-more
