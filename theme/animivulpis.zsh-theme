@@ -34,7 +34,7 @@ prompt_vcs_construction() {
 	prompt_segment black red '%m'
 	prompt_segment black white ':'
 	prompt_segment black cyan '%-70<…<%~%<<'
-	prompt_segment black blue " ($(git_remote_status)${vcs_info_msg_0_}$(git_untracked)%{%F{blue}%})"
+	prompt_segment black blue " ($(git_remote_status)${vcs_info_msg_0_/% /}$(git_untracked)%{%F{blue}%})"
 	print -n '%{%f%}]'
 	prompt_segment black white '%(!.#.$) '
 }
