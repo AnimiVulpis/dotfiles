@@ -1,6 +1,6 @@
 # path related changes
 # zplug
-export ZPLUG_HOME="~/.zplug"
+export ZPLUG_HOME=~/.zplug
 # brew
 export PATH="/usr/local/sbin:$PATH"
 # brew coreutils
