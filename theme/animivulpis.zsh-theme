@@ -114,9 +114,9 @@ function git_remote_status() {
 }
 
 function git_untracked() {
-	local status
-	status=$(command git status --porcelain | grep -E '^\?\?' 2> /dev/null | tail -n1)
-	if [[ -n $status ]]; then
+	local git_status_porcelain
+	git_status_porcelain=$(command git status --porcelain | grep -E '^\?\?' 2> /dev/null | tail -n1)
+	if [[ -n $git_status_porcelain ]]; then
 		echo "%{%F{red}%}○%{%f%}"
 	fi
 }
