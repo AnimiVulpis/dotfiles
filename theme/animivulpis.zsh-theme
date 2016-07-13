@@ -8,8 +8,8 @@ setupsolarized dircolors.ansi-dark
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%{%F{blue}%}%b%{%f%}%{%F{yellow}%}%m%{%f%}%c%u'
-zstyle ':vcs_info:*' actionformats '%{%F{blue}%}%b %{%F{white}%}(%{%F{red}%}%a%{%F{white}%})%{%f%}%c%u'
+zstyle ':vcs_info:*' formats '%{%F{blue}%}%b%{%f%}%{%F{yellow}%}%m%{%f%} %c%u'
+zstyle ':vcs_info:*' actionformats '%{%F{blue}%}%b %{%F{white}%}(%{%F{red}%}%a%{%F{white}%})%{%f%} %c%u'
 zstyle ':vcs_info:*' stagedstr '%{%F{green}%}●%{%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}◐%{%f%}'
 
