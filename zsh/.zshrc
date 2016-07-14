@@ -9,6 +9,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 ### history options
+export HISTFILE=~/.zsh_history
 # history sizes (see `man zshoptions` under `HIST_EXPIRE_DUPS_FIRST`)
 export HISTSIZE=20000
 export SAVEHIST=10000
