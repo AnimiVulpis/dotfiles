@@ -66,6 +66,8 @@ zplug "zsh-users/zsh-history-substring-search", nice:12
 zplug "psprint/history-search-multi-word", nice:13
 # personal theme (load after dircolors-solarized)
 zplug "AnimiVulpis/dotfiles", use:"zsh-theme/*.zsh-theme", nice:6
+# personal configuration
+zplug "AnimiVulpis/dotfiles", use:"zsh-config/*.zsh", nice:6
 # plugins section end
 
 # source plugins and add commands to the PATH
