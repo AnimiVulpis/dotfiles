@@ -77,7 +77,7 @@ bindkey "$terminfo[cuu1]" history-substring-search-up
 bindkey "$terminfo[cud1]" history-substring-search-down
 
 # source things that should not be in the dotfiles repository
-[ -f ~/.zsh-more ] && source ~/.zsh-more
+[ -f ~/.zsh-additional ] && source ~/.zsh-additional
 
 # use homebrew vim instead of mac os vi
 alias vi="/usr/local/bin/vim"
