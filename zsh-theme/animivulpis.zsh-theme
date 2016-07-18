@@ -1,9 +1,6 @@
 # enable zsh Prompt Expansion
 setopt PROMPT_SUBST
 
-# set dircolors (https://github.com/joel-porquet/zsh-dircolors-solarized)
-setupsolarized dircolors.ansi-dark
-
 # to load vcs_info like shown in Episode III (https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples)
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git

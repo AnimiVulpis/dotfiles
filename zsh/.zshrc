@@ -48,8 +48,8 @@ zplug "mwilliammyers/plugin-osx"
 zplug "hcgraf/zsh-sudo"
 # directory listings with git information
 zplug "supercrabtree/k"
-# solarized dircolors
-zplug "joel-porquet/zsh-dircolors-solarized", nice:5
+# solarized dircolors (don't forget to use `setupsolarized dircolors.ansi-dark` at least once)
+zplug "joel-porquet/zsh-dircolors-solarized"
 # more completions
 zplug "zsh-users/zsh-completions"
 # nvm plugin
@@ -65,7 +65,7 @@ zplug "zsh-users/zsh-history-substring-search", nice:12
 # multiple keywords history search `Ctrl-r`
 zplug "psprint/history-search-multi-word", nice:13
 # personal theme (load after dircolors-solarized)
-zplug "AnimiVulpis/dotfiles", use:"zsh-theme/*.zsh-theme", nice:6
+zplug "AnimiVulpis/dotfiles", use:"zsh-theme/*.zsh-theme"
 # personal configuration
 zplug "AnimiVulpis/dotfiles", use:"zsh-config/*.zsh", nice:6
 # plugins section end
