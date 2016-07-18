@@ -75,8 +75,8 @@ zplug load #--verbose
 
 # zsh-history-substring-search config (https://github.com/zsh-users/zsh-history-substring-search)
 zmodload zsh/terminfo
-bindkey "$terminfo[cuu1]" history-substring-search-up
-bindkey "$terminfo[cud1]" history-substring-search-down
+bindkey "\e[A" history-substring-search-up
+bindkey "\e[B" history-substring-search-down
 
 # source things that should not be in the dotfiles repository
 [ -f ~/.zsh-additional ] && source ~/.zsh-additional
