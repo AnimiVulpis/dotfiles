@@ -8,3 +8,9 @@ zstyle ':completion:*' matcher-list \
 	'+m:{[:upper:]}={[:lower:]}' \
 	'r:|[-_./]=* r:|=*' \
 	'l:|=* r:|=*'
+
+# use default LS_COLORS for list entries
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# use menu selection for completion lists
+zstyle ':completion:*' menu select
