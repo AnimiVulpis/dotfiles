@@ -37,7 +37,7 @@ source $ZPLUG_HOME/init.zsh
 # let zplug manage itself
 zplug "zplug/zplug"
 
-# plugins section start
+### plugins section start
 # sane options for zsh
 zplug "willghatch/zsh-saneopt"
 # colored man pages
@@ -80,6 +80,11 @@ bindkey "\e[B" history-substring-search-down
 
 # source things that should not be in the dotfiles repository
 [ -f ~/.zsh-additional ] && source ~/.zsh-additional
+
+### other configurations
+
+# make `alt-left` and `alt-right` navigation more sane
+export WORDCHARS=''
 
 # use homebrew vim instead of mac os vi
 alias vi="/usr/local/bin/vim"
