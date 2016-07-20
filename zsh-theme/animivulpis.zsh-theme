@@ -5,8 +5,8 @@ setopt PROMPT_SUBST
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%{%F{blue}%}%b%{%f%}%{%F{yellow}%}%m%{%f%} %c%u'
-zstyle ':vcs_info:*' actionformats '%{%F{blue}%}%b %{%F{white}%}(%{%F{red}%}%a%{%F{white}%})%{%f%} %c%u'
+zstyle ':vcs_info:*' formats '%{%F{blue}%}%b%{%f%}%{%F{yellow}%}%m%{%f%}%c%u'
+zstyle ':vcs_info:*' actionformats '%{%F{blue}%}%b %{%F{white}%}(%{%F{red}%}%a%{%F{white}%})%{%f%}%c%u'
 zstyle ':vcs_info:*' stagedstr '%{%F{green}%}●%{%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}◐%{%f%}'
 
@@ -31,7 +31,7 @@ prompt_vcs_construction() {
 	prompt_segment black red '%m'
 	prompt_segment black white ':'
 	prompt_segment black cyan '%-70<…<%~%<<'
-	prompt_segment black blue " ($(git_remote_status)${vcs_info_msg_0_/% /}$(git_untracked)%{%F{blue}%})"
+	prompt_segment black blue " ($(git_remote_status)${vcs_info_msg_0_}$(git_untracked)%{%F{blue}%})"
 	print -n '%{%f%}]'
 	prompt_segment black white '%(!.#.$) '
 }
@@ -96,16 +96,16 @@ function git_remote_status() {
 		behind=$(command git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | wc -l)
 
 		if [[ $ahead -eq 0 ]] && [[ $behind -eq 0 ]]; then
-			git_remote_status="%{%F{green}%}%{%f%} "
+			git_remote_status="%{%F{green}%}%{%f%}"
 		elif [[ $ahead -gt 0 ]] && [[ $behind -eq 0 ]]; then
-			git_remote_status="%{%F{yellow}%}$((ahead))∆%{%f%} "
+			git_remote_status="%{%F{yellow}%}$((ahead))∆%{%f%}"
 		elif [[ $behind -gt 0 ]] && [[ $ahead -eq 0 ]]; then
-			git_remote_status="%{%F{yellow}%}$((behind))∇%{%f%} "
+			git_remote_status="%{%F{yellow}%}$((behind))∇%{%f%}"
 		elif [[ $ahead -gt 0 ]] && [[ $behind -gt 0 ]]; then
-			git_remote_status="%{%F{blue}%}$((ahead))%{%F{yellow}%}∆$((behind))∇%{%f%} "
+			git_remote_status="%{%F{blue}%}$((ahead))%{%F{yellow}%}∆$((behind))∇%{%f%}"
 		fi
 	else
-		git_remote_status="%{%F{blue}%}%{%f%} "
+		git_remote_status="%{%F{blue}%}%{%f%}"
 	fi
 	echo $git_remote_status
 }
