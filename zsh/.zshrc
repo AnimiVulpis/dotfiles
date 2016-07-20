@@ -86,6 +86,9 @@ bindkey "\e[B" history-substring-search-down
 # make `alt-left` and `alt-right` navigation more sane
 export WORDCHARS=''
 
+# make grep use colors by default
+alias grep="grep --color=auto"
+
 # use homebrew vim instead of mac os vi
 alias vi="/usr/local/bin/vim"
 
