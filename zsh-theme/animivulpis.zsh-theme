@@ -102,10 +102,10 @@ function git_remote_status() {
 		elif [[ $behind -gt 0 ]] && [[ $ahead -eq 0 ]]; then
 			git_remote_status="%{%F{yellow}%}$((behind))∇%{%f%}"
 		elif [[ $ahead -gt 0 ]] && [[ $behind -gt 0 ]]; then
-			git_remote_status="%{%F{blue}%}$((ahead))%{%F{yellow}%}∆$((behind))∇%{%f%}"
+			git_remote_status="%{%F{yellow}%}$((ahead))∆$((behind))∇%{%f%}"
 		fi
 	else
-		git_remote_status="%{%F{blue}%}%{%f%}"
+		git_remote_status="%{%F{yellow}%}%{%f%}"
 	fi
 	echo $git_remote_status
 }
