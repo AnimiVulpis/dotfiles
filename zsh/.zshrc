@@ -60,11 +60,11 @@ zplug "lukechilds/zsh-better-npm-completion", nice:10
 # gibo autocompletion
 zplug "simonwhitaker/gibo", nice:10
 # syntax highlighing for the shell
-zplug "zsh-users/zsh-syntax-highlighting", nice:11
+zplug "zsh-users/zsh-syntax-highlighting", nice:13
 # history search feature
-zplug "zsh-users/zsh-history-substring-search", nice:12
+zplug "zsh-users/zsh-history-substring-search", nice:14
 # multiple keywords history search `Ctrl-r`
-zplug "psprint/history-search-multi-word", nice:13
+zplug "psprint/history-search-multi-word"
 # personal theme (load after dircolors-solarized)
 zplug "AnimiVulpis/dotfiles", use:"zsh-theme/*.zsh-theme"
 # personal configuration
