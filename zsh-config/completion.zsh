@@ -14,3 +14,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # use menu selection for completion lists
 zstyle ':completion:*' menu select
+
+# load complist module to make the `menuselect` keymap available
+zmodload zsh/complist
+# bind <shift-tab> to go back through menu selection list
+bindkey -M menuselect '^\e[Z' reverse-menu-complete
