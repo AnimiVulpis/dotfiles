@@ -90,10 +90,10 @@ prompt_end() {
 # (adapted from https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh)
 function git_remote_status() {
 	local remote ahead behind git_remote_status
-	remote=${$(command git rev-parse --verify ${hook_com[branch]}@{upstream} --symbolic-full-name 2>/dev/null)/refs\/remotes\/}
+	remote=${$(command git rev-parse --verify ${hook_com[branch]}@{upstream} --symbolic-full-name 2> /dev/null)/refs\/remotes\/}
 	if [[ -n ${remote} ]]; then
-		ahead=$(command git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | wc -l)
-		behind=$(command git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | wc -l)
+		ahead=$(command git rev-list ${hook_com[branch]}@{upstream}..HEAD 2> /dev/null | wc -l)
+		behind=$(command git rev-list HEAD..${hook_com[branch]}@{upstream} 2> /dev/null | wc -l)
 
 		if [[ $ahead -eq 0 ]] && [[ $behind -eq 0 ]]; then
 			git_remote_status="%{%F{green}%}%{%f%}"
@@ -112,7 +112,7 @@ function git_remote_status() {
 
 function git_untracked() {
 	local git_status_porcelain
-	git_status_porcelain=$(command git status --porcelain | grep -E '^\?\?' 2> /dev/null | tail -n1)
+	git_status_porcelain=$(command git status --porcelain 2> /dev/null | grep -E '^\?\?' | tail -n1)
 	if [[ -n $git_status_porcelain ]]; then
 		echo "%{%F{red}%}○%{%f%}"
 	fi
