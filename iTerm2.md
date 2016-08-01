@@ -1,4 +1,10 @@
-# Key Mappings
+# iTerm2 settings
+
+## Profiles
+
+### Keys
+
+#### Key Mappings
 
 Key Mappings as I currently use them in iTerm2
 
