@@ -1,5 +1,45 @@
 # iTerm2 settings
 
+## Appearance
+
+### Tabs
+
+- Tab bar location: `Top`
+- Theme: `Dark`
+- [x] Show tab bar even when there is only one tab
+- [ ] Show tab numbers
+- [ ] Show tab close buttons
+- [x] Show activity indicator
+- [x] Show new-output indicator
+- [x] Show tab bar in fullscreen
+
+### Panes
+
+- [ ] Show per-pane title bar with split panes
+
+### Screen
+
+- [x] Auto-hide menu bar in non-native fullscreen
+
+### Window & Tab Titles
+
+- [ ] Show window number
+- [x] Show current job name
+- [ ] Show profile name
+
+### Dimming
+
+- [ ] Dimming affects only text, not background
+- Dimming amount: `~20%`
+- [x] Dim inactive split panes
+- [ ] Dim background windows
+
+### Window
+
+- [ ] Show border around window
+- [x] Hide scrollbars
+- [ ] Disable transparency for fullscreen windows by default
+
 ## Profiles
 
 ### Keys
