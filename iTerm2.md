@@ -42,6 +42,12 @@
 
 ## Profiles
 
+### Colors
+
+Color Preset (changed the `Green Bright` manually):
+
+`base16-solarized.dark.itermcolors` from https://github.com/chriskempson/base16-iterm2
+
 ### Keys
 
 #### Key Mappings
