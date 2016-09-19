@@ -86,7 +86,7 @@ Minimum contrast: `0`
 
 Color | Normal | Bright
 ------|--------|-------
-Black | `#002b36` (same as Background) (`base03`) | `#073642` (`base02`)
+Black | `#002b36` (same as Background) (`base03`) | `#586e75` (`base01`)
 Red | `#dc322f` (`red`) | `#cb4b16` (`orange`)
 Green | `#859900` (`green`) | `#6a8000` (Lightness value decreased from `green` by `10`)
 Yellow | `#b58900` (`yellow`) | `#d4a42b` (Lightness value increased from `yellow` by `10`)
