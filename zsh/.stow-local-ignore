@@ -1,0 +1,7 @@
+# Ignore files that should not be linked into the home directory
+
+# The theme
+^/animivulpis.zsh-theme
+
+# The zsh completion configuration
+^/completion.zsh

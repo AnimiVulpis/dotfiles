@@ -72,6 +72,10 @@ Install **zplug** managed plugins
 
 ### zsh
 
+- A `zshrc` file containg most of my configuration
+- A theme: `animivulpis.zsh-theme`
+- Some options that do not belong into the `.zshrc` file (IMHO)
+
 ### iTerm2
 
 - A color theme (somehow based on solarized)
