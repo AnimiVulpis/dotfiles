@@ -1,0 +1,27 @@
+define theme:
+    description = "AnimiVulpis.theme: A solarized based color theme"
+    colors:
+        # General UI colors
+        # Assuming the same way to specify colors as for taskwarrior
+        exclusion = "black on bright black"
+        today     = "bold yellow"
+        holiday   = "black on yellow"
+        label     = "green"
+        ids       = "bold magenta"
+        debug     = "bold white on blue"
+
+    palette:
+        color01 = "white on red"
+        color02 = "white on blue"
+        color03 = "black on green"
+        color04 = "black on magenta"
+        color05 = "black on cyan"
+        color06 = "black on yellow"
+        color07 = "black on white"
+        color08 = "white on bright red"
+        color09 = "white on bright blue"
+        color10 = "black on bright green"
+        color11 = "black on bright magenta"
+        color12 = "black on bright cyan"
+        color13 = "black on bright yellow"
+        color14 = "red on bright white"

@@ -71,3 +71,13 @@ Install **zplug** managed plugins
 ## Content
 
 ### zsh
+
+### iTerm2
+
+- A color theme (somehow based on solarized)
+- A markdown file listing the settings I use
+
+### [timewarrior](https://taskwarrior.org/docs/timewarrior/index.html)
+
+- A config file
+- A theme file for timewarrior
