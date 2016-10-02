@@ -121,6 +121,5 @@ Shortcut | Action
 <kbd>⌘</kbd><kbd>←</kbd> | Send Hex Codes: `0x01`
 <kbd>⎇</kbd><kbd>→</kbd> | Send Hex Codes: `0x1b` `0x66`
 <kbd>⌘</kbd><kbd>→</kbd> | Send Hex Codes: `0x05`
-<kbd>Del→</kbd> | Send Hex Codes: `0x4`
 <kbd>⌘</kbd><kbd>Del→</kbd> | Send Hex Codes: `0x0b`
 <kbd>⎇</kbd><kbd>Del→</kbd> | Send Hex Codes: `0x01b` `0x64`
