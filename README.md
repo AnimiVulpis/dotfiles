@@ -46,6 +46,7 @@ _Adapted from the [Rifleman's Creed](https://en.wikipedia.org/wiki/Rifleman%27s_
 
 - Needed:
  - [zplug](https://github.com/zplug/zplug)
+ - [vim-plug](https://github.com/junegunn/vim-plug)
  - [git](https://git-scm.com/)
 - Optional:
  - [gnu stow](https://www.gnu.org/software/stow/)
@@ -75,6 +76,7 @@ Install **zplug** managed plugins
 - A `zshrc` file containg most of my configuration
 - A theme: `animivulpis.zsh-theme`
 - Some options that do not belong into the `.zshrc` file (IMHO)
+- For the **solarized dircolors** don't forget to use `setupsolarized dircolors.ansi-dark` at least once
 
 ### iTerm2
 
