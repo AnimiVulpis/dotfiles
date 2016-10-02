@@ -87,3 +87,7 @@ Install **zplug** managed plugins
 
 - A config file
 - A theme file for timewarrior
+
+### neovim
+
+- My neovim configuration file
