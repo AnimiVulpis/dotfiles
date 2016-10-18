@@ -79,6 +79,9 @@ zmodload zsh/terminfo
 bindkey "\e[A" history-substring-search-up
 bindkey "\e[B" history-substring-search-down
 
+# make `fn+delete` behave as it should
+bindkey "^[[3~" delete-char
+
 # source things that should not be in the dotfiles repository
 [ -f ~/.zsh-additional ] && source ~/.zsh-additional
 
