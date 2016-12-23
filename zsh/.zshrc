@@ -56,19 +56,19 @@ zplug "zsh-users/zsh-completions"
 # nvm plugin
 zplug "lukechilds/zsh-nvm"
 # npm completions
-zplug "lukechilds/zsh-better-npm-completion", nice:10
+zplug "lukechilds/zsh-better-npm-completion", defer:2
 # gibo autocompletion
-zplug "simonwhitaker/gibo", nice:10
+zplug "simonwhitaker/gibo", defer:2
 # syntax highlighing for the shell
-zplug "zsh-users/zsh-syntax-highlighting", nice:13
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
 # history search feature
-zplug "zsh-users/zsh-history-substring-search", nice:14
+zplug "zsh-users/zsh-history-substring-search", defer:3
 # multiple keywords history search `Ctrl-r`
 zplug "psprint/history-search-multi-word"
 # personal theme (load after dircolors-solarized)
-zplug "AnimiVulpis/dotfiles", use:"zsh/animivulpis.zsh-theme"
+zplug "AnimiVulpis/dotfiles", use:"zsh/animivulpis.zsh-theme", as:theme
 # personal completion configuration
-zplug "AnimiVulpis/dotfiles", use:"zsh/completion.zsh", nice:6
+zplug "AnimiVulpis/dotfiles", use:"zsh/completion.zsh", defer:0
 # plugins section end
 
 # source plugins and add commands to the PATH
