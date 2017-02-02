@@ -71,14 +71,16 @@ Install **zplug** managed plugins
 
 ## Content
 
-### zsh
+### [zsh](http://www.zsh.org/)
 
-- A `zshrc` file containg most of my configuration
+- A `zshrc` file containg most of my configuration  
+ - Contains the sourcing of a file called `.zsh-additional` that can contain things like  
+ API tokens
 - A theme: `animivulpis.zsh-theme`
-- Some options that do not belong into the `.zshrc` file (IMHO)
+- Some options that do not belong into the `.zshrc` file (which leaves room for improvement)
 - For the **solarized dircolors** don't forget to use `setupsolarized dircolors.ansi-dark` at least once
 
-### iTerm2
+### [iTerm2](https://www.iterm2.com/)
 
 - A color theme (somehow based on solarized)
 - A markdown file listing the settings I use
