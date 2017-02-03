@@ -60,7 +60,7 @@ zplug "lukechilds/zsh-better-npm-completion", defer:2
 # gibo autocompletion
 zplug "simonwhitaker/gibo", defer:2
 # syntax highlighing for the shell
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # history search feature
 zplug "zsh-users/zsh-history-substring-search", defer:3
 # multiple keywords history search `Ctrl-r`
