@@ -1,7 +1,7 @@
-# enable zsh Prompt Expansion
+# Enable zsh Prompt Expansion
 setopt PROMPT_SUBST
 
-# to load vcs_info like shown in Episode III (https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples)
+# To load vcs_info like shown in Episode III (https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples)
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
@@ -23,7 +23,7 @@ precmd() {
 
 RPROMPT='[%D{%T}]'
 
-# prompt construction with version control information
+# Prompt construction with version control information
 prompt_vcs_construction() {
 	print -n '['
 	prompt_segment black green '%n'
@@ -36,7 +36,7 @@ prompt_vcs_construction() {
 	prompt_segment black white '%(!.#.$) '
 }
 
-# prompt construction without version control information
+# Prompt construction without version control information
 prompt_construction() {
 	print -n '['
 	prompt_segment black green '%n'
