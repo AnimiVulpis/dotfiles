@@ -26,10 +26,7 @@ RPROMPT='[%D{%T}]'
 # Prompt construction with version control information
 prompt_vcs_construction() {
 	print -n '['
-	prompt_segment black green '%n'
-	prompt_segment black white '@'
-	prompt_segment black red '%m'
-	prompt_segment black white ':'
+	prompt_user_host_part
 	prompt_segment black cyan '%-70<…<%~%<<'
 	prompt_segment black blue " ($(git_remote_status)${vcs_info_msg_0_}$(git_untracked)%{%F{blue}%})"
 	print -n '%{%f%}]'
@@ -39,13 +36,21 @@ prompt_vcs_construction() {
 # Prompt construction without version control information
 prompt_construction() {
 	print -n '['
-	prompt_segment black green '%n'
-	prompt_segment black white '@'
-	prompt_segment black red '%m'
-	prompt_segment black white ':'
+	prompt_user_host_part
 	prompt_segment black cyan '%-70<…<%~%<<'
 	print -n '%{%f%}]'
 	prompt_segment black white '%(!.#.$) '
+}
+
+# Construct user@host prompt part
+# Will omit user if `$USER` equals `$ZSH_DEFAULT_USER`
+prompt_user_host_part() {
+	if [[ $USER != $ZSH_DEFAULT_USER ]]; then
+		prompt_segment black green '%n'
+	fi
+	prompt_segment black white '@'
+	prompt_segment black red '%m'
+	prompt_segment black white ':'
 }
 
 ### Segment drawing
