@@ -3,12 +3,18 @@ setopt PROMPT_SUBST
 
 # To load vcs_info like shown in Episode III (https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples)
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%{%F{blue}%}%b%{%f%}%{%F{yellow}%}%m%{%f%}%c%u'
-zstyle ':vcs_info:*' actionformats '%{%F{blue}%}%b%{%F{yellow}%}(%{%F{red}%}%a%{%F{yellow}%})%{%f%}%c%u'
-zstyle ':vcs_info:*' stagedstr '%{%F{green}%}●%{%f%}'
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}◐%{%f%}'
+config_zstyle() {
+	local branch_width
+	branch_width=$(( [#10] $COLUMNS * 0.2 ))
+	zstyle ':vcs_info:*' enable git
+	zstyle ':vcs_info:*' check-for-changes true
+	zstyle ':vcs_info:*' formats "%{%F{blue}%}%${branch_width}>…>%b%>>%{%f%}%{%F{yellow}%}%m%{%f%}%c%u"
+	zstyle ':vcs_info:*' actionformats "%{%F{blue}%}%${branch_width}>…>%b%>>%{%F{yellow}%}(%{%F{red}%}%a%{%F{yellow}%})%{%f%}%c%u"
+	zstyle ':vcs_info:*' stagedstr '%{%F{green}%}●%{%f%}'
+	zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}◐%{%f%}'
+}
+
+config_zstyle
 
 precmd() {
 	vcs_info
