@@ -93,9 +93,13 @@ export WORDCHARS=''
 # make grep use colors by default
 alias grep="grep --color=auto"
 
-# use homebrew vim instead of mac os vi
-alias vi="/usr/local/bin/vim"
+# use vim instead of vi
+alias vi="vim"
 
+# use neovim instead of vim
+alias vim="nvim"
+
+# use colors in `ls` by default
 alias ls="ls --color=auto"
 alias ll="ls --color=auto -lhA"
 
