@@ -36,7 +36,7 @@ setopt ALWAYS_TO_END
 source $ZPLUG_HOME/init.zsh
 
 # let zplug manage itself
-zplug "zplug/zplug"
+zplug "zplug/zplug", hook-build:"zplug --self-manage"
 
 ### plugins section start
 # sane options for zsh
