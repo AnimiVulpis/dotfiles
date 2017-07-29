@@ -101,7 +101,8 @@ alias vim="nvim"
 
 # use colors in `ls` by default
 alias ls="ls --color=auto"
-alias ll="ls --color=auto -lhA"
+alias ll="ls --color=auto -lh"
+alias lh="ls --color=auto -lhA"
 
 # less *now* will open atom when pressing `v`
 export LESSEDIT="atom %f?lm\:%lm."
