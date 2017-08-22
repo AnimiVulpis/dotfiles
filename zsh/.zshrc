@@ -104,6 +104,12 @@ alias ls="ls --color=auto"
 alias ll="ls --color=auto -lh"
 alias lh="ls --color=auto -lhA"
 
+# aliases for exa (ls replacement)
+alias es="exa"
+alias el="exa -l"
+alias eh="exa -lh"
+alias et="exa -T"
+
 # less *now* will open atom when pressing `v`
 export LESSEDIT="atom %f?lm\:%lm."
 # less *now* with code highlighting via source-highlight
