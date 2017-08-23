@@ -93,8 +93,8 @@ export WORDCHARS=''
 # make grep use colors by default
 alias grep="grep --color=auto"
 
-# use vim instead of vi
-alias vi="vim"
+# use neovim instead of vi
+alias vi="nvim"
 
 # use neovim instead of vim
 alias vim="nvim"
