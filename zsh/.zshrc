@@ -107,7 +107,7 @@ alias lh="ls --color=auto -lhA"
 # aliases for exa (ls replacement)
 alias es="exa"
 alias el="exa -l"
-alias eh="exa -lh"
+alias eh="exa -la"
 alias et="exa -T"
 
 # less *now* will open atom when pressing `v`
