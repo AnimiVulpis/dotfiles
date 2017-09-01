@@ -1,0 +1,37 @@
+[core]
+	pager = less -R -x5,9
+	editor = nvim
+	excludesfile = ~/.gitglobalignore
+[credential]
+	helper = osxkeychain
+[alias]
+	diffw = diff --word-diff=color
+	lastcommit = for-each-ref --sort='-authordate' --format='%(color:blue)%(authordate:relative)%09%(color:green)%(authorname)%09%(color:yellow)%(objectname:short)%09%(color:red)%(refname:short)' refs/
+	ffmerge = merge --ff-only
+	logg = log --graph
+	loggo = log --graph --oneline
+	logga = log --graph --all
+	loggoa = log --graph --oneline --all
+	st = status --short
+	loggd = log --graph --pretty=format:'%C(auto)%h - %C(bold black)%aD%Creset %C(blue)(%ar)%Creset - %C(magenta)%an%Creset%C(auto)%d%n%s'
+	logd = log --pretty=format:'%s%n%>(14)%C(auto)%h - %C(bold black)%aD%Creset %C(blue)(%ar)%Creset %C(magenta)%an%Creset%C(auto)%d'
+[mergetool]
+	keepBackup = false
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	path = /Applications/p4merge.app/Contents/MacOS/p4merge
+[color]
+	ui = always
+[color "diff"]
+	meta = yellow
+[user]
+	useConfigOnly = true
+[pager]
+	log = diff-so-fancy | less
+	show = diff-so-fancy | less
+	diff = diff-so-fancy | less
+[interactive]
+	diffFilter = diff-so-fancy
+[diff]
+	compactionHeuristic = true
