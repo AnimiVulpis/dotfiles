@@ -37,7 +37,7 @@ prompt_vcs_construction() {
 	prompt_segment black cyan "%${path_width}<…<%~%<<"
 	prompt_segment black blue "($(git_remote_status)${vcs_info_msg_0_}$(git_untracked)%{%F{blue}%})"
 	print -n '%{%f%}'
-	prompt_segment black white '%(!.#.$) '
+	prompt_border
 }
 
 # Prompt construction without version control information
@@ -45,7 +45,7 @@ prompt_construction() {
 	prompt_user_host_part
 	prompt_segment black cyan '%-70<…<%~%<<'
 	print -n '%{%f%}'
-	prompt_segment black white '%(!.#.$) '
+	prompt_border
 }
 
 # Construct user@host prompt part
@@ -57,6 +57,12 @@ prompt_user_host_part() {
 	prompt_segment black white '@'
 	prompt_segment black red '%m'
 	prompt_segment black white ':'
+}
+
+# Construct prompt border
+# Will be red when exit code is != 0
+prompt_border() {
+	prompt_segment black white '%(?.%{%F{white}%}.%{%F{red}%})%(!.∷.∵)%{%f%} '
 }
 
 ### Segment drawing
