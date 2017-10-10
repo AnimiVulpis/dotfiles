@@ -88,7 +88,7 @@ bindkey "^[[3~" delete-char
 ### other configurations
 
 # make `alt-left` and `alt-right` navigation more sane
-export WORDCHARS=''
+export WORDCHARS='-'
 
 # make grep use colors by default
 alias grep="grep --color=auto"
@@ -116,7 +116,7 @@ export LESSEDIT="atom %f?lm\:%lm."
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 # interpret colors in less (-R) and case-insensitive search (-i)
 # as well as with tabs set to 4 spaces (instead of 8)
-export LESS="-Ri -x4"
+export LESS="-x4 -Ri"
 # set editor for svn
 export SVN_EDITOR=vim
 
