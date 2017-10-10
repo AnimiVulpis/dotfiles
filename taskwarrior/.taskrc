@@ -34,3 +34,4 @@ context.fu=+fu
 context.mine=+mine
 context.gaming=+gaming
 report.list.columns=id,start.age,entry.age,depends.list,priority,project,tags,recur.indicator,scheduled.countdown,due,until.remaining,description.count,urgency
+context.coding=+coding
