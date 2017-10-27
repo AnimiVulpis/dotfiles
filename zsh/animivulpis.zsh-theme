@@ -14,12 +14,12 @@ config_zstyle() {
 	zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}◐%{%f%}'
 }
 
-config_zstyle
-
 precmd() {
 	# set tab title (`\e]1;`='start', `\a`='end')
 	# `%17<X<`='truncation-start', `%<<`='truncation-end'
 	print -Pn "\e]1;%17<…<%~%<<\a"
+
+	config_zstyle
 	vcs_info
 	if [[ -n ${vcs_info_msg_0_} ]]; then
 		# vcs_info found something
