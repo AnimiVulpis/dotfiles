@@ -17,6 +17,9 @@ config_zstyle() {
 config_zstyle
 
 precmd() {
+	# set tab title (`\e]1;`='start', `\a`='end')
+	# `%17<X<`='truncation-start', `%<<`='truncation-end'
+	print -Pn "\e]1;%17<…<%~%<<\a"
 	vcs_info
 	if [[ -n ${vcs_info_msg_0_} ]]; then
 		# vcs_info found something
