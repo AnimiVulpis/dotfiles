@@ -1,3 +1,6 @@
+# For profiling uncomment line #2 and call `zprof`
+# zmodload zsh/zprof
+
 # path related changes
 # zplug
 export ZPLUG_HOME=~/.zplug
