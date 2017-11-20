@@ -50,16 +50,10 @@ zplug "zlsun/solarized-man"
 zplug "mwilliammyers/plugin-osx"
 # sudo with `ESC-ESC`
 zplug "hcgraf/zsh-sudo"
-# directory listings with git information
-zplug "supercrabtree/k"
 # solarized dircolors (don't forget to use `setupsolarized dircolors.ansi-dark` at least once)
 zplug "joel-porquet/zsh-dircolors-solarized"
 # more completions
 zplug "zsh-users/zsh-completions"
-# nvm plugin
-zplug "lukechilds/zsh-nvm"
-# npm completions
-zplug "lukechilds/zsh-better-npm-completion", defer:2
 # gibo autocompletion
 zplug "simonwhitaker/gibo", defer:2
 # syntax highlighing for the shell
@@ -127,4 +121,4 @@ export SVN_EDITOR=vim
 eval "$(fasd --init auto)"
 # for nvm to work properly when installed via homebrew
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh --no-use
