@@ -34,6 +34,9 @@ setopt PUSHD_MINUS
 ### completion options
 setopt ALWAYS_TO_END
 
+### zsh-autosuggestions options (https://github.com/zsh-users/zsh-autosuggestions#disabling-suggestion-for-large-buffers)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+
 ### zplug
 # load zplug (https://github.com/zplug/zplug)
 source $ZPLUG_HOME/init.zsh
@@ -72,6 +75,9 @@ zplug "AnimiVulpis/dotfiles", use:"zsh/completion.zsh", defer:0
 
 # source plugins and add commands to the PATH
 zplug load #--verbose
+
+# zsh-autosuggestions config (https://github.com/zsh-users/zsh-autosuggestions#key-bindings)
+bindkey "^ " autosuggest-accept
 
 # zsh-history-substring-search config (https://github.com/zsh-users/zsh-history-substring-search)
 zmodload zsh/terminfo
