@@ -54,6 +54,8 @@ zplug "hcgraf/zsh-sudo"
 zplug "joel-porquet/zsh-dircolors-solarized"
 # more completions
 zplug "zsh-users/zsh-completions"
+# Fish-like autosuggestions
+zplug "zsh-users/zsh-autosuggestions"
 # gibo autocompletion
 zplug "simonwhitaker/gibo", defer:2
 # syntax highlighing for the shell
