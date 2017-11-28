@@ -5,7 +5,7 @@ setopt PROMPT_SUBST
 autoload -Uz vcs_info
 config_zstyle() {
 	local branch_width
-	branch_width=$(( [#10] $COLUMNS * 0.2 ))
+	branch_width=$(( [#10] $COLUMNS * 0.15 ))
 	zstyle ':vcs_info:*' enable git
 	zstyle ':vcs_info:*' check-for-changes true
 	zstyle ':vcs_info:*' formats "%{%F{blue}%}%${branch_width}>…>%b%>>%{%f%}%{%F{yellow}%}%m%{%f%}%c%u"
@@ -35,7 +35,7 @@ RPROMPT='[%D{%T}]'
 # Prompt construction with version control information
 prompt_vcs_construction() {
 	local path_width
-	path_width=$(( [#10] $COLUMNS * 0.3 ))
+	path_width=$(( [#10] $COLUMNS * 0.25 ))
 	prompt_user_host_part
 	prompt_segment black cyan "%${path_width}<…<%~%<<"
 	prompt_segment black blue "($(git_remote_status)${vcs_info_msg_0_}$(git_untracked)%{%F{blue}%})"
