@@ -38,6 +38,9 @@ setopt ALWAYS_TO_END
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 ### zplug
+# set number of zplug threads (for installing/updating)
+export ZPLUG_THREADS=1
+
 # load zplug (https://github.com/zplug/zplug)
 source $ZPLUG_HOME/init.zsh
 
