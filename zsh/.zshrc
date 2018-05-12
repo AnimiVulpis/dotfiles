@@ -131,3 +131,6 @@ eval "$(fasd --init auto)"
 # for nvm to work properly when installed via homebrew
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh --no-use
+# for jenv to work properly
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
