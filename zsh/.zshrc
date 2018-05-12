@@ -62,8 +62,6 @@ zplug "joel-porquet/zsh-dircolors-solarized"
 zplug "zsh-users/zsh-completions"
 # Fish-like autosuggestions
 zplug "zsh-users/zsh-autosuggestions"
-# gibo autocompletion
-zplug "simonwhitaker/gibo", defer:2
 # syntax highlighing for the shell
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # history search feature
