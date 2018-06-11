@@ -14,8 +14,8 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 ### history options
 export HISTFILE=~/.zsh_history
 # history sizes (see `man zshoptions` under `HIST_EXPIRE_DUPS_FIRST`)
-export HISTSIZE=200000
-export SAVEHIST=100000
+export HISTSIZE=420000
+export SAVEHIST=210000
 
 # to ignore adjacent history entries
 setopt HIST_EXPIRE_DUPS_FIRST
