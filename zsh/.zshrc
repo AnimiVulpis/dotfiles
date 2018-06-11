@@ -94,7 +94,7 @@ bindkey "^[[3~" delete-char
 ### other configurations
 
 # make `alt-left` and `alt-right` navigation more sane
-export WORDCHARS='-'
+export WORDCHARS=''
 
 # make grep use colors by default
 alias grep="grep --color=auto"
