@@ -52,8 +52,6 @@ zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "willghatch/zsh-saneopt"
 # colored man pages
 zplug "zlsun/solarized-man"
-# osx plugins
-zplug "mwilliammyers/plugin-osx"
 # sudo with `ESC-ESC`
 zplug "hcgraf/zsh-sudo"
 # solarized dircolors (don't forget to use `setupsolarized dircolors.ansi-dark` at least once)
