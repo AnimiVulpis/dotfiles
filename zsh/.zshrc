@@ -1,7 +1,7 @@
 # For profiling uncomment line #2 and call `zprof`
 # zmodload zsh/zprof
 
-# path related changes
+### path related changes
 # zplug
 export ZPLUG_HOME=~/.zplug
 # brew
@@ -10,6 +10,15 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # brew coreutils man
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# for jenv to work properly
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# conda (python)
+export PATH="/usr/local/miniconda3/bin:$PATH"
+# for nvm to work properly when installed via homebrew
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh --no-use
 
 ### history options
 export HISTFILE=~/.zsh_history
@@ -126,9 +135,3 @@ export SVN_EDITOR=vim
 
 # for 'fasd' to work
 eval "$(fasd --init auto)"
-# for nvm to work properly when installed via homebrew
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh --no-use
-# for jenv to work properly
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
