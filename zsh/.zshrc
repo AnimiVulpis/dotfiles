@@ -132,6 +132,7 @@ export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS="-x4 -Ri"
 # set editor for svn
 export SVN_EDITOR=vim
-
+# set language of cli tools
+export LC_MESSAGES=C
 # for 'fasd' to work
 eval "$(fasd --init auto)"
