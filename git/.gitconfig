@@ -13,6 +13,7 @@
 	loggo = log --graph --oneline
 	loggoa = log --graph --oneline --all
 	st = status --short
+	tmerge = merge --no-commit --no-ff
 [merge]
 	tool = p4merge
 [mergetool]
