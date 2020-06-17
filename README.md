@@ -47,8 +47,6 @@ To link the files in the `stow-package` folder using the `stow` command:
     $ stow --dotfiles --restow stow-package
     $ # or the short(er)
     $ stow --dotfiles -R stow-package
-    $ # Very similar for timew configuration
-    $ stow --dotfiles -S timewarrior
 
 Opening a shell will then launch [`zinit`](https://github.com/zdharma/zinit) which will install everything else for you.
 
@@ -60,13 +58,3 @@ To update run `zinit update`
 
 - A `.zshrc` file containing my configuration
 - A `.p10k.zsh` file containing my theme configuration
-
-### [timewarrior](https://taskwarrior.org/docs/timewarrior/index.html)
-
-- A config file
-- A theme file for timewarrior
-
-### [git](https://git-scm.com/)
-
-- A `.gitconfig` file containing my `git` configuration
-- A `.gitglobalignore` file containing my global ignore rules
