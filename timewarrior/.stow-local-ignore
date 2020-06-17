@@ -1,3 +1,0 @@
-# Ignore (do not link into home folder) timewarrior theme which will be used by `.timewarrior/timewarrior.cfg`
-
-^/AnimiVulpis.theme
