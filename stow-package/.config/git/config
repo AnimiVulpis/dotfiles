@@ -1,9 +1,14 @@
+[user]
+	useConfigOnly = true
 [core]
-	pager = diff-so-fancy | less -x4 -RFXi
 	editor = nvim
-	excludesfile = ~/.gitglobalignore
+	quotePath = false
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[mergetool]
+	keepBackup = false
 [alias]
-	diffw = diff --word-diff=color
 	ffmerge = merge --ff-only
 	lastcommit = for-each-ref --sort='-authordate' --format='%(color:blue)%(authordate:relative)%09%(color:green)%(authorname)%09%(color:yellow)%(objectname:short)%09%(color:red)%(refname:short)' refs/
 	logd = log --pretty=format:'%s%n%>(14)%C(auto)%h - %C(bold black)%aD%Creset %C(blue)(%ar)%Creset %C(magenta)%an%Creset%C(auto)%d'
@@ -14,22 +19,3 @@
 	loggoa = log --graph --oneline --all
 	st = status --short
 	tmerge = merge --no-commit --no-ff
-[merge]
-	tool = p4merge
-	tool = intellij
-[mergetool]
-	keepBackup = false
-[mergetool "p4merge"]
-	path = /Applications/p4merge.app/Contents/MacOS/p4merge
-[mergetool "intellij"]
-	cmd = idea merge \"$LOCAL\" \"REMOTE\" \"BASE\" \"MERGED\"
-[diff]
-	tool = intellij
-[difftool "intellij"]
-	cmd = idea diff \"$LOCAL\" \"$REMOTE\"
-[color "diff"]
-	meta = yellow
-[user]
-	useConfigOnly = true
-[credential]
-	helper = osxkeychain

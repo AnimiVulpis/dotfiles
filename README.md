@@ -2,94 +2,71 @@
 
 ### Table of Contents
 
-1. [Dotfiles Creed](#dotfiles-creed)
-2. [Install/Usage](#installusage)
-3. [Content](#content)
-
-## Dotfiles Creed
-
->These are my dotfiles.  
-There are many like it, but these ones are mine.
-
->My dotfiles are my friends.  
-They are part of my developer life.  
-I must master them as I must master my life.
-
->Without me, my dotfiles are useless.  
-Without my dotfiles, I am less useful.  
-I must keep my dotfiles true.  
-I will...
-
->My dotfiles and I know that what counts in development is not the lines of code we write, the elegance of our functions, nor the comments we write.  
-We know that it is the results that count.  
-We will code...
-
->My dotfiles are a developer, even as I, because they are part of my developer life.  
-Thus, I will learn them as a brother.  
-I will learn their weaknesses, their strengths, their parts, their accessories, their functions and their code.  
-I will keep my dotfiles clean and ready, even as I am clean and ready.  
-We will become part of each other.  
-We will...
-
->Before the Internet, I swear this creed.  
-My dotfiles and I are the testers of my code.  
-We are the assignees of our issues.  
-We are the coders of my life.
-
->So be it, until development is finished and there is no issue, but clean code!
-
-_Adapted from the [Rifleman's Creed](https://en.wikipedia.org/wiki/Rifleman%27s_Creed)_
+1. [Install/Usage](#installusage)
+2. [Content](#content)
 
 ## Install/Usage
 
 ### Preconditions
 
 - Needed:
- - [zplug](https://github.com/zplug/zplug)
- - [vim-plug](https://github.com/junegunn/vim-plug)
- - [git](https://git-scm.com/)
-- Optional:
- - [gnu stow](https://www.gnu.org/software/stow/)
+  - Using [`zsh`](https://www.zsh.org/)
+  - Following the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+  - Using [`nvim`](https://github.com/neovim/neovim)
+  - Using [`exa`](https://github.com/ogham/exa)
+  - Using [`vscode`](https://code.visualstudio.com/)
+  - Using [`git`](https://git-scm.com/)
+  - Using [`fasd`](https://github.com/clvv/fasd)
+  - Using [`nvm`](https://github.com/nvm-sh/nvm)
+  - Using [`broot`](https://github.com/Canop/broot)
+  - Optional:
+    - [gnu `stow`](https://www.gnu.org/software/stow/)
 
-I recommend using [gnu stow](https://www.gnu.org/software/stow/) to manage the linking from the `dotfiles/` folder to the `~/` folder.
+_I recommend using [gnu stow](https://www.gnu.org/software/stow/) to manage the linking from the `dotfiles/` folder to the `~/` folder._  
+_Most of these **dependencies** can be removed easily._
 
 ### Install
 
 To clone this repository into your home folder:
 
-	$ git clone git@github.com:AnimiVulpis/dotfiles.git
+    $ git clone git@github.com:AnimiVulpis/dotfiles.git
 
-To link the `.zshrc` into the `~` folder using the `stow` command:
+To link the files in the `stow-package` folder using the `stow` command:
 
     $ cd dotfiles
-	~/dotfiles
-	$ stow zsh
+    ~/dotfiles
+    $ # To save use
+    $ stow --dotfiles --stow stow-package
+    $ # or the short(er)
+    $ stow --dotfiles -S stow-package
+    $ # To delete use
+    $ stow --dotfiles --delete stow-package
+    $ # or the short(er)
+    $ stow --dotfiles -D stow-package
+    $ # To delete and then save use
+    $ stow --dotfiles --restow stow-package
+    $ # or the short(er)
+    $ stow --dotfiles -R stow-package
+    $ # Very similar for timew configuration
+    $ stow --dotfiles -S timewarrior
 
-Install **zplug** managed plugins
+Opening a shell will then launch [`zinit`](https://github.com/zdharma/zinit) which will install everything else for you.
 
-    $ zplug update
+To update run `zinit update`
 
 ## Content
 
 ### [zsh](http://www.zsh.org/)
 
-- A `zshrc` file containg most of my configuration  
- - Contains the sourcing of a file called `.zsh-additional` that can contain things like  
- API tokens
-- A theme: `animivulpis.zsh-theme`
-- Some options that do not belong into the `.zshrc` file (which leaves room for improvement)
-- For the **solarized dircolors** don't forget to use `setupsolarized dircolors.ansi-dark` at least once
-
-### [iTerm2](https://www.iterm2.com/)
-
-- A color theme (somehow based on solarized)
-- A markdown file listing the settings I use
+- A `.zshrc` file containing my configuration
+- A `.p10k.zsh` file containing my theme configuration
 
 ### [timewarrior](https://taskwarrior.org/docs/timewarrior/index.html)
 
 - A config file
 - A theme file for timewarrior
 
-### neovim
+### [git](https://git-scm.com/)
 
-- My neovim configuration file
+- A `.gitconfig` file containing my `git` configuration
+- A `.gitglobalignore` file containing my global ignore rules

@@ -1,0 +1,134 @@
+#!/bin/zsh
+
+# Check for presence of XDG variables
+if [[ ! -v XDG_CONFIG_HOME || ! -v XDG_DATA_HOME || ! -v XDG_CACHE_HOME ]]; then
+  echo 'XDG directories not set'
+  return 1
+fi
+
+# Set up history and zsh options
+HISTFILE=$XDG_DATA_HOME/zsh/histfile
+HISTSIZE=63000
+SAVEHIST=42000
+bindkey -e
+setopt APPEND_HISTORY
+# History with timestamps and elapsed time
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY_TIME
+# First remove oldest duplicate history items
+setopt HIST_EXPIRE_DUPS_FIRST
+# Better performance for locking of history file
+setopt HIST_FCNTL_LOCK
+# Don't add the history item consecutively
+setopt HIST_IGNORE_DUPS
+# Don't add history items with leading space
+setopt HIST_IGNORE_SPACE
+# Remove spaces
+setopt HIST_REDUCE_BLANKS
+# Don't execute history item immediately
+setopt HIST_VERIFY
+# List jobs with pid
+setopt LONG_LIST_JOBS
+# Remove no match warning
+setopt NONOMATCH
+# Move cursor to end of completion
+setopt ALWAYS_TO_END
+# Attempt completion if mid-word
+setopt COMPLETE_IN_WORD
+# Allow comments in interactive shell
+setopt INTERACTIVE_COMMENTS
+# Don't push the same directory consecutively
+setopt PUSHD_IGNORE_DUPS
+
+# Set max buffer size zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# Use async suggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+# Set up ZINIT array parameters
+typeset -A ZINIT
+# Where Zinit code resides
+ZINIT[BIN_DIR]=$XDG_DATA_HOME/zinit/bin
+# Where Zinit should create all working directories
+ZINIT[HOME_DIR]=$XDG_DATA_HOME/zinit
+# Path to `.zcompdump` file, with the file included
+ZINIT[ZCOMPDUMP_PATH]=$XDG_CACHE_HOME/zcompdump
+# If set to 1, then Zinit will skip checking if a Turbo-loaded object exists
+ZINIT[OPTIMIZE_OUT_DISK_ACCESSES]=1
+
+source $ZINIT[BIN_DIR]/zinit.zsh
+
+zinit light-mode for \
+  atload"source ~/.p10k.zsh; _p9k_precmd" nocd \
+  romkatv/powerlevel10k
+
+zinit light-mode atclone"dircolors -b LS_COLORS > lscolors.zsh" \
+  atpull"%atclone" pick"lscolors.zsh" nocompile"!" \
+  atload'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"' for \
+  trapd00r/LS_COLORS
+
+zinit wait lucid light-mode for \
+  zlsun/solarized-man
+
+zinit wait lucid light-mode for \
+  andrewferrier/fzf-z
+
+zinit wait lucid light-mode for \
+  atload"_zsh_autosuggest_start" \
+  zsh-users/zsh-autosuggestions
+
+zinit wait lucid light-mode for \
+  zsh-users/zsh-history-substring-search
+
+zinit wait lucid light-mode blockf for \
+  zsh-users/zsh-completions
+
+zinit wait lucid light-mode for \
+  hcgraf/zsh-sudo
+
+zinit wait lucid light-mode for \
+  zdharma/history-search-multi-word
+
+zinit wait lucid light-mode for \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+  zdharma/fast-syntax-highlighting
+
+# Set key-binding https://github.com/zsh-users/zsh-autosuggestions#key-bindings
+bindkey '^ ' autosuggest-accept
+
+# History substring search config
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Defining go paths
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+
+# PATH modification for cargo/go
+export PATH="$HOME/.cargo/bin:$GOBIN:$PATH"
+
+# alias definitions
+alias vi="nvim"
+alias vim="nvim"
+alias ls="ls --color=auto"
+alias ll="ls --color=auto -lh"
+alias lh="ls --color=auto -lhA"
+alias es="exa"
+alias el="exa -l --time-style=long-iso"
+alias eh="exa -la --time-style=long-iso"
+alias et="exa -T"
+
+# More environment variables
+export EDITOR="nvim"
+export VISUAL="code -w"
+export LESS="-x4 -Ri"
+
+# fasd initialization
+eval "$(fasd --init auto)"
+
+# nvm initialization
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+
+# broot initialization
+source /home/animi_vulpis/.config/broot/launcher/bash/br
