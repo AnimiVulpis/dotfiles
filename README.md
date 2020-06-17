@@ -31,11 +31,11 @@ To clone this repository into your home folder:
 
     $ git clone git@github.com:AnimiVulpis/dotfiles.git
 
-To link the `.zshrc` into the `~` folder using the `stow` command:
+To link the files in the `configs` folder using the `stow` command:
 
     $ cd dotfiles
     ~/dotfiles
-    $ stow zsh
+    $ stow --dotfiles configs
 
 Opening a shell will then launch [`zinit`](https://github.com/zdharma/zinit) which will install everything else for you.
 
