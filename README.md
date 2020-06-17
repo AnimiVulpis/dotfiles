@@ -47,6 +47,8 @@ To link the files in the `stow-package` folder using the `stow` command:
     $ stow --dotfiles --restow stow-package
     $ # or the short(er)
     $ stow --dotfiles -R stow-package
+    $ # Very similar for timew configuration
+    $ stow --dotfiles -S timewarrior
 
 Opening a shell will then launch [`zinit`](https://github.com/zdharma/zinit) which will install everything else for you.
 
