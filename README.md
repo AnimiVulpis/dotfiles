@@ -31,11 +31,22 @@ To clone this repository into your home folder:
 
     $ git clone git@github.com:AnimiVulpis/dotfiles.git
 
-To link the files in the `configs` folder using the `stow` command:
+To link the files in the `stow-package` folder using the `stow` command:
 
     $ cd dotfiles
     ~/dotfiles
-    $ stow --dotfiles configs
+    $ # To save use
+    $ stow --dotfiles --stow stow-package
+    $ # or the short(er)
+    $ stow --dotfiles -S stow-package
+    $ # To delete use
+    $ stow --dotfiles --delete stow-package
+    $ # or the short(er)
+    $ stow --dotfiles -D stow-package
+    $ # To delete and then save use
+    $ stow --dotfiles --restow stow-package
+    $ # or the short(er)
+    $ stow --dotfiles -R stow-package
 
 Opening a shell will then launch [`zinit`](https://github.com/zdharma/zinit) which will install everything else for you.
 
