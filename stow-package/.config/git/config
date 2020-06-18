@@ -9,7 +9,9 @@
 [mergetool]
 	keepBackup = false
 [alias]
-	ffmerge = merge --ff-only
+	ffomerge = merge --ff-only
+	nffmerge = merge --no-ff
+	tmerge = merge --no-commit --no-ff
 	lastcommit = for-each-ref --sort='-authordate' --format='%(color:blue)%(authordate:relative)%09%(color:green)%(authorname)%09%(color:yellow)%(objectname:short)%09%(color:red)%(refname:short)' refs/
 	logd = log --pretty=format:'%s%n%>(14)%C(auto)%h - %C(bold black)%aD%Creset %C(blue)(%ar)%Creset %C(magenta)%an%Creset%C(auto)%d'
 	logg = log --graph
@@ -18,4 +20,3 @@
 	loggo = log --graph --oneline
 	loggoa = log --graph --oneline --all
 	st = status --short
-	tmerge = merge --no-commit --no-ff
