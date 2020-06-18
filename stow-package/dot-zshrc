@@ -45,6 +45,20 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+# Configure zsh completion (see `man zshcompsys`)
+# 1. Normal completion
+# 2. Lowercase characters match uppercase characters
+# 3. Matches subwords at boundaries
+# 4. Substring completion
+zstyle ':completion:*' matcher-list \
+  '' \
+  'm:{[:lower:]}={[:upper:]}' \
+  '+r:|[.,_-/]=* r:|=*' \
+  'l:|=* r:|=*'
+
+# Use menu selection for completion lists
+zstyle ':completion:*' menu select
+
 # Set up ZINIT array parameters
 typeset -A ZINIT
 # Where Zinit code resides
@@ -99,6 +113,13 @@ bindkey '^ ' autosuggest-accept
 # History substring search config
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# # Bind <shift-tab> to go **backwards** in selection list
+zmodload zsh/complist
+bindkey -M menuselect '^\[[Z' reverse-menu-complete
+
+# Define word jump behaviour
+export WORDCHARS=''
 
 # Defining go paths
 export GOPATH="$HOME/go"
