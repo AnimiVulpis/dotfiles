@@ -72,6 +72,10 @@ ZINIT[OPTIMIZE_OUT_DISK_ACCESSES]=1
 
 source $ZINIT[BIN_DIR]/zinit.zsh
 
+# Setup fasd
+zinit light-mode is-snippet for \
+  ~/dotfiles/fasd-init-cache.zsh
+
 zinit light-mode for \
   atload"source ~/.p10k.zsh; _p9k_precmd" nocd \
   romkatv/powerlevel10k
@@ -143,9 +147,6 @@ alias et="exa -T"
 export EDITOR="nvim"
 export VISUAL="code -w"
 export LESS="-x4 -Ri"
-
-# fasd initialization
-eval "$(fasd --init auto)"
 
 # nvm initialization
 export NVM_DIR="$XDG_CONFIG_HOME/nvm"
