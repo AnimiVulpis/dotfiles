@@ -89,6 +89,9 @@ zinit wait lucid light-mode for \
   zlsun/solarized-man
 
 zinit wait lucid light-mode for \
+  hcgraf/zsh-sudo
+
+zinit wait lucid light-mode for \
   andrewferrier/fzf-z
 
 zinit wait lucid light-mode for \
@@ -100,9 +103,6 @@ zinit wait lucid light-mode for \
 
 zinit wait lucid light-mode blockf for \
   zsh-users/zsh-completions
-
-zinit wait lucid light-mode for \
-  hcgraf/zsh-sudo
 
 zinit wait lucid light-mode for \
   zdharma/history-search-multi-word
