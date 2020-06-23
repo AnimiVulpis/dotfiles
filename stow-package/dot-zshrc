@@ -59,6 +59,11 @@ zstyle ':completion:*' matcher-list \
 # Use menu selection for completion lists
 zstyle ':completion:*' menu select
 
+# Set up NVM directory
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+# Same effect as `"$NVM_DIR/nvm.sh" --no-use` but for `zsh-nvm`
+export NVM_NO_USE=true
+
 # Set up ZINIT array parameters
 typeset -A ZINIT
 # Where Zinit code resides
@@ -75,6 +80,9 @@ source $ZINIT[BIN_DIR]/zinit.zsh
 # Setup fasd
 zinit light-mode is-snippet for \
   ~/dotfiles/fasd-init-cache.zsh
+
+zinit light-mode for \
+  lukechilds/zsh-nvm
 
 zinit light-mode for \
   atload"source ~/.p10k.zsh; _p9k_precmd" nocd \
@@ -147,10 +155,6 @@ alias et="exa -T"
 export EDITOR="nvim"
 export VISUAL="code -w"
 export LESS="-x4 -Ri"
-
-# nvm initialization
-export NVM_DIR="$XDG_CONFIG_HOME/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 
 # broot initialization
 source /home/animi_vulpis/.config/broot/launcher/bash/br
