@@ -195,7 +195,7 @@ schemes:
       cyan:    '#29706a' # my dim cyan
       white:   '#fde8af' # my dim white
     normal:
-      black:   '#002b36' # base03
+      black:   '#3e575e' # bright_background
       red:     '#dc322f' # red
       green:   '#859900' # green
       yellow:  '#b58900' # yellow
