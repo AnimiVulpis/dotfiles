@@ -131,7 +131,7 @@ zmodload zsh/complist
 bindkey -M menuselect '^\[[Z' reverse-menu-complete
 
 # Define word jump behaviour
-export WORDCHARS=''
+export WORDCHARS='-'
 
 # Defining go paths
 export GOPATH="$HOME/go"
