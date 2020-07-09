@@ -1,10 +1,13 @@
 {
+    "auto-close-tag.enableAutoCloseTag": false,
+    "auto-close-tag.SublimeText3Mode": true,
     "bookmarks.showCommandsInContextMenu": false,
     "bookmarks.useWorkaroundForFormatters": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "color-highlight.markerType": "underline",
     "color-highlight.markRuler": false,
+    "cSpell.language": "en,de",
     "debug.inlineValues": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.cursorBlinking": "solid",
@@ -110,6 +113,7 @@
     "workbench.tree.indent": 10,
     "workbench.tree.renderIndentGuides": "always",
     "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
+    "yaml.schemaStore.enable": false,
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
     "todohighlight.include": [
