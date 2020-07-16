@@ -555,3 +555,8 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+awful.spawn.single_instance("nm-applet")
+awful.spawn.single_instance("light-locker --lock-after-screensaver=5")
+awful.spawn.single_instance("udiskie --no-automount --tray")
+awful.spawn.single_instance("/usr/lib/polkit-kde-authentication-agent-1")
