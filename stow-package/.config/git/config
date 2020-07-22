@@ -18,5 +18,6 @@
 	logga = log --graph --all
 	loggd = log --graph --pretty=format:'%C(auto)%h - %C(bold black)%aD%Creset %C(blue)(%ar)%Creset - %C(magenta)%an%Creset%C(auto)%d%n%s'
 	loggo = log --graph --oneline
+	logo = log --oneline
 	loggoa = log --graph --oneline --all
 	st = status --short
