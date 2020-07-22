@@ -84,6 +84,7 @@
     "telemetry.enableTelemetry": false,
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.scrollback": 42000,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "typescript.disableAutomaticTypeAcquisition": true,
     "vsintellicode.java.completionsEnabled": false,
     "vsintellicode.python.completionsEnabled": false,
