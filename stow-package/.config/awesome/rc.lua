@@ -558,6 +558,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.spawn.single_instance("light-locker --lock-after-screensaver=5")
 awful.spawn.single_instance("/usr/lib/polkit-kde-authentication-agent-1")
-awful.spawn.single_instance("redshift")
+awful.spawn.single_instance("redshift-gtk")
 awful.spawn.single_instance("udiskie --no-automount --tray")
 awful.spawn.single_instance("nm-applet")
