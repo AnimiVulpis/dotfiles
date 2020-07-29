@@ -83,6 +83,15 @@
     "gitlens.views.repositories.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
     "html.format.endWithNewline": true,
+    "indentRainbow.colors": [
+        "#39558c40",
+        "#25838e40",
+        "#29af7f40",
+        "#84d44b40",
+        "#fde72540"
+    ],
+    "indentRainbow.errorColor": "#dc322f60",
+    "indentRainbow.tabmixColor": "#e75d2360",
     "json.schemaDownload.enable": false,
     "liveshare.allowGuestDebugControl": true,
     "liveshare.allowGuestTaskControl": true,
