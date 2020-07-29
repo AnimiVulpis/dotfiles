@@ -1,13 +1,31 @@
 {
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "alexLinter.check.enabled": true,
-    "auto-close-tag.enableAutoCloseTag": false,
     "auto-close-tag.SublimeText3Mode": true,
+    "auto-close-tag.enableAutoCloseTag": false,
     "bookmarks.showCommandsInContextMenu": false,
     "bookmarks.useWorkaroundForFormatters": true,
-    "color-highlight.markerType": "dot-after",
-    "color-highlight.markRuler": false,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
+    "cSpell.userWords": [
+        "animi",
+        "esbenp",
+        "fluentui",
+        "luma",
+        "msrvida",
+        "work",
+        "theia"
+    ],
+    "color-highlight.markRuler": false,
+    "color-highlight.markerType": "dot-after",
     "debug.inlineValues": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.accessibilitySupport": "off",
@@ -32,6 +50,23 @@
     "files.enableTrash": false,
     "files.hotExit": "off",
     "gitlens.advanced.telemetry.enabled": false,
+    "gitlens.autolinks": [
+        {
+            "ignoreCase": true,
+            "prefix": "CJM-",
+            "url": "https://jira.work.com/browse/CJM-<num>"
+        },
+        {
+            "ignoreCase": true,
+            "prefix": "DES-",
+            "url": "https://jira.work.com/browse/DES-<num>"
+        },
+        {
+            "ignoreCase": true,
+            "prefix": "SPM-",
+            "url": "https://jira.work.com/browse/SPM-<num>"
+        }
+    ],
     "gitlens.blame.dateFormat": "YYYY-MM-DDTHH:mmZ",
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
@@ -85,28 +120,5 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.openDefaultKeybindings": true,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-    "workbench.tree.renderIndentGuides": "always",
-    "gitlens.autolinks": [
-        {"prefix": "CJM-", "url": "https://jira.work.com/browse/CJM-<num>", "ignoreCase": true},
-        {"prefix": "DES-", "url": "https://jira.work.com/browse/DES-<num>", "ignoreCase": true},
-        {"prefix": "SPM-", "url": "https://jira.work.com/browse/SPM-<num>", "ignoreCase": true}
-    ],
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "cSpell.userWords": [
-        "animi",
-        "esbenp",
-        "fluentui",
-        "luma",
-        "msrvida",
-        "work",
-        "theia"
-    ],
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "workbench.tree.renderIndentGuides": "always"
 }

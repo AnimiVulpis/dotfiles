@@ -1,13 +1,46 @@
 {
-    "auto-close-tag.enableAutoCloseTag": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "auto-close-tag.SublimeText3Mode": true,
+    "auto-close-tag.enableAutoCloseTag": false,
     "bookmarks.showCommandsInContextMenu": false,
     "bookmarks.useWorkaroundForFormatters": true,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
-    "color-highlight.markerType": "underline",
-    "color-highlight.markRuler": false,
     "cSpell.language": "en,de",
+    "cSpell.userWords": [
+        "animi",
+        "animi vulpis",
+        "callhierarchy",
+        "fluentui",
+        "luma",
+        "msrvida",
+        "sanddance",
+        "work",
+        "theia",
+        "vulpis"
+    ],
+    "color-highlight.markRuler": false,
+    "color-highlight.markerType": "underline",
     "debug.inlineValues": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.cursorBlinking": "solid",
@@ -22,7 +55,10 @@
     "editor.renderLineHighlight": "all",
     "editor.renderWhitespace": "boundary",
     "editor.roundedSelection": false,
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.stablePeek": true,
     "editor.suggest.localityBonus": true,
     "editor.suggestSelection": "first",
@@ -37,7 +73,6 @@
     "gitlens.hovers.annotations.over": "annotation",
     "gitlens.hovers.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
-    "gitlens.statusBar.enabled": false,
     "gitlens.menus": {
         "editor": false,
         "editorGroup": {
@@ -64,8 +99,7 @@
             "stash": true
         }
     },
-    "indentRainbow.errorColor": "#dc322f33",
-    "indentRainbow.tabmixColor": "#e75d2333",
+    "gitlens.statusBar.enabled": false,
     "indentRainbow.colors": [
         "#39558c40",
         "#25838e40",
@@ -73,6 +107,8 @@
         "#84d44b40",
         "#fde72540"
     ],
+    "indentRainbow.errorColor": "#dc322f33",
+    "indentRainbow.tabmixColor": "#e75d2333",
     "liveshare.showInStatusBar": "whileCollaborating",
     "npm.fetchOnlinePackageInfo": false,
     "prettier.packageManager": "yarn",
@@ -85,6 +121,24 @@
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.scrollback": 42000,
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.md"
+    ],
+    "todohighlight.keywords": [
+        {
+            "backgroundColor": "#4caf50",
+            "color": "#ffffff",
+            "text": "DONE:"
+        }
+    ],
     "typescript.disableAutomaticTypeAcquisition": true,
     "vsintellicode.java.completionsEnabled": false,
     "vsintellicode.python.completionsEnabled": false,
@@ -116,56 +170,5 @@
     "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
     "yaml.schemaStore.enable": false,
     "zenMode.fullScreen": false,
-    "zenMode.hideLineNumbers": false,
-    "todohighlight.include": [
-        "**/*.js",
-        "**/*.jsx",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.html",
-        "**/*.php",
-        "**/*.css",
-        "**/*.scss",
-        "**/*.md"
-    ],
-    "todohighlight.keywords": [
-        {
-            "text": "DONE:",
-            "color": "#ffffff",
-            "backgroundColor": "#4caf50",
-        }
-    ],
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "cSpell.userWords": [
-        "animi",
-        "animi vulpis",
-        "callhierarchy",
-        "fluentui",
-        "luma",
-        "msrvida",
-        "sanddance",
-        "work",
-        "theia",
-        "vulpis"
-    ],
+    "zenMode.hideLineNumbers": false
 }
