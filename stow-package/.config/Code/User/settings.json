@@ -16,6 +16,7 @@
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
+        "alacritty",
         "animi",
         "esbenp",
         "fluentui",
@@ -24,7 +25,8 @@
         "msrvida",
         "rgba",
         "work",
-        "theia"
+        "theia",
+        "todohighlight"
     ],
     "color-highlight.markRuler": false,
     "color-highlight.markerType": "dot-after",
