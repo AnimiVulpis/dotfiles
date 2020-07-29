@@ -13,6 +13,9 @@
     "auto-close-tag.enableAutoCloseTag": false,
     "bookmarks.showCommandsInContextMenu": false,
     "bookmarks.useWorkaroundForFormatters": true,
+    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
