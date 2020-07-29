@@ -116,6 +116,24 @@
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.confirmOnExit": true,
     "terminal.integrated.scrollback": 4200,
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.md"
+    ],
+    "todohighlight.keywords": [
+        {
+            "backgroundColor": "#4caf50",
+            "color": "#ffffff",
+            "text": "DONE:"
+        }
+    ],
     "typescript.disableAutomaticTypeAcquisition": true,
     "update.mode": "start",
     "vulnCost.sendStatistics": false,
