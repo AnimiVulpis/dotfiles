@@ -29,7 +29,8 @@
         "rgba",
         "signavio",
         "theia",
-        "todohighlight"
+        "todohighlight",
+        "viridis"
     ],
     "color-highlight.markRuler": false,
     "color-highlight.markerType": "dot-after",
