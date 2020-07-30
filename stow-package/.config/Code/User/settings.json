@@ -49,7 +49,6 @@
     "editor.suggest.statusBar.visible": true,
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "eslint.codeActionsOnSave.mode": "problems",
-    "explorer.autoReveal": "focusNoScroll",
     "explorer.incrementalNaming": "smart",
     "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": false,
