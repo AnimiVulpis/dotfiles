@@ -13,6 +13,12 @@
     "auto-close-tag.enableAutoCloseTag": false,
     "bookmarks.showCommandsInContextMenu": false,
     "bookmarks.useWorkaroundForFormatters": true,
+    "bracket-pair-colorizer-2.colors": [
+        "#b12a90",
+        "#e16462",
+        "#fca636",
+        "#f0f921"
+    ],
     "bracket-pair-colorizer-2.forceIterationColorCycle": true,
     "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
@@ -89,11 +95,10 @@
     "gitlens.views.search.location": "gitlens",
     "html.format.endWithNewline": true,
     "indentRainbow.colors": [
-        "#39558c40",
-        "#25838e40",
-        "#29af7f40",
-        "#84d44b40",
-        "#fde72540"
+        "#b12a9040",
+        "#e1646240",
+        "#fca63640",
+        "#f0f92140"
     ],
     "indentRainbow.errorColor": "#dc322f60",
     "indentRainbow.tabmixColor": "#e75d2360",
