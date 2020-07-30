@@ -142,6 +142,7 @@
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "folders",
     "window.title": "${rootName}${separator}${activeEditorShort}${dirty}",
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Dark",
     "workbench.commandPalette.preserveInput": true,
     "workbench.editor.enablePreview": false,
