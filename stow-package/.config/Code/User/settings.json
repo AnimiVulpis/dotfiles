@@ -2,10 +2,16 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "alexLinter.check.enabled": true,
@@ -84,12 +90,32 @@
         }
     ],
     "gitlens.blame.dateFormat": "YYYY-MM-DDTHH:mmZ",
-    "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.defaultDateFormat": "YYYY-MM-DDTHH:mmZ",
     "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
     "gitlens.hovers.annotations.over": "annotation",
     "gitlens.liveshare.allowGuestAccess": false,
+    "gitlens.mode.active": "zen",
+    "gitlens.modes": {
+        "review": {
+            "codeLens": true,
+            "currentLine": true,
+            "description": "for reviewing code, enables many visual features",
+            "hovers": true,
+            "name": "Review",
+            "statusBar": false,
+            "statusBarItemName": "Review"
+        },
+        "zen": {
+            "codeLens": false,
+            "currentLine": false,
+            "description": "for a zen-like experience, disables many visual features",
+            "hovers": false,
+            "name": "Zen",
+            "statusBar": false,
+            "statusBarItemName": "Zen"
+        }
+    },
     "gitlens.statusBar.enabled": false,
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.fileHistory.location": "gitlens",
