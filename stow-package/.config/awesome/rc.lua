@@ -556,9 +556,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn.single_instance("light-locker --lock-after-screensaver=5")
-awful.spawn.single_instance("/usr/lib/polkit-kde-authentication-agent-1")
-awful.spawn.single_instance("redshift-gtk")
-awful.spawn.single_instance("udiskie --no-automount --tray")
-awful.spawn.single_instance("nm-applet")
-awful.spawn.single_instance("kupfer --no-splash")
+awful.spawn.once("light-locker --lock-after-screensaver=5")
+awful.spawn.once("/usr/lib/polkit-kde-authentication-agent-1")
+awful.spawn.once("redshift-gtk")
+awful.spawn.once("udiskie --no-automount --tray")
+awful.spawn.once("nm-applet")
+awful.spawn.once("kupfer --no-splash")
