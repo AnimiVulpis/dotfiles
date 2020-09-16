@@ -62,7 +62,7 @@
     "editor.fontLigatures": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
-    "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "trailing",
     "editor.roundedSelection": false,
     "editor.showFoldingControls": "always",
     "editor.suggest.localityBonus": true,
@@ -75,6 +75,8 @@
     "extensions.showRecommendationsOnlyOnDemand": true,
     "files.enableTrash": false,
     "files.hotExit": "off",
+    "git.enableStatusBarSync": false,
+    "git.suggestSmartCommit": false,
     "gitlens.advanced.telemetry.enabled": false,
     "gitlens.autolinks": [
         {
