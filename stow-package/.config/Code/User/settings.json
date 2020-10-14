@@ -48,7 +48,6 @@
         "work",
         "theia",
         "tmux",
-        "todohighlight",
         "viridis"
     ],
     "color-highlight.markRuler": false,
@@ -159,24 +158,8 @@
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.confirmOnExit": true,
     "terminal.integrated.scrollback": 4200,
-    "todohighlight.include": [
-        "**/*.js",
-        "**/*.jsx",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.html",
-        "**/*.php",
-        "**/*.css",
-        "**/*.scss",
-        "**/*.md"
-    ],
-    "todohighlight.keywords": [
-        {
-            "backgroundColor": "#4caf50",
-            "color": "#ffffff",
-            "text": "DONE:"
-        }
-    ],
+    "todo-tree.filtering.useBuiltInExcludes": "search excludes",
+    "todo-tree.tree.showScanModeButton": true,
     "typescript.disableAutomaticTypeAcquisition": true,
     "update.mode": "start",
     "vulnCost.sendStatistics": false,
