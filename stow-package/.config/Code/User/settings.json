@@ -136,6 +136,7 @@
     ],
     "indentRainbow.errorColor": "#dc322f60",
     "indentRainbow.tabmixColor": "#e75d2360",
+    "jest.autoEnable": false,
     "json.schemaDownload.enable": false,
     "liveshare.allowGuestDebugControl": true,
     "liveshare.allowGuestTaskControl": true,
