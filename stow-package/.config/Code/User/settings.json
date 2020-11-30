@@ -1,4 +1,7 @@
 {
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -28,7 +31,6 @@
         "#fca636",
         "#f0f921"
     ],
-    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
     "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "cSpell.allowCompoundWords": true,
@@ -59,6 +61,7 @@
     "editor.cursorSurroundingLines": 2,
     "editor.fontFamily": "'iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
+    "editor.fontSize": 15,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "trailing",
@@ -68,6 +71,7 @@
     "editor.suggest.statusBar.visible": true,
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "eslint.codeActionsOnSave.mode": "problems",
+    "eslint.packageManager": "yarn",
     "explorer.incrementalNaming": "smart",
     "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": false,
