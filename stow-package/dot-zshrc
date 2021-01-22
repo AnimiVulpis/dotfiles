@@ -8,8 +8,8 @@ fi
 
 # Set up history and zsh options
 HISTFILE=$XDG_DATA_HOME/zsh/histfile
-HISTSIZE=63000
-SAVEHIST=42000
+HISTSIZE=512000
+SAVEHIST=256000
 bindkey -e
 setopt APPEND_HISTORY
 # History with timestamps and elapsed time
@@ -93,45 +93,41 @@ zinit light-mode atclone"dircolors -b LS_COLORS > lscolors.zsh" \
   atload'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"' for \
   trapd00r/LS_COLORS
 
-zinit wait lucid light-mode for \
+zinit wait lucid for \
   zlsun/solarized-man
 
-zinit wait lucid light-mode for \
+zinit wait lucid for \
   hcgraf/zsh-sudo
 
-zinit wait lucid light-mode for \
+zinit wait lucid for \
   andrewferrier/fzf-z
 
-zinit wait lucid light-mode for \
-  atload"_zsh_autosuggest_start" \
-  zsh-users/zsh-autosuggestions
-
-zinit wait lucid light-mode for \
+# History substring search config
+zinit wait lucid for \
   zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
-zinit wait lucid light-mode blockf for \
-  zsh-users/zsh-completions
-
-zinit wait lucid light-mode for \
-  zdharma/history-search-multi-word
-
-zinit wait lucid light-mode for \
+zinit wait lucid for \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-  zdharma/fast-syntax-highlighting
+    zdharma/fast-syntax-highlighting \
+  atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+  blockf atpull"zinit creinstall -q ." \
+    zsh-users/zsh-completions
+
+zinit wait lucid for \
+  zdharma/history-search-multi-word
 
 # Set key-binding https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 bindkey '^ ' autosuggest-accept
-
-# History substring search config
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # # Bind <shift-tab> to go **backwards** in selection list
 zmodload zsh/complist
 bindkey -M menuselect '^\[[Z' reverse-menu-complete
 
 # Define word jump behaviour
-export WORDCHARS='-'
+export WORDCHARS=''
 
 # Defining go paths
 export GOPATH="$HOME/go"
@@ -152,6 +148,7 @@ alias eh="exa -la --time-style=long-iso"
 alias et="exa -T"
 
 # More environment variables
+export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
 export VISUAL="code -w"
 export LESS="-x4 -Ri"
