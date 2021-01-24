@@ -319,7 +319,7 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
     
     -- Lock
-    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("light-locker-command -l") end)
+    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("xset s activate") end)
 )
 
 clientkeys = gears.table.join(
@@ -556,8 +556,12 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn.once("light-locker --lock-after-screensaver=5")
-awful.spawn.once("/usr/lib/polkit-kde-authentication-agent-1")
+-- AnimiVulpis
+local lock_command = "env XSECURELOCK_AUTH_TIMEOUT=60 XSECURELOCK_BLANK_TIMEOUT=120 XSECURELOCK_BLANK_DPMS_STATE=standby XSECURELOCK_BURNIN_MITIGATION=500 XSECURELOCK_PASSWORD_PROMPT=cursor XSECURELOCK_SAVER=saver_blank xsecurelock"
+
+awful.spawn.once("xset s 450 5")
+awful.spawn.once("xss-lock -n /usr/lib/xsecurelock/dimmer -l -- " .. lock_command)
+awful.spawn.once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 awful.spawn.once("redshift-gtk")
 awful.spawn.once("udiskie --no-automount --tray")
 awful.spawn.once("nm-applet")
