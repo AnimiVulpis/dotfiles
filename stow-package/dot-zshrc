@@ -45,6 +45,15 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+# Configure fzf-z to use `fasd` instead of `z`
+FZFZ_RECENT_DIRS_TOOL=fasd
+# Configure fzf-z to use `exa -T` instead of the default `tree`
+FZFZ_PREVIEW_COMMAND="exa -T {}"
+# Configure fzf-z to not deduplicate directory entries
+FZFZ_UNIQUIFIER="cat"
+# Configure some fzf-z custom directories
+FZFZ_EXTRA_DIRS="~/desktop ~/dev ~/documents ~/downloads ~/pictures ~/sounds ~/videos"
+
 # Configure zsh completion (see `man zshcompsys`)
 # 1. Normal completion
 # 2. Lowercase characters match uppercase characters
@@ -77,47 +86,35 @@ ZINIT[OPTIMIZE_OUT_DISK_ACCESSES]=1
 
 source $ZINIT[BIN_DIR]/zinit.zsh
 
-# Setup fasd
-zinit light-mode is-snippet for \
-  ~/dotfiles/fasd-init-cache.zsh
-
+# Setup zsh plugins
 zinit light-mode for \
-  lukechilds/zsh-nvm
-
-zinit light-mode for \
-  atload"source ~/.p10k.zsh; _p9k_precmd" nocd \
-  romkatv/powerlevel10k
-
-zinit light-mode atclone"dircolors -b LS_COLORS > lscolors.zsh" \
+  is-snippet \
+    ~/dotfiles/fasd-init-cache.zsh \
+  lukechilds/zsh-nvm \
+  atload"source ~/.p10k.zsh" nocd \
+    romkatv/powerlevel10k \
+  atclone"dircolors -b LS_COLORS > lscolors.zsh" \
   atpull"%atclone" pick"lscolors.zsh" nocompile"!" \
-  atload'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"' for \
-  trapd00r/LS_COLORS
+  atload'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"' \
+    trapd00r/LS_COLORS
 
 zinit wait lucid for \
-  zlsun/solarized-man
-
-zinit wait lucid for \
-  hcgraf/zsh-sudo
-
-zinit wait lucid for \
-  andrewferrier/fzf-z
-
-# History substring search config
-zinit wait lucid for \
-  zsh-users/zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-zinit wait lucid for \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-    zdharma/fast-syntax-highlighting \
+  zsh-users/zsh-history-substring-search \
+  hcgraf/zsh-sudo \
+  zdharma/history-search-multi-word \
+  andrewferrier/fzf-z \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit" \
   atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions \
+  atinit"zicdreplay" \
+    zdharma/fast-syntax-highlighting \
+  zlsun/solarized-man \
   blockf atpull"zinit creinstall -q ." \
     zsh-users/zsh-completions
 
-zinit wait lucid for \
-  zdharma/history-search-multi-word
+# History substring search config
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Set key-binding https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 bindkey '^ ' autosuggest-accept
@@ -154,4 +151,4 @@ export VISUAL="code -w"
 export LESS="-x4 -Ri"
 
 # broot initialization
-source /home/animi_vulpis/.config/broot/launcher/bash/br
+source /home/animi_vulpis/.config/broot/launcher/zsh/br
