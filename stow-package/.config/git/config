@@ -8,8 +8,20 @@
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only
+[delta]
+	features = decorations
+	syntax-theme = Solarized (dark)
+	plus-style = syntax "#003f00"
+	minus-style = syntax "#4f0001"
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	hunk-header-decoration-style = cyan box ul
 [mergetool]
 	keepBackup = false
+[diff]
+	colorMoved = default
 [alias]
 	diffs = diff --staged
 	ffomerge = merge --ff-only
