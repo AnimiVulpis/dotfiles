@@ -40,6 +40,32 @@ setopt INTERACTIVE_COMMENTS
 # Don't push the same directory consecutively
 setopt PUSHD_IGNORE_DUPS
 
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _list _expand _complete _ignored _match _prefix
+zstyle ':completion:*' completions 1
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' glob 1
+zstyle ':completion:*' ignore-parents parent pwd .. directory
+zstyle ':completion:*' insert-unambiguous false
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-prompt %SAt %p (of %l): Hit TAB for more, or type%s
+zstyle ':completion:*' list-suffixes true
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-/]=** r:|=**' '+m:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' match-original both
+zstyle ':completion:*' max-errors 2
+zstyle ':completion:*' menu select=7
+zstyle ':completion:*' original false
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' select-prompt %SAt %l (%p)%s
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' use-compctl true
+zstyle :compinstall filename '/home/animi_vulpis/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
 # Set max buffer size zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
@@ -53,20 +79,6 @@ FZFZ_PREVIEW_COMMAND="exa -T {}"
 FZFZ_UNIQUIFIER="cat"
 # Configure some fzf-z custom directories
 FZFZ_EXTRA_DIRS="~/desktop ~/dev ~/documents ~/downloads ~/pictures ~/sounds ~/videos"
-
-# Configure zsh completion (see `man zshcompsys`)
-# 1. Normal completion
-# 2. Lowercase characters match uppercase characters
-# 3. Matches subwords at boundaries
-# 4. Substring completion
-zstyle ':completion:*' matcher-list \
-  '' \
-  'm:{[:lower:]}={[:upper:]}' \
-  '+r:|[.,_-/]=* r:|=*' \
-  'l:|=* r:|=*'
-
-# Use menu selection for completion lists
-zstyle ':completion:*' menu select
 
 # Set up NVM directory
 export NVM_DIR="$XDG_CONFIG_HOME/nvm"
