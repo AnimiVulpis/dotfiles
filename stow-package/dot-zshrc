@@ -40,32 +40,6 @@ setopt INTERACTIVE_COMMENTS
 # Don't push the same directory consecutively
 setopt PUSHD_IGNORE_DUPS
 
-# The following lines were added by compinstall
-
-zstyle ':completion:*' completer _list _expand _complete _ignored _match _prefix
-zstyle ':completion:*' completions 1
-zstyle ':completion:*' expand prefix suffix
-zstyle ':completion:*' glob 1
-zstyle ':completion:*' ignore-parents parent pwd .. directory
-zstyle ':completion:*' insert-unambiguous false
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-prompt %SAt %p (of %l): Hit TAB for more, or type%s
-zstyle ':completion:*' list-suffixes true
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-/]=** r:|=**' '+m:{[:lower:]}={[:upper:]}'
-zstyle ':completion:*' match-original both
-zstyle ':completion:*' max-errors 2
-zstyle ':completion:*' menu select=7
-zstyle ':completion:*' original false
-zstyle ':completion:*' preserve-prefix '//[^/]##/'
-zstyle ':completion:*' select-prompt %SAt %l (%p)%s
-zstyle ':completion:*' substitute 1
-zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '/home/animi_vulpis/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
 # Set max buffer size zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
@@ -124,16 +98,50 @@ zinit wait lucid for \
   blockf atpull"zinit creinstall -q ." \
     zsh-users/zsh-completions
 
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _list _expand _complete _ignored _match _approximate _prefix
+zstyle ':completion:*' completions 1
+zstyle ':completion:*' condition 7
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' glob 1
+zstyle ':completion:*' ignore-parents parent pwd .. directory
+zstyle ':completion:*' insert-unambiguous false
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-prompt '%SAt %p (of %l): Hit TAB for more, or type%s'
+zstyle ':completion:*' list-suffixes true
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-/]=** r:|=**' '+m:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' match-original both
+zstyle ':completion:*' max-errors 2
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' original false
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' select-prompt '%SAt %l (%p)%s'
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' use-compctl true
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '/home/animi_vulpis/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+## AnimiVulpis: Use CTRL+(hjkl) besides cursor keys in menu completion
+zmodload zsh/complist
+bindkey -M menuselect '^h' vi-backward-char        # left
+bindkey -M menuselect '^k' vi-up-line-or-history   # up
+bindkey -M menuselect '^l' vi-forward-char         # right
+bindkey -M menuselect '^j' vi-down-line-or-history # bottom
+# # Bind <shift-tab> to go **backwards** in selection list
+bindkey -M menuselect '^\[[Z' reverse-menu-complete
+
 # History substring search config
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Set key-binding https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 bindkey '^ ' autosuggest-accept
-
-# # Bind <shift-tab> to go **backwards** in selection list
-zmodload zsh/complist
-bindkey -M menuselect '^\[[Z' reverse-menu-complete
 
 # Define word jump behaviour
 export WORDCHARS=''
