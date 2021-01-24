@@ -89,7 +89,7 @@ source $ZINIT[BIN_DIR]/zinit.zsh
 # Setup zsh plugins
 zinit light-mode for \
   is-snippet \
-    ~/dotfiles/fasd-init-cache.zsh \
+    ~/dotfiles/scripts/fasd-init-cache.zsh \
   lukechilds/zsh-nvm \
   atload"source ~/.p10k.zsh" nocd \
     romkatv/powerlevel10k \
