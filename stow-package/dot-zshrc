@@ -81,7 +81,6 @@ zinit light-mode for \
     romkatv/powerlevel10k \
   atclone"dircolors -b LS_COLORS > lscolors.zsh" \
   atpull"%atclone" pick"lscolors.zsh" nocompile"!" \
-  atload'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"' \
     trapd00r/LS_COLORS
 
 zinit wait lucid for \
