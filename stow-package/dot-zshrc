@@ -94,8 +94,10 @@ zinit wait lucid for \
   atinit"zicdreplay" \
     zdharma/fast-syntax-highlighting \
     zlsun/solarized-man \
-  blockf atpull"zinit creinstall -q ." \
-    zsh-users/zsh-completions
+  id-as=site-functions as=completion \
+  atclone="zinit creinstall -q /usr/share/zsh/site-functions" \
+  atpull="%atclone" run-atpull \
+    zdharma/null
 
 # The following lines were added by compinstall
 
