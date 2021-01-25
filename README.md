@@ -35,6 +35,8 @@ To link the files in the `stow-package` folder using the `stow` command:
 
     $ cd dotfiles
     ~/dotfiles
+    $ # To check what would happen use simulate
+    $ stow -v --dotfiles --simulate stow-package
     $ # To save use
     $ stow --dotfiles --stow stow-package
     $ # or the short(er)
