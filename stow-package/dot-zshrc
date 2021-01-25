@@ -97,7 +97,9 @@ zinit wait lucid for \
   id-as=site-functions as=completion \
   atclone="zinit creinstall -q /usr/share/zsh/site-functions" \
   atpull="%atclone" run-atpull \
-    zdharma/null
+    zdharma/null \
+  blockf atpull"zinit creinstall -q ." \
+    zsh-users/zsh-completions
 
 # The following lines were added by compinstall
 
