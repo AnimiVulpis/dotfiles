@@ -76,7 +76,7 @@ source $ZINIT[BIN_DIR]/zinit.zsh
 zinit light-mode for \
   is-snippet \
     ~/dotfiles/scripts/fasd-init-cache.zsh \
-  lukechilds/zsh-nvm \
+    lukechilds/zsh-nvm \
   atload"source ~/.p10k.zsh" nocd \
     romkatv/powerlevel10k \
   atclone"dircolors -b LS_COLORS > lscolors.zsh" \
@@ -84,16 +84,16 @@ zinit light-mode for \
     trapd00r/LS_COLORS
 
 zinit wait lucid for \
-  zsh-users/zsh-history-substring-search \
-  hcgraf/zsh-sudo \
-  zdharma/history-search-multi-word \
-  andrewferrier/fzf-z \
+    zsh-users/zsh-history-substring-search \
+    hcgraf/zsh-sudo \
+    zdharma/history-search-multi-word \
+    andrewferrier/fzf-z \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit" \
   atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions \
   atinit"zicdreplay" \
     zdharma/fast-syntax-highlighting \
-  zlsun/solarized-man \
+    zlsun/solarized-man \
   blockf atpull"zinit creinstall -q ." \
     zsh-users/zsh-completions
 
