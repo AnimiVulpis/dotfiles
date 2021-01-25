@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Check if first arugment is a valid directory
+# Check if first argument is a valid directory
 if [ ! -d "$1" ]; then
   echo "$1 is not valid directory"
   exit 0
