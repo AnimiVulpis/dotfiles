@@ -6,6 +6,10 @@ if [[ ! -v XDG_CONFIG_HOME || ! -v XDG_DATA_HOME || ! -v XDG_CACHE_HOME ]]; then
   return 1
 fi
 
+# AnimiVulpis: Remove `/usr(/local)/share/...` from default `fpath`
+# This way `zinit` can handle all completions
+fpath=( ${fpath[@]:#/usr/*share/zsh/site-functions} )
+
 # Set up history and zsh options
 HISTFILE=$XDG_DATA_HOME/zsh/histfile
 HISTSIZE=512000
