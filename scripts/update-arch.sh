@@ -1,5 +1,5 @@
 #!/bin/zsh
-sudo pacman -Syu
+sudo pacman --color always -Syu
 sudo snap refresh
 flatpak update
 ~/dotfiles/scripts/repository-updates.sh ~/aur-and-external/
