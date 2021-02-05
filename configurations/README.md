@@ -50,3 +50,9 @@ ExecStart=/usr/lib/fwupd/fwupd -v
 * `XSECURELOCK_SAVER=saver_blank` explicitely set the default screen saver module
 * `XSECURELOCK_SHOW_DATETIME=1` show datetime
 * `XSECURELOCK_SHOW_HOSTNAME=1` show host
+
+# Problems with cabal (Haskell build tool)
+
+## Configure cabal for dynamic linking
+
+[Arch Wiki page](https://wiki.archlinux.org/index.php/haskell#Configuring_Cabal_for_dynamic_linking)
