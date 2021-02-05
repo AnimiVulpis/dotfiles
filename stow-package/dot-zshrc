@@ -157,8 +157,8 @@ export WORDCHARS=''
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-# PATH modification for cargo/go
-export PATH="$HOME/.cargo/bin:$GOBIN:$PATH"
+# PATH modification for cargo/go/cabal
+export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.cabal/bin:$PATH"
 
 # alias definitions
 alias vi="nvim"
