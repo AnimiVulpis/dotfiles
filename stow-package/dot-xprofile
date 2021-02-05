@@ -1,5 +1,7 @@
 #!/bin/bash
 
+/home/animi_vulpis/dotfiles/scripts/display-setup.sh
+
 /usr/lib/polkit-kde-authentication-agent-1 &
 redshift-gtk &
 udiskie --no-automount --tray &
