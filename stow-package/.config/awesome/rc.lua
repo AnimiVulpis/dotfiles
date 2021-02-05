@@ -535,7 +535,7 @@ XSECURELOCK_PASSWORD_PROMPT=cursor \
 XSECURELOCK_SAVER=saver_blank \
 XSECURELOCK_SHOW_DATETIME=1 \
 XSECURELOCK_SHOW_HOSTNAME=1 \
-xsecurelock"
+xsecurelock -- loginctl lock-session" -- lock session after screen locking
 
 awful.spawn.once("xset s on")
 awful.spawn.once("xset s 900 7")
