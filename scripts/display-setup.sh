@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -e
+#!/bin/sh
 
 # the script will not work if xrandr is not available
 if [ -z "$(which xrandr)" ]; then
