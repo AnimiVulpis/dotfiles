@@ -1,3 +1,7 @@
+# General information
+
+All files in the `etc/` folder belong into their respective paths under `/etc/`
+
 # systemd related
 
 ## fwupdmgr problems
