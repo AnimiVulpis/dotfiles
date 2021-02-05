@@ -1,0 +1,25 @@
+#!/bin/bash
+
+/usr/lib/polkit-kde-authentication-agent-1 &
+redshift-gtk &
+udiskie --no-automount --tray &
+nm-applet &
+
+xsecurelock_command="env \
+    XSECURELOCK_AUTH=auth_x11 \
+    XSECURELOCK_AUTHPROTO=authproto_pam \
+    XSECURELOCK_AUTH_TIMEOUT=60 \
+    XSECURELOCK_BLANK_TIMEOUT=10 \
+    XSECURELOCK_BLANK_DPMS_STATE=off \
+    XSECURELOCK_BURNIN_MITIGATION=500 \
+    XSECURELOCK_DATETIME_FORMAT='%Y-%m-%d %T' \
+    XSECURELOCK_FONT='Iosevka Medium Extended' \
+    XSECURELOCK_PASSWORD_PROMPT=cursor \
+    XSECURELOCK_SAVER=saver_blank \
+    XSECURELOCK_SHOW_DATETIME=1 \
+    XSECURELOCK_SHOW_HOSTNAME=1 \
+    xsecurelock"
+
+xset s on
+xset s 900 7
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- $xsecurelock_command

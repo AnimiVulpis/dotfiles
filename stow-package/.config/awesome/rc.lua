@@ -522,27 +522,3 @@ client.connect_signal("focus",
 client.connect_signal("unfocus",
                       function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
--- AnimiVulpis
-local lock_command = "env \
-    XSECURELOCK_AUTH=auth_x11 \
-    XSECURELOCK_AUTHPROTO=authproto_pam \
-    XSECURELOCK_AUTH_TIMEOUT=60 \
-    XSECURELOCK_BLANK_TIMEOUT=10 \
-    XSECURELOCK_BLANK_DPMS_STATE=off \
-    XSECURELOCK_BURNIN_MITIGATION=500 \
-    XSECURELOCK_DATETIME_FORMAT='%Y-%m-%d %T' \
-    XSECURELOCK_FONT='Iosevka Medium Extended' \
-    XSECURELOCK_PASSWORD_PROMPT=cursor \
-    XSECURELOCK_SAVER=saver_blank \
-    XSECURELOCK_SHOW_DATETIME=1 \
-    XSECURELOCK_SHOW_HOSTNAME=1 \
-    xsecurelock"
-
-awful.spawn.once("xset s 900 7")
-awful.spawn.once("xss-lock -n /usr/lib/xsecurelock/dimmer -l -- " ..
-                     lock_command)
-awful.spawn.once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-awful.spawn.once("redshift-gtk")
-awful.spawn.once("udiskie --no-automount --tray")
-awful.spawn.once("nm-applet")
