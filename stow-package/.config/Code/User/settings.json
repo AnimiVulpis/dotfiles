@@ -177,6 +177,8 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Dark",
     "workbench.commandPalette.preserveInput": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.tabCloseButton": "off",
