@@ -24,4 +24,4 @@ xsecurelock_command="env \
 
 xset s on
 xset s 900 7
-xss-lock -n /usr/lib/xsecurelock/dimmer -l -- $xsecurelock_command
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- $xsecurelock_command &
