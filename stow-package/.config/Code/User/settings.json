@@ -161,6 +161,8 @@
     "search.searchEditor.reusePriorSearchConfiguration": true,
     "search.showLineNumbers": true,
     "search.smartCase": true,
+    "shellformat.flag": "-i 4 -bn -ci -sr",
+    "shellformat.path": "/usr/bin/shfmt",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.external.linuxExec": "alacritty",
