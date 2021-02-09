@@ -6,7 +6,7 @@ if [[ ! -v XDG_CONFIG_HOME || ! -v XDG_DATA_HOME || ! -v XDG_CACHE_HOME ]]; then
   return 1
 fi
 
-# AnimiVulpis: Remove `/usr(/local)/share/...` from default `fpath`
+# Remove `/usr(/local)/share/...` from default `fpath`
 # This way `zinit` can handle all completions
 fpath=( ${fpath[@]:#/usr/*share/zsh/site-functions} )
 
@@ -134,7 +134,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-## AnimiVulpis: Use CTRL+(hjkl) besides cursor keys in menu completion
+## Use CTRL+(hjkl) besides cursor keys in menu completion
 zmodload zsh/complist
 bindkey -M menuselect '^h' vi-backward-char        # left
 bindkey -M menuselect '^k' vi-up-line-or-history   # up
