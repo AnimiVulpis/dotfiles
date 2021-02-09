@@ -10,6 +10,7 @@ In order to debug `fwupdmgr refresh` failing I use a [systemd drop-in file](http
 
 In order to add the verbose flag use `sudo systemctl edit fwupd.service`.
 After successful editing the file `/etc/systemd/system/fwupd.service.d/override.conf` should look like this:
+
 ```
 # AnimiVulpis: Add verbose flag to fwupd
 [Service]
@@ -38,21 +39,27 @@ ExecStart=/usr/lib/fwupd/fwupd -v
 
 ## List of options with explanation found [here](https://github.com/google/xsecurelock#options)
 
-* `XSECURELOCK_AUTH=auth_x11` explicitely set default auth module
-* `XSECURELOCK_AUTHPROTO=authproto_pam` explicitely set default auth protocol module
-* `XSECURELOCK_AUTH_TIMEOUT=60` time in seconds till auth dialog turns off again
-* `XSECURELOCK_BLANK_TIMEOUT=10` time in seconds till windows blanking (not sure what that means)
-* `XSECURELOCK_BLANK_DPMS_STATE=off` I guess that tells xsecure lock how to blank the screen
-* `XSECURELOCK_BURNIN_MITIGATION=500` specifies the number of pixels the prompt of auth_x11 will move to mitigate possible burn-in effects
-* `XSECURELOCK_DATETIME_FORMAT='%Y-%m-%d %T'` the date format to show. Defaults to the locale settings
-* `XSECURELOCK_FONT='Iosevka Medium Extended'` the font to use on the lock screen
-* `XSECURELOCK_PASSWORD_PROMPT=cursor` Choose password prompt mode
-* `XSECURELOCK_SAVER=saver_blank` explicitely set the default screen saver module
-* `XSECURELOCK_SHOW_DATETIME=1` show datetime
-* `XSECURELOCK_SHOW_HOSTNAME=1` show host
+-   `XSECURELOCK_AUTH=auth_x11` explicitely set default auth module
+-   `XSECURELOCK_AUTHPROTO=authproto_pam` explicitely set default auth protocol module
+-   `XSECURELOCK_AUTH_TIMEOUT=60` time in seconds till auth dialog turns off again
+-   `XSECURELOCK_BLANK_TIMEOUT=10` time in seconds till windows blanking (not sure what that means)
+-   `XSECURELOCK_BLANK_DPMS_STATE=off` I guess that tells xsecure lock how to blank the screen
+-   `XSECURELOCK_BURNIN_MITIGATION=500` specifies the number of pixels the prompt of auth_x11 will move to mitigate possible burn-in effects
+-   `XSECURELOCK_DATETIME_FORMAT='%Y-%m-%d %T'` the date format to show. Defaults to the locale settings
+-   `XSECURELOCK_FONT='Iosevka Medium Extended'` the font to use on the lock screen
+-   `XSECURELOCK_PASSWORD_PROMPT=cursor` Choose password prompt mode
+-   `XSECURELOCK_SAVER=saver_blank` explicitely set the default screen saver module
+-   `XSECURELOCK_SHOW_DATETIME=1` show datetime
+-   `XSECURELOCK_SHOW_HOSTNAME=1` show host
 
 # Problems with cabal (Haskell build tool)
 
 ## Configure cabal for dynamic linking
 
 [Arch Wiki page](https://wiki.archlinux.org/index.php/haskell#Configuring_Cabal_for_dynamic_linking)
+
+# Cursor theming
+
+Refer to https://wiki.archlinux.org/index.php/Cursor_themes for more information.
+
+The name used in `/usr/share/icons/default/index.theme` must match a folder (containing cursors) under `/usr/share/icons/`
