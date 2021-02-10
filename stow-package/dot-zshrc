@@ -88,6 +88,8 @@ zinit light-mode for \
     trapd00r/LS_COLORS
 
 zinit wait lucid for \
+  nocd atload"!set-term-title-precmd" \
+    AnimiVulpis/zsh-terminal-title \
     zsh-users/zsh-history-substring-search \
     hcgraf/zsh-sudo \
     zdharma/history-search-multi-word \
