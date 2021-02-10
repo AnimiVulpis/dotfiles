@@ -504,21 +504,5 @@ client.connect_signal("unfocus",
     function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- AnimiVulpis
-local lock_command = "env \
-XSECURELOCK_AUTH_TIMEOUT=60 \
-XSECURELOCK_BLANK_TIMEOUT=10 \
-XSECURELOCK_BLANK_DPMS_STATE=off \
-XSECURELOCK_BURNIN_MITIGATION=500 \
-XSECURELOCK_DATETIME_FORMAT='%Y-%m-%d %T' \
-XSECURELOCK_FONT='Iosevka Medium Extended' \
-XSECURELOCK_PASSWORD_PROMPT=cursor \
-XSECURELOCK_SAVER=saver_blank \
-XSECURELOCK_SHOW_DATETIME=1 \
-XSECURELOCK_SHOW_HOSTNAME=1 \
-xsecurelock -- loginctl lock-session" -- lock session after screen locking
-
-awful.spawn.once("xset s on")
-awful.spawn.once("xset s 900 7")
-awful.spawn.once("xss-lock -n /usr/lib/xsecurelock/dimmer -l -- " ..
-                     lock_command)
+-- Autostart script from https://wiki.archlinux.org/index.php/Awesome#Autostart
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")

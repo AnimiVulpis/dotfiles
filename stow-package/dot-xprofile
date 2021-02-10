@@ -4,4 +4,3 @@
 redshift-gtk &
 udiskie --no-automount --tray &
 nm-applet &
-arbtt-capture &
