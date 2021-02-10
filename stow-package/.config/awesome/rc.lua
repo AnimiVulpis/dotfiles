@@ -299,7 +299,7 @@ globalkeys = gears.table.join(awful.key({modkey}, "s", hotkeys_popup.show_help,
     awful.key({modkey}, "p", function() menubar.show() end,
         {description = "show the menubar", group = "launcher"}), -- Lock
     awful.key({modkey, "Control"}, "s",
-        function() awful.util.spawn("xset s activate") end))
+        function() awful.util.spawn("loginctl lock-session") end))
 
 clientkeys = gears.table.join(awful.key({modkey}, "f", function(c)
     c.fullscreen = not c.fullscreen
