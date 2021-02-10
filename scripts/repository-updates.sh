@@ -6,11 +6,14 @@ if [ ! -d "$1" ]; then
     exit 0
 fi
 
+# Hide cursor
+echo -ne '\e[?25l'
+
 # Fetch updates and print errors
 exa -D $1 |
     xargs -I@ zsh -c "
-    echo -ne '\033[2K Fetching @\r';
-    git -C $1/@ fetch -q origin || echo -e ' Fetching @ \033[0;31mfailed\033[0m (See above for error)'"
+    echo -ne '\e[2KFetching @\r';
+    git -C $1/@ fetch -q origin || echo -e 'Fetching @ \e[0;31mfailed\e[0m (See above for error)'"
 
 # Pretty-print tracking information
 exa -D $1 |
@@ -18,3 +21,6 @@ exa -D $1 |
     echo -n '@\t';
     git -c color.status=always -C $1/@ status --untracked-files=no --short --branch" 2>&1 |
     column --table --separator '	'
+
+# Show cursor again
+echo -ne '\e[?25h'
