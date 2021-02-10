@@ -153,12 +153,16 @@ bindkey '^ ' autosuggest-accept
 # Define word jump behaviour
 export WORDCHARS=''
 
+# Defining lua paths (created by running `luarocks path --no-bin`)
+export LUA_PATH='/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib/lua/5.4/?.lua;/usr/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/animi_vulpis/.luarocks/share/lua/5.4/?.lua;/home/animi_vulpis/.luarocks/share/lua/5.4/?/init.lua'
+export LUA_CPATH='/usr/lib/lua/5.4/?.so;/usr/lib/lua/5.4/loadall.so;./?.so;/home/animi_vulpis/.luarocks/lib/lua/5.4/?.so'
+
 # Defining go paths
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-# PATH modification for cargo/go/cabal
-export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.cabal/bin:$PATH"
+# PATH modification for cargo/go/cabal/lua
+export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.cabal/bin:$HOME/.luarocks/bin:$PATH"
 
 # alias definitions
 alias vi="nvim"
