@@ -22,4 +22,4 @@ run_if_not_already_running xss-lock -n /usr/lib/xsecurelock/dimmer -l -- \
     XSECURELOCK_SHOW_HOSTNAME=1 \
     xsecurelock -- loginctl lock-session # lock session after screen locking
 
-run_if_not_already_running arbtt-capture
+run_if_not_already_running ~/.cabal/bin/arbtt-capture
