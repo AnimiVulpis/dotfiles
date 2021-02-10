@@ -1,8 +1,8 @@
 #!/bin/bash
 
 function run_if_not_already_running {
-    if ! pgrep -f $1; then
-        $@ &
+    if ! pgrep -f "$1"; then
+        "$@" &
     fi
 }
 
