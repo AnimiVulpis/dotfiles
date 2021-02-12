@@ -3,9 +3,6 @@
 echo '\e[34mExecuting\e[0m "\e[32msudo pacman \e[36m--color \e[37malways \e[36m-Syu\e[0m"'
 sudo pacman --color always -Syu
 
-echo '\e[34mExecuting\e[0m "\e[32mcabal \e[33minstall \e[36m--overwrite-policy=always \e[37marbtt\e[0m"'
-cabal install --overwrite-policy=always arbtt
-
 echo '\e[34mExecuting\e[0m "\e[32msudo snap \e[37mrefresh\e[0m"'
 sudo snap refresh
 
