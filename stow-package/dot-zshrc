@@ -163,8 +163,8 @@ export LUA_CPATH='/usr/lib/lua/5.4/?.so;/usr/lib/lua/5.4/loadall.so;./?.so;/home
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-# PATH modification for cargo/go/cabal/lua
-export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.cabal/bin:$HOME/.luarocks/bin:$PATH"
+# PATH modification for cargo/go/lua
+export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.luarocks/bin:$PATH"
 
 # alias definitions
 alias vi="nvim"
