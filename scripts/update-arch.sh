@@ -9,11 +9,11 @@ sudo snap refresh
 echo '\e[34mExecuting\e[0m "\e[32mflatpak \e[37mupdate\e[0m"'
 flatpak update
 
-echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.sh \e[35m~/aur-and-external/\e[0m"'
-~/dotfiles/scripts/repository-updates.sh ~/aur-and-external/
-
 echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/update-more.sh\e[0m"'
 ~/dotfiles/scripts/update-more.sh
+
+echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.sh \e[35m~/aur-and-external/\e[0m"'
+~/dotfiles/scripts/repository-updates.sh ~/aur-and-external/
 
 echo '\e[34mExecuting\e[0m "\e[32msudo fwupdmgr \e[37mrefresh && \e[32msudo fwupdmgr \e[37mget-updates\e[0m"'
 sudo fwupdmgr refresh \
