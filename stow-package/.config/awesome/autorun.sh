@@ -23,3 +23,4 @@ run_if_not_already_running xss-lock -n /usr/lib/xsecurelock/dimmer -l -- \
     xsecurelock -- loginctl lock-session # lock session after screen locking
 
 run_if_not_already_running aw-qt
+run_if_not_already_running redshift-gtk

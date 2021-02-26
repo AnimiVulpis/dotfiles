@@ -1,6 +1,5 @@
 #!/bin/bash
 
 /usr/lib/polkit-kde-authentication-agent-1 &
-redshift-gtk &
-udiskie --no-automount --tray &
 nm-applet &
+udiskie --no-automount --tray &
