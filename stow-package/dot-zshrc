@@ -11,7 +11,7 @@ fi
 fpath=( ${fpath[@]:#/usr/*share/zsh/site-functions} )
 
 # Set up history and zsh options
-HISTFILE=$XDG_DATA_HOME/zsh/histfile
+export HISTFILE=$XDG_DATA_HOME/zsh/histfile
 HISTSIZE=512000
 SAVEHIST=256000
 bindkey -e
