@@ -432,6 +432,7 @@ awful.rules.rules = {
                 "AlarmWindow", -- Thunderbird's calendar.
                 "ConfigManager", -- Thunderbird's about:config.
                 "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
+                "Firefox – Sharing Indicator", -- Firefox sharing indicator (WebRTCGlobalIndicator)
             },
         },
         properties = {floating = true},
