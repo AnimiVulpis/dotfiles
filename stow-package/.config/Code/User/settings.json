@@ -1,4 +1,5 @@
 {
+    "IoTWorkbench.workbench": "/home/animi_vulpis/IoTWorkbenchProjects",
     "Lua.diagnostics.enable": false,
     "Lua.telemetry.enable": false,
     "[html]": {
@@ -26,6 +27,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "alexLinter.check.enabled": true,
+    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json",
+    "arduino.logLevel": "verbose",
     "auto-close-tag.SublimeText3Mode": true,
     "auto-close-tag.enableAutoCloseTag": false,
     "bookmarks.showCommandsInContextMenu": false,
@@ -66,7 +69,7 @@
     "editor.cursorSurroundingLines": 2,
     "editor.fontFamily": "'iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "boundary",
@@ -168,6 +171,7 @@
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "problems.showCurrentInStatus": true,
+    "redhat.telemetry.enabled": false,
     "screencastMode.onlyKeyboardShortcuts": true,
     "search.searchEditor.reusePriorSearchConfiguration": true,
     "search.showLineNumbers": true,
@@ -179,14 +183,25 @@
     "telemetry.enableTelemetry": false,
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.scrollback": 4200,
+    "todo-tree.filtering.includeHiddenFiles": true,
     "todo-tree.filtering.useBuiltInExcludes": "search excludes",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "NOTE",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "todo-tree.tree.showScanModeButton": true,
     "typescript.disableAutomaticTypeAcquisition": true,
     "update.mode": "start",
     "vulnCost.sendStatistics": false,
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "folders",
-    "window.title": "${rootName}${separator}${activeEditorShort}${dirty}",
+    "window.title": "VSCode${separator}${rootName}${separator}${activeEditorMedium}${dirty}",
     "workbench.colorTheme": "Solarized Dark",
     "workbench.commandPalette.preserveInput": true,
     "workbench.editor.decorations.badges": true,
@@ -194,6 +209,9 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.tabCloseButton": "off",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
