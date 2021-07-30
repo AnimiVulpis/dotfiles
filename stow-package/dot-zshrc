@@ -163,8 +163,8 @@ export LUA_CPATH='/usr/lib/lua/5.4/?.so;/usr/lib/lua/5.4/loadall.so;./?.so;/home
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-# PATH modification for cargo/go/lua
-export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.luarocks/bin:$PATH"
+# PATH modification for cargo/go/lua/local-bin/default-path
+export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.luarocks/bin:$HOME/.local/bin:$PATH"
 
 # alias definitions
 alias vi="nvim"
@@ -177,6 +177,7 @@ alias ed="exa -D"
 alias el="exa -l --time-style=long-iso"
 alias eh="exa -la --time-style=long-iso"
 alias et="exa -T"
+alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 8601 date:\t' && date -Iseconds"
 
 # More environment variables
 export SUDO_EDITOR="nvim"
