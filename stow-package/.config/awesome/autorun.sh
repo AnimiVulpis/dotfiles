@@ -13,7 +13,7 @@ run_if_not_already_running xss-lock -n /usr/lib/xsecurelock/dimmer -l -- \
     XSECURELOCK_AUTH_TIMEOUT=60 \
     XSECURELOCK_BLANK_TIMEOUT=10 \
     XSECURELOCK_BLANK_DPMS_STATE=off \
-    XSECURELOCK_BURNIN_MITIGATION=500 \
+    XSECURELOCK_BURNIN_MITIGATION=400 \
     XSECURELOCK_DATETIME_FORMAT='%Y-%m-%d %T' \
     XSECURELOCK_FONT='Iosevka Medium Extended' \
     XSECURELOCK_PASSWORD_PROMPT=cursor \
@@ -22,5 +22,7 @@ run_if_not_already_running xss-lock -n /usr/lib/xsecurelock/dimmer -l -- \
     XSECURELOCK_SHOW_HOSTNAME=1 \
     xsecurelock -- loginctl lock-session # lock session after screen locking
 
+run_if_not_already_running picom
 run_if_not_already_running aw-qt
-run_if_not_already_running redshift-gtk
+# run_if_not_already_running redshift-gtk
+run_if_not_already_running copyq
