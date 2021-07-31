@@ -1,4 +1,4 @@
 #!/bin/sh
 # Xsetup - run as root before the login dialog appears
 # AnimiVulpis:
-/home/animi_vulpis/dotfiles/scripts/display-setup.sh
+/home/animi_vulpis/dotfiles/scripts/display/setup.sh
