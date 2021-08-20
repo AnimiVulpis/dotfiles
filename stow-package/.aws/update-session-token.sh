@@ -12,7 +12,7 @@ if [[ -z "$1" ]]; then
     exit 1
 fi
 mfa_source=$1
-mfa_target=$(echo "${mfa_source}" | cut -d'-' -f-2)
+mfa_target=$(echo "${mfa_source}" | sed 's/-source$//')
 
 # get mfa serial
 mfa_serial=$(aws configure get mfa_serial --profile ${mfa_source})
