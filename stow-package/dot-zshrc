@@ -90,7 +90,6 @@ zinit light-mode for \
 zinit wait lucid for \
   nocd atload"!set-term-title-precmd" \
     AnimiVulpis/zsh-terminal-title \
-    zsh-users/zsh-history-substring-search \
     hcgraf/zsh-sudo \
     zdharma/history-search-multi-word \
     andrewferrier/fzf-z \
@@ -144,10 +143,6 @@ bindkey -M menuselect '^l' vi-forward-char         # right
 bindkey -M menuselect '^j' vi-down-line-or-history # bottom
 # # Bind <shift-tab> to go **backwards** in selection list
 bindkey -M menuselect '^\[[Z' reverse-menu-complete
-
-# History substring search config
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # Set key-binding https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 bindkey '^ ' autosuggest-accept
