@@ -171,6 +171,7 @@
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "problems.showCurrentInStatus": true,
+    "python.formatting.provider": "black",
     "redhat.telemetry.enabled": false,
     "screencastMode.onlyKeyboardShortcuts": true,
     "search.searchEditor.reusePriorSearchConfiguration": true,
