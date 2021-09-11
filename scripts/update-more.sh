@@ -4,8 +4,14 @@
 echo '\e[34mExecuting\e[0m "\e[32mrustup \e[37mupdate\e[0m"'
 rustup update
 
-echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall click eva genact git-delta\e[0m"'
-cargo install chars click eva genact git-delta
+echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall click eva genact git-delta gobang\e[0m"'
+cargo install \
+    chars \
+    click \
+    eva \
+    genact \
+    git-delta
+cargo install --version 0.1.0-alpha.3 gobang
 
 # Go related
 # Tool to fetch gitignore files from GitHub templates `gig`
