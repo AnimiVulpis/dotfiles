@@ -8,6 +8,9 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -199,6 +202,9 @@
     "todo-tree.tree.showScanModeButton": true,
     "typescript.disableAutomaticTypeAcquisition": true,
     "update.mode": "start",
+    "vs-kubernetes": {
+        "vscode-kubernetes.minikube-path.linux": "/home/animi_vulpis/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
     "vulnCost.sendStatistics": false,
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "folders",
