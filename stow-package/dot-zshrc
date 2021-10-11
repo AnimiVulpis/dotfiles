@@ -161,6 +161,9 @@ export GOBIN="$GOPATH/bin"
 # PATH modification for cargo/go/lua/local-bin/default-path
 export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.luarocks/bin:$HOME/.local/bin:$PATH"
 
+# Configure docker to use XDG_CONFIG_DIR
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+
 # alias definitions
 alias vi="nvim"
 alias vim="nvim"
