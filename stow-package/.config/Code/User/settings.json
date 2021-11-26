@@ -1,213 +1,107 @@
 {
-    "IoTWorkbench.workbench": "/home/animi_vulpis/IoTWorkbenchProjects",
-    "Lua.diagnostics.enable": false,
-    "Lua.telemetry.enable": false,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "alexLinter.check.enabled": true,
-    "arduino.additionalUrls": "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json",
-    "arduino.logLevel": "verbose",
     "auto-close-tag.SublimeText3Mode": true,
-    "auto-close-tag.enableAutoCloseTag": false,
-    "bookmarks.showCommandsInContextMenu": false,
+    "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
     "bookmarks.useWorkaroundForFormatters": true,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
-    "cSpell.userWords": [
-        "alacritty",
-        "animi",
-        "animivulpis",
-        "esbenp",
-        "fluentui",
-        "iosevka",
-        "lightdm",
-        "luma",
-        "minio",
-        "msrvida",
-        "rgba",
-        "work",
-        "theia",
-        "tmux",
-        "viridis"
-    ],
     "color-highlight.markRuler": false,
     "color-highlight.markerType": "outline",
-    "debug.inlineValues": true,
+    "color-highlight.matchWords": true,
+    "csv-preview.lineNumbers": "ordinal",
+    "debug.console.fontFamily": "Iosevka Fixed",
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "solid",
-    "editor.cursorSurroundingLines": 2,
-    "editor.fontFamily": "'iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.cursorSurroundingLines": 5,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "'Iosevka Extended', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.guides.bracketPairs": true,
+    "editor.linkedEditing": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "boundary",
     "editor.roundedSelection": false,
+    "editor.scrollbar.horizontalScrollbarSize": 8,
+    "editor.scrollbar.verticalScrollbarSize": 8,
     "editor.semanticHighlighting.enabled": true,
     "editor.showFoldingControls": "always",
     "editor.suggest.localityBonus": true,
+    "editor.suggest.preview": true,
+    "editor.suggest.shareSuggestSelections": true,
     "editor.suggest.showStatusBar": true,
-    "editor.suggest.statusBar.visible": true,
     "editor.suggestSelection": "recentlyUsedByPrefix",
-    "eslint.codeActionsOnSave.mode": "problems",
-    "eslint.packageManager": "yarn",
+    "editor.wordBasedSuggestionsMode": "allDocuments",
     "explorer.autoReveal": false,
     "explorer.incrementalNaming": "smart",
-    "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": false,
+    "files.associations": {
+        "config": "jsonc"
+    },
     "files.enableTrash": false,
-    "files.exclude": {
-        "**/.DS_Store": false,
-        "**/.hg": false,
-        "**/.svn": false,
-        "**/CVS": false
-    },
-    "files.hotExit": "off",
-    "git.enableStatusBarSync": false,
-    "git.suggestSmartCommit": false,
-    "gitlens.advanced.telemetry.enabled": false,
-    "gitlens.autolinks": [
-        {
-            "ignoreCase": true,
-            "prefix": "CJM-",
-            "url": "https://jira.work.com/browse/CJM-<num>"
-        },
-        {
-            "ignoreCase": true,
-            "prefix": "DES-",
-            "url": "https://jira.work.com/browse/DES-<num>"
-        },
-        {
-            "ignoreCase": true,
-            "prefix": "SPM-",
-            "url": "https://jira.work.com/browse/SPM-<num>"
-        }
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.highlight.locations": [
+        "gutter",
+        "line",
+        "overview"
     ],
-    "gitlens.blame.dateFormat": "YYYY-MM-DDTHH:mmZ",
-    "gitlens.currentLine.enabled": false,
-    "gitlens.defaultDateFormat": "YYYY-MM-DDTHH:mmZ",
+    "gitlens.changes.locations": [
+        "gutter",
+        "overview"
+    ],
+    "gitlens.codeLens.enabled": false,
+    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm ZZ",
     "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
-    "gitlens.hovers.annotations.over": "annotation",
-    "gitlens.liveshare.allowGuestAccess": false,
+    "gitlens.defaultGravatarsStyle": "retro",
+    "gitlens.defaultTimeFormat": "HH:mm",
+    "gitlens.heatmap.locations": [
+        "gutter"
+    ],
     "gitlens.mode.active": "zen",
-    "gitlens.modes": {
-        "review": {
-            "codeLens": true,
-            "currentLine": true,
-            "description": "for reviewing code, enables many visual features",
-            "hovers": true,
-            "name": "Review",
-            "statusBar": false,
-            "statusBarItemName": "Review"
-        },
-        "zen": {
-            "codeLens": false,
-            "currentLine": false,
-            "description": "for a zen-like experience, disables many visual features",
-            "hovers": false,
-            "name": "Zen",
-            "statusBar": false,
-            "statusBarItemName": "Zen"
-        }
-    },
     "gitlens.statusBar.enabled": false,
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.location": "gitlens",
-    "gitlens.views.repositories.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
     "html.format.endWithNewline": true,
-    "json.schemaDownload.enable": false,
-    "liveshare.allowGuestDebugControl": true,
-    "liveshare.allowGuestTaskControl": true,
     "liveshare.increasedGuestLimit": false,
-    "liveshare.languages.allowGuestCommandControl": true,
-    "liveshare.presence": true,
-    "liveshare.publishWorkspaceInfo": true,
-    "liveshare.sharedTerminalHeight": 120,
-    "liveshare.sharedTerminalWidth": 160,
-    "liveshare.showInStatusBar": "whileCollaborating",
-    "npm.fetchOnlinePackageInfo": false,
-    "prettier.semi": false,
-    "prettier.singleQuote": true,
+    "liveshare.sharedTerminalHeight": 100,
+    "path-intellisense.showHiddenFiles": true,
     "problems.showCurrentInStatus": true,
-    "python.formatting.provider": "black",
     "redhat.telemetry.enabled": false,
+    "scm.inputFontFamily": "editor",
     "screencastMode.onlyKeyboardShortcuts": true,
+    "search.quickOpen.history.filterSortOrder": "recency",
     "search.searchEditor.reusePriorSearchConfiguration": true,
-    "search.showLineNumbers": true,
-    "search.smartCase": true,
-    "search.useIgnoreFiles": false,
+    "search.searchOnTypeDebouncePeriod": 500,
     "shellformat.flag": "-i 4 -bn -ci -sr",
-    "shellformat.path": "/usr/bin/shfmt",
+    "shellformat.path": "/home/user/go/bin/shfmt",
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.fontFamily": "Iosevka Fixed",
     "terminal.integrated.scrollback": 4200,
     "todo-tree.filtering.includeHiddenFiles": true,
-    "todo-tree.filtering.useBuiltInExcludes": "search excludes",
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "NOTE",
-        "[ ]",
-        "[x]"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "todo-tree.tree.showScanModeButton": true,
-    "typescript.disableAutomaticTypeAcquisition": true,
-    "update.mode": "start",
-    "vs-kubernetes": {
-        "vscode-kubernetes.minikube-path.linux": "/home/animi_vulpis/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-    },
-    "vulnCost.sendStatistics": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.autoDetectHighContrast": false,
     "window.menuBarVisibility": "toggle",
-    "window.restoreWindows": "folders",
     "window.title": "VSCode${separator}${rootName}${separator}${activeEditorMedium}${dirty}",
     "workbench.colorTheme": "Solarized Dark",
     "workbench.commandPalette.preserveInput": true,
-    "workbench.editor.decorations.badges": true,
-    "workbench.editor.decorations.colors": true,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.sharedViewState": true,
     "workbench.editor.tabCloseButton": "off",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "workbench.preferredLightColorTheme": "Solarized Light",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.openDefaultKeybindings": true,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.indent": 6,
+    "workbench.tree.renderIndentGuides": "always",
+    "zenMode.fullScreen": false,
+    "zenMode.restore": false,
+    "zenMode.silentNotifications": false
 }
