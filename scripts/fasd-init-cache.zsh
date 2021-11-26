@@ -1,4 +1,4 @@
-# AnimiVulpis: Created on 2021-01-24 by running
+# AnimiVulpis: Created on 2021-11-16 by running
 # fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install > ~/dotfiles/scripts/fasd-init-cache.zsh
 
 alias a='fasd -a'
