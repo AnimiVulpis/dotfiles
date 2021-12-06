@@ -1,4 +1,3 @@
 .aws/README.md
 .config/broot/README.md
-.docker/README.md
-.local/share/fonts/README.md
+.config/docker/README.md
