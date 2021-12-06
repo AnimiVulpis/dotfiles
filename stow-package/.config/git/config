@@ -1,27 +1,48 @@
 [init]
 	defaultBranch = main
+
 [user]
 	useConfigOnly = true
+
+[includeIf "gitdir:~/work/"]
+	path = ~/work/gitconfig
+
+[includeIf "gitdir:~/projects/"]
+	path = ~/projects/gitconfig
+
+[includeIf "gitdir:~/repos/"]
+	path = ~/projects/gitconfig
+
 [core]
 	editor = nvim
-	quotePath = false
 	pager = delta
+
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = delta --color-only --features=interactive
+
 [delta]
-	features = decorations
+	features = decorations navigation
 	syntax-theme = Solarized (dark)
-	plus-style = syntax "#003f00"
-	minus-style = syntax "#4f0001"
+
+[delta "interactive"]
+	keep-plus-minus-markers = false
+
 [delta "decorations"]
-	commit-decoration-style = bold yellow box ul
-	file-style = bold yellow ul
-	file-decoration-style = none
-	hunk-header-decoration-style = cyan box ul
+	commit-decoration-style = blue box ol
+	hunk-header-style = file line-number syntax
+
+[diff]
+	colorMoved = dimmed-zebra
+
 [mergetool]
 	keepBackup = false
-[diff]
-	colorMoved = default
+
 [alias]
 	diffs = diff --staged
 	ffomerge = merge --ff-only
@@ -36,3 +57,18 @@
 	loggoa = log --graph --oneline --all
 	logo = log --oneline
 	st = status --short
+
+[maintenance]
+	repo = /home/user/zsh-repos/emoji-cli
+	repo = /home/user/zsh-repos/fast-syntax-highlighting
+	repo = /home/user/zsh-repos/history-search-multi-word
+	repo = /home/user/zsh-repos/LS_COLORS
+	repo = /home/user/zsh-repos/powerlevel10k
+	repo = /home/user/zsh-repos/zcolors
+	repo = /home/user/zsh-repos/zsh-autosuggestions
+	repo = /home/user/zsh-repos/zsh-colored-man-pages
+	repo = /home/user/zsh-repos/zsh-completions
+	repo = /home/user/zsh-repos/zsh-edit
+	repo = /home/user/zsh-repos/zsh-nvm
+	repo = /home/user/zsh-repos/zsh-sudo
+	repo = /home/user/zsh-repos/zsh-terminal-title
