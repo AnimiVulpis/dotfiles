@@ -1,23 +1,25 @@
 #!/bin/zsh
 
-# Check for presence of XDG variables
-if [[ ! -v XDG_CONFIG_HOME || ! -v XDG_DATA_HOME || ! -v XDG_CACHE_HOME ]]; then
-  echo 'XDG directories not set'
-  return 1
+# To profile zsh startup uncomment:
+# zmodload zsh/zprof
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Remove `/usr(/local)/share/...` from default `fpath`
-# This way `zinit` can handle all completions
-fpath=( ${fpath[@]:#/usr/*share/zsh/site-functions} )
-
-# Set up history and zsh options
-export HISTFILE=$XDG_DATA_HOME/zsh/histfile
+# Set up history
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history-file"
 HISTSIZE=512000
 SAVEHIST=256000
+# ZLE Emacs mode
 bindkey -e
-setopt APPEND_HISTORY
+
 # History with timestamps and elapsed time
 setopt EXTENDED_HISTORY
+# Append to history after commands have finished
 setopt INC_APPEND_HISTORY_TIME
 # First remove oldest duplicate history items
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -49,64 +51,36 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
-# Configure fzf-z to use `fasd` instead of `z`
-FZFZ_RECENT_DIRS_TOOL=fasd
-# Configure fzf-z to use `exa -T` instead of the default `tree`
-FZFZ_PREVIEW_COMMAND="exa -T {}"
-# Configure fzf-z to not deduplicate directory entries
-FZFZ_UNIQUIFIER="cat"
-# Configure some fzf-z custom directories
-FZFZ_EXTRA_DIRS="~/desktop ~/dev ~/documents ~/downloads ~/pictures ~/sounds ~/videos"
-
 # Set up NVM directory
-export NVM_DIR="$XDG_CONFIG_HOME/nvm"
-# Same effect as `"$NVM_DIR/nvm.sh" --no-use` but for `zsh-nvm`
+export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
+# Don't autoload nvm node
 export NVM_NO_USE=true
 
-# Set up ZINIT array parameters
-typeset -A ZINIT
-# Where Zinit code resides
-ZINIT[BIN_DIR]=$XDG_DATA_HOME/zinit/bin
-# Where Zinit should create all working directories
-ZINIT[HOME_DIR]=$XDG_DATA_HOME/zinit
-# Path to `.zcompdump` file, with the file included
-ZINIT[ZCOMPDUMP_PATH]=$XDG_CACHE_HOME/zcompdump
-# If set to 1, then Zinit will skip checking if a Turbo-loaded object exists
-ZINIT[OPTIMIZE_OUT_DISK_ACCESSES]=1
+# Set znap repository folder
+zstyle ':znap:*' repos-dir ~/zsh-repos
+source ~/zsh-snap/znap.zsh
 
-source $ZINIT[BIN_DIR]/zinit.zsh
+znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
+znap source marlonrichert/zcolors
+znap eval zcolors "zcolors ${(q)LS_COLORS}"
+znap source romkatv/powerlevel10k
+znap source lukechilds/zsh-nvm
+znap source hcgraf/zsh-sudo
+znap source zdharma-continuum/history-search-multi-word
+znap source ael-code/zsh-colored-man-pages
+znap source b4b4r07/emoji-cli
+znap source marlonrichert/zsh-edit
+znap source zsh-users/zsh-autosuggestions
+znap source AnimiVulpis/zsh-terminal-title
+znap source zsh-users/zsh-completions
+znap source zdharma-continuum/fast-syntax-highlighting
 
-# Setup zsh plugins
-zinit light-mode for \
-  is-snippet \
-    ~/dotfiles/scripts/fasd-init-cache.zsh \
-    lukechilds/zsh-nvm \
-  atload"source ~/.p10k.zsh" nocd \
-    romkatv/powerlevel10k \
-  atclone"dircolors -b LS_COLORS > lscolors.zsh" \
-  atpull"%atclone" pick"lscolors.zsh" nocompile"!" \
-    trapd00r/LS_COLORS
+source ~/dotfiles/scripts/fasd-init-cache.zsh
 
-zinit wait lucid for \
-  nocd atload"!set-term-title-precmd" \
-    AnimiVulpis/zsh-terminal-title \
-    hcgraf/zsh-sudo \
-    zdharma/history-search-multi-word \
-    andrewferrier/fzf-z \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit" \
-  atload"!_zsh_autosuggest_start" \
-    zsh-users/zsh-autosuggestions \
-  atinit"zicdreplay" \
-    zdharma/fast-syntax-highlighting \
-    zlsun/solarized-man \
-  id-as=site-functions as=completion \
-  atclone="zinit creinstall -q /usr/share/zsh/site-functions" \
-  atpull="%atclone" run-atpull \
-    zdharma/null \
-  blockf atpull"zinit creinstall -q ." \
-    zsh-users/zsh-completions
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# The following lines were added by compinstall
+# The following lines were added by compinstall (but modified)
 
 zstyle ':completion:*' completer _list _expand _complete _ignored _match _approximate _prefix
 zstyle ':completion:*' completions 1
@@ -129,40 +103,32 @@ zstyle ':completion:*' select-prompt '%SAt %l (%p)%s'
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' use-compctl true
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/animi_vulpis/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+# autoload -Uz compinit
+# compinit
+# End of lines added by compinstall (but modified)
 
-## Use CTRL+(hjkl) besides cursor keys in menu completion
+# Use CTRL+(hjkl) besides cursor keys in menu completion
 zmodload zsh/complist
 bindkey -M menuselect '^h' vi-backward-char        # left
 bindkey -M menuselect '^k' vi-up-line-or-history   # up
 bindkey -M menuselect '^l' vi-forward-char         # right
 bindkey -M menuselect '^j' vi-down-line-or-history # bottom
-# # Bind <shift-tab> to go **backwards** in selection list
+
+# Bind <shift-tab> to go **backwards** in selection list
 bindkey -M menuselect '^\[[Z' reverse-menu-complete
 
 # Set key-binding https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 bindkey '^ ' autosuggest-accept
 
-# Define word jump behaviour
 export WORDCHARS=''
-
-# Defining lua paths (created by running `luarocks path --no-bin`)
-export LUA_PATH='/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib/lua/5.4/?.lua;/usr/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/animi_vulpis/.luarocks/share/lua/5.4/?.lua;/home/animi_vulpis/.luarocks/share/lua/5.4/?/init.lua'
-export LUA_CPATH='/usr/lib/lua/5.4/?.so;/usr/lib/lua/5.4/loadall.so;./?.so;/home/animi_vulpis/.luarocks/lib/lua/5.4/?.so'
 
 # Defining go paths
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-# PATH modification for cargo/go/lua/local-bin/default-path
-export PATH="$HOME/.cargo/bin:$GOBIN:$HOME/.luarocks/bin:$HOME/.local/bin:$PATH"
-
 # Configure docker to use XDG_CONFIG_DIR
-export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export DOCKER_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/docker"
 
 # alias definitions
 alias vi="nvim"
@@ -177,8 +143,6 @@ alias eh="exa -la --time-style=long-iso"
 alias et="exa -T"
 alias tv="tidy-viewer"
 alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 8601 date:\t' && date -Iseconds"
-alias ignoreExternalDisplay="echo 'ignore' > ~/dotfiles/scripts/display/mode.txt"
-alias detectExternalDisplay="echo 'detect' > ~/dotfiles/scripts/display/mode.txt"
 
 # More environment variables
 export SUDO_EDITOR="nvim"
@@ -187,4 +151,4 @@ export VISUAL="code -w"
 export LESS="-x4 -Ri"
 
 # broot initialization
-source /home/animi_vulpis/.config/broot/launcher/zsh/br
+source "${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br"
