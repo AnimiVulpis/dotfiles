@@ -1,4 +1,7 @@
 {
+    "[lua]": {
+        "editor.defaultFormatter": "Koihik.vscode-lua-format"
+    },
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
@@ -7,6 +10,11 @@
     "bookmarks.useWorkaroundForFormatters": true,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
+    "cSpell.userWords": [
+        "animi",
+        "fwupd",
+        "fwupdmgr"
+    ],
     "color-highlight.markRuler": false,
     "color-highlight.markerType": "outline",
     "color-highlight.matchWords": true,
@@ -19,7 +27,8 @@
     "editor.cursorSurroundingLines": 5,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'Iosevka Extended', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
     "editor.guides.bracketPairs": true,
     "editor.linkedEditing": true,
     "editor.minimap.renderCharacters": false,
@@ -79,6 +88,7 @@
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontFamily": "Iosevka Fixed",
     "terminal.integrated.scrollback": 4200,
     "todo-tree.filtering.includeHiddenFiles": true,
@@ -93,7 +103,7 @@
     "workbench.editor.sharedViewState": true,
     "workbench.editor.tabCloseButton": "off",
     "workbench.enableExperiments": false,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "workbench.preferredLightColorTheme": "Solarized Light",
     "workbench.settings.enableNaturalLanguageSearch": false,
