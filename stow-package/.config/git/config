@@ -23,6 +23,9 @@
 	reflog = delta
 	show = delta
 
+[log]
+	date = iso
+
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 
