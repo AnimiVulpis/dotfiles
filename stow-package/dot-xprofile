@@ -1,5 +1,0 @@
-#!/bin/bash
-
-/usr/lib/polkit-kde-authentication-agent-1 &
-nm-applet &
-udiskie --no-automount --tray &
