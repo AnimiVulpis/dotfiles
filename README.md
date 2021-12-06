@@ -37,19 +37,19 @@ To link the files in the `stow-package` folder using the `stow` command:
     $ cd dotfiles
     ~/dotfiles
     $ # To check what would happen use simulate
-    $ stow -v --dotfiles --simulate stow-package
+    $ stow -v --simulate stow-package
     $ # To save use
-    $ stow --dotfiles --stow stow-package
+    $ stow --stow stow-package
     $ # or the short(er)
-    $ stow --dotfiles -S stow-package
+    $ stow -S stow-package
     $ # To delete use
-    $ stow --dotfiles --delete stow-package
+    $ stow --delete stow-package
     $ # or the short(er)
-    $ stow --dotfiles -D stow-package
+    $ stow -D stow-package
     $ # To delete and then save use
-    $ stow --dotfiles --restow stow-package
+    $ stow --restow stow-package
     $ # or the short(er)
-    $ stow --dotfiles -R stow-package
+    $ stow -R stow-package
 
 Opening a shell will then launch [`zinit`](https://github.com/zdharma/zinit) which will install everything else for you.
 
