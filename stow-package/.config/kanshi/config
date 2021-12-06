@@ -1,0 +1,9 @@
+{
+    output "Samsung Electric Company S34J55x" position 0,0
+    output eDP-1 position 760,1440
+}
+
+{
+    output eDP-1 position 0,0
+}
+

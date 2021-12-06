@@ -1,0 +1,17 @@
+markup_extra = 'font_style="italic" font_size="smaller"'
+markup_highlight = 'underline="low" weight="bold"'
+
+exclusive = true
+lines = 2
+icon_size = 20
+anchor_left = false
+anchor_right = false
+anchor_top = false
+anchor_bottom = false
+margin_top = 1
+margin_bottom = 0
+margin_left = 0
+margin_right = 0
+width = 750
+height = 550
+command_prefix = ":"

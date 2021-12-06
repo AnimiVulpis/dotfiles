@@ -1,0 +1,267 @@
+# default config location: `sway/build/config`
+# Read `man 5 sway` for a complete reference.
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term alacritty
+# Your preferred application launcher
+set $menu sirula
+
+### Color config
+#
+# order:
+# 1: border
+#   The border around the title bar
+# 2: background
+#   The background of the title bar
+# 3: text
+#   The text color of the title bar
+# [4: indicator]
+#   The color used to indicate where a new view will open. In a tiled container, this would paint the right border of the current view if a new view would be opened to the right
+# [5: child_border]
+#   The border around the view itself
+#
+# focused:
+#   The window that has focus
+# focused_inactive:
+#   The most recently focused view within a container which is not focused
+# unfocused:
+#   A view that does not have focus
+# urgent:
+#   A view with an urgency hint
+client.focused          #b1cc00 #b1cc00 #002b36 #e75d23 #b1cc00
+client.focused_inactive #6f7b1e #6f7b1e #002b36 #9c3b3a #6f7b1e
+client.unfocused        #268bd2 #268bd2 #596f74 #9c3b3a #268bd2
+client.urgent           #e75d23 #b58900 #dfdccc #2aa198 #e75d23
+
+### Border configuration
+#
+default_border pixel 1
+default_floating_border normal 1
+
+### Titlebar font and padding configuration
+#
+font 'Iosevka Aile 10'
+titlebar_padding 5 1
+
+### X11 version
+# Zoom App
+# For pop up notification windows that don't use notifications api
+for_window [class="zoom" title="^zoom$"] border none, floating enable
+# For specific Zoom windows
+for_window [class="zoom" title="^(Zoom|About)$"] floating enable
+for_window [class="zoom" title="^Choose"] floating enable
+### Wayland version
+# For pop up notification windows that don't use notifications api
+for_window [app_id="zoom" title="^zoom$"] border none, floating enable
+# For specific Zoom windows
+for_window [app_id="zoom" title="^(Zoom|About)$"] floating enable
+for_window [app_id="zoom" title="^Choose"] floating enable
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
+output * bg /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+# default layout (found by running `man 7 xkeyboard-config`)
+input "type:keyboard" {
+    xkb_layout us
+    xkb_variant altgr-intl
+}
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+Shift+q kill
+
+    # Start your launcher
+    bindsym $mod+d exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # Exit sway (logs you out of your Wayland session)
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+#
+# Moving around:
+#
+    # Focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Focus between workspaces $mod+[up|down|left|right]
+    bindsym $mod+Left workspace prev_on_output
+    bindsym $mod+Right workspace next_on_output
+    bindsym $mod+Down focus output down
+    bindsym $mod+Up focus output up
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # Move to workspace, with arrow keys
+    bindsym $mod+Shift+Left move container to workpace prev_on_output
+    bindsym $mod+Shift+Right move container to workspace next_on_output
+    bindsym $mod+Shift+Down move container to output down
+    bindsym $mod+Shift+Up move container to output up
+#
+# Workspaces:
+#
+    # Switch to workspace (using swaysome)
+    bindsym $mod+1 exec "swaysome focus 1"
+    bindsym $mod+2 exec "swaysome focus 2"
+    bindsym $mod+3 exec "swaysome focus 3"
+    bindsym $mod+4 exec "swaysome focus 4"
+    bindsym $mod+5 exec "swaysome focus 5"
+    bindsym $mod+6 exec "swaysome focus 6"
+    bindsym $mod+7 exec "swaysome focus 7"
+    bindsym $mod+8 exec "swaysome focus 8"
+    bindsym $mod+9 exec "swaysome focus 9"
+    bindsym $mod+0 exec "swaysome focus 10"
+    # Move focused container to workspace (using swaysome)
+    bindsym $mod+Shift+1 exec "swaysome move 1"
+    bindsym $mod+Shift+2 exec "swaysome move 2"
+    bindsym $mod+Shift+3 exec "swaysome move 3"
+    bindsym $mod+Shift+4 exec "swaysome move 4"
+    bindsym $mod+Shift+5 exec "swaysome move 5"
+    bindsym $mod+Shift+6 exec "swaysome move 6"
+    bindsym $mod+Shift+7 exec "swaysome move 7"
+    bindsym $mod+Shift+8 exec "swaysome move 8"
+    bindsym $mod+Shift+9 exec "swaysome move 9"
+    bindsym $mod+Shift+0 exec "swaysome move 10"
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+
+    # Move focused container to next output (with swaysome)
+    bindsym $mod+o exec "swaysome next_output"
+    # Move focused container to previous output (with swaysome)
+    bindsym $mod+Shift+o exec "swaysome prev_output"
+#
+# Layout stuff:
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Make floating window sticky (tack it on)
+    bindsym $mod+Shift+t sticky toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+    bindsym $mod+Shift+a focus child
+
+    # Change titlebars
+    # minimal
+    bindsym $mod+m border pixel 1
+    # normal
+    bindsym $mod+n border normal 1
+
+    bindsym $mod+u [urgent="recent"] focus
+
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+    bindsym $mod+Ctrl+$left resize shrink width
+    bindsym $mod+Ctrl+$right resize grow width
+    bindsym $mod+Ctrl+$down resize shrink height
+    bindsym $mod+Ctrl+$up resize grow height
+
+#
+# Status Bar:
+#
+# Use waybar instead of swaybar
+bar {
+    swaybar_command waybar
+}
+
+# To restart something on every sway config reload
+# source: https://todo.sr.ht/~emersion/kanshi/35
+# exec_always pkill <program>; exec <program>
+
+# display configuration
+#output DP-3 pos 0 0 # (sometimes the output is called DP-4)
+#output eDP-1 pos 760 1440
+exec_always pkill kanshi; exec kanshi >>/tmp/kanshi.log 2>&1
+
+exec swaymsg focus output eDP-1
+
+# Sworkstyle configuration
+exec_always pkill sworkstyle; exec sworkstyle >>/tmp/sworkstyle.log 2>&1
+# exec sworkstyle &> /tmp/sworkstyle.log
+
+# Start dunst notifications
+exec_always pkill dunst; exec dunst >>/tmp/dunst.log 2>&1
+
+# `swaysome init [name]`: cycle all outputs to create a default workspace with name [name]
+exec_always pkill swaysome; exec swaysome init 1 >>/tmp/swaysome.log 2>&1
+
