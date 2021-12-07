@@ -16,7 +16,7 @@ echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/update-more.sh\e[0m"'
 ~/dotfiles/scripts/update-more.sh
 
 echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-software/\e[0m"'
-~/dotfiles/scripts/repository-updates.zsh ~/external-software/
+~/dotfiles/scripts/repository-updates.zsh ~/external-repos/
 
 echo '\e[34mExecuting\e[0m "\e[32msudo fwupdmgr \e[37mrefresh && \e[32msudo fwupdmgr \e[37mget-updates\e[0m"'
 sudo fwupdmgr refresh && sudo fwupdmgr get-updates
