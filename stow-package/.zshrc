@@ -61,8 +61,6 @@ zstyle ':znap:*' repos-dir ~/zsh-repos
 source ~/zsh-snap/znap.zsh
 
 znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
-znap source marlonrichert/zcolors
-znap eval zcolors "zcolors ${(q)LS_COLORS}"
 znap source romkatv/powerlevel10k
 znap source lukechilds/zsh-nvm
 znap source hcgraf/zsh-sudo
