@@ -41,7 +41,7 @@
 	hunk-header-style = file line-number syntax
 
 [diff]
-	colorMoved = dimmed-zebra
+	colorMoved = zebra
 
 [mergetool]
 	keepBackup = false
@@ -67,7 +67,6 @@
 	repo = /home/user/zsh-repos/history-search-multi-word
 	repo = /home/user/zsh-repos/LS_COLORS
 	repo = /home/user/zsh-repos/powerlevel10k
-	repo = /home/user/zsh-repos/zcolors
 	repo = /home/user/zsh-repos/zsh-autosuggestions
 	repo = /home/user/zsh-repos/zsh-colored-man-pages
 	repo = /home/user/zsh-repos/zsh-completions
