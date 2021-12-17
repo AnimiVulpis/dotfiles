@@ -56,6 +56,9 @@ export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
 # Don't autoload nvm node
 export NVM_NO_USE=true
 
+# make `zle reset-prompt` work as described [here](https://github.com/zdharma-continuum/history-search-multi-word)
+zstyle :plugin:history-search-multi-word reset-prompt-protect 1
+
 # Set znap repository folder
 zstyle ':znap:*' repos-dir ~/zsh-repos
 source ~/zsh-snap/znap.zsh
@@ -64,13 +67,13 @@ znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
 znap source romkatv/powerlevel10k
 znap source lukechilds/zsh-nvm
 znap source hcgraf/zsh-sudo
-znap source zdharma-continuum/history-search-multi-word
 znap source ael-code/zsh-colored-man-pages
 znap source b4b4r07/emoji-cli
 znap source marlonrichert/zsh-edit
 znap source zsh-users/zsh-autosuggestions
 znap source AnimiVulpis/zsh-terminal-title
 znap source zsh-users/zsh-completions
+znap source zdharma-continuum/history-search-multi-word
 znap source zdharma-continuum/fast-syntax-highlighting
 
 source ~/dotfiles/scripts/fasd-init-cache.zsh
@@ -105,6 +108,15 @@ zstyle ':completion:*' verbose true
 # autoload -Uz compinit
 # compinit
 # End of lines added by compinstall (but modified)
+
+# suggested [here](https://github.com/zdharma-continuum/history-search-multi-word)
+# by the history-search-multi-word plugin
+schedprompt() {
+    zle && zle reset-prompt
+    sched +1 schedprompt
+}
+zmodload -i zsh/sched
+schedprompt
 
 # Use CTRL+(hjkl) besides cursor keys in menu completion
 zmodload zsh/complist
