@@ -8,6 +8,9 @@
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
     "auto-close-tag.SublimeText3Mode": true,
     "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
     "bookmarks.useWorkaroundForFormatters": true,
