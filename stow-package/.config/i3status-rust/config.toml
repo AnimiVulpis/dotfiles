@@ -1,0 +1,46 @@
+[theme]
+name = "native"
+
+[icons]
+name = "awesome"
+
+[[block]]
+block = "focused_window"
+max_width = 100
+show_marks = "visible"
+
+[[block]]
+block = "sound"
+show_volume_when_muted = true
+
+[[block]]
+block = "net"
+format = "{ssid} {signal_strength} {speed_down;K*b} {graph_down;M*_b}"
+format_alt = "{ssid} {signal_strength} {speed_up;K*b} {graph_up;K*_b}"
+interval = 5
+
+[[block]]
+block = "cpu"
+interval = 3
+format = "{frequency} {barchart} {utilization}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+
+[[block]]
+block = "temperature"
+driver = "sysfs"
+
+[[block]]
+block = "battery"
+interval = 30
+format = "{percentage} {time}"
+full_threshold = 98
+
+[[block]]
+block = "time"
+format = "%a %F %R"
+interval = 30
