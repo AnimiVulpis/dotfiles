@@ -37,7 +37,8 @@
 	keep-plus-minus-markers = false
 
 [delta "decorations"]
-	commit-decoration-style = blue box ol
+	commit-decoration-style = white yellow ol
+	file-decoration-style = blue ol
 	hunk-header-style = file line-number syntax
 
 [diff]
@@ -61,16 +62,3 @@
 	logo = log --oneline
 	st = status --short
 
-[maintenance]
-	repo = /home/user/zsh-repos/emoji-cli
-	repo = /home/user/zsh-repos/fast-syntax-highlighting
-	repo = /home/user/zsh-repos/history-search-multi-word
-	repo = /home/user/zsh-repos/LS_COLORS
-	repo = /home/user/zsh-repos/powerlevel10k
-	repo = /home/user/zsh-repos/zsh-autosuggestions
-	repo = /home/user/zsh-repos/zsh-colored-man-pages
-	repo = /home/user/zsh-repos/zsh-completions
-	repo = /home/user/zsh-repos/zsh-edit
-	repo = /home/user/zsh-repos/zsh-nvm
-	repo = /home/user/zsh-repos/zsh-sudo
-	repo = /home/user/zsh-repos/zsh-terminal-title
