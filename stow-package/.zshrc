@@ -109,15 +109,6 @@ zstyle ':completion:*' verbose true
 # compinit
 # End of lines added by compinstall (but modified)
 
-# suggested [here](https://github.com/zdharma-continuum/history-search-multi-word)
-# by the history-search-multi-word plugin
-schedprompt() {
-    zle && zle reset-prompt
-    sched +1 schedprompt
-}
-zmodload -i zsh/sched
-schedprompt
-
 # Use CTRL+(hjkl) besides cursor keys in menu completion
 zmodload zsh/complist
 bindkey -M menuselect '^h' vi-backward-char        # left
