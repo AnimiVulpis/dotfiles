@@ -46,3 +46,8 @@ go install github.com/cbednarski/hostess@latest
 # Tool for fast code search `houndd`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/hound-search/hound/cmds/...@latest\e[0m"'
 go install github.com/hound-search/hound/cmds/...@latest
+
+# Python related
+
+echo '\e[34mCheck\e[0m "\e[32mhttps://github.com/fdw/rofimoji/releases/\e[0m" for \e[33mrofimoji\e[0m \e[35m> 5.3.0\e[0m'
+echo '\e[34mThen use\e[0m `\e[32mpip3 \e[33minstall \e[36m--user \e[35m~/Downloads/rofimoji-<VERSION>-py3-none-any.whl\e[0m` \e[34mto install\e[0m'
