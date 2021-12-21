@@ -38,7 +38,7 @@
 
 [delta "decorations"]
 	commit-decoration-style = white yellow ol
-	file-decoration-style = blue ol
+	file-decoration-style = white blue ol
 	hunk-header-style = file line-number syntax
 
 [diff]
