@@ -4,9 +4,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Format and order json",
+            "label": "Format and sort json",
             "type": "shell",
-            "command": "jq --sort-keys --indent 4 -n -f '${file}' | sponge '${file}'",
+            "command": "cat ${file} | jq --sort-keys --indent 4 '.' | sponge '${file}'",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Format and sort json by `.command` ignoring the first line",
+            "type": "shell",
+            "command": "{ head -n 1 ${file}; tail -n +2 ${file} | jq --sort-keys --indent 4 'sort_by(.command)'; } | sponge '${file}'",
             "presentation": {
                 "reveal": "silent",
                 "panel": "shared",
