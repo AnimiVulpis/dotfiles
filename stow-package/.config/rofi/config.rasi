@@ -15,10 +15,10 @@ configuration {
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
 /*	icon-theme: ;*/
-/*	drun-match-fields: "name,generic,exec,categories,keywords";*/
+	drun-match-fields: "name,generic,categories,comment,keywords";
 /*	drun-categories: ;*/
-	drun-show-actions: true;
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+	drun-show-actions: false;
+	drun-display-format: "[<b>{name}</b>][<span weight='light' size='small'> {generic}</span>][<span weight='light' size='small'> »{comment}«</span>][<span weight='light' size='small'> 🮹🮺{categories}</span>][<span weight='light' size='small'> ➤{keywords}</span>]";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -33,7 +33,7 @@ configuration {
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 	combi-modi: "drun,window";
-	matching: "fuzzy";
+	matching: "prefix";
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	filter: ;*/

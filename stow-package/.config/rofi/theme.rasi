@@ -3,38 +3,38 @@
  * Rofi version: 1.7.2-dev
  **/
 * {
-    red:                         rgba ( 220, 50, 47, 100 % );
-    selected-active-foreground:  rgba ( 253, 246, 227, 100 % );
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    separatorcolor:              rgba ( 195, 198, 200, 100 % );
-    urgent-foreground:           rgba ( 255, 82, 82, 100 % );
-    alternate-urgent-background: rgba ( 69, 90, 100, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    red:                         #dc322f;
+    selected-active-foreground:  #dfdccc;
+    lightfg:                     #596f74;
+    separatorcolor:              #b0baba;
+    urgent-foreground:           #e75d23;
+    alternate-urgent-background: #8d752a;
+    lightbg:                     #3e575e;
     background-color:            transparent;
     border-color:                var(foreground);
-    normal-background:           rgba ( 69, 90, 100, 100 % );
-    bordercolor:                 rgba ( 42, 55, 62, 100 % );
-    alternate-active-background: rgba ( 69, 90, 100, 100 % );
-    active-foreground:           rgba ( 0, 188, 212, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
+    normal-background:           #3e575e;
+    bordercolor:                 #002b36;
+    alternate-active-background: #22404a;
+    active-foreground:           #336c94;
+    blue:                        #268bd2;
     alternate-normal-foreground: var(foreground);
-    urgent-background:           rgba ( 69, 90, 100, 100 % );
-    selected-normal-foreground:  rgba ( 250, 251, 252, 100 % );
-    selected-active-background:  rgba ( 0, 150, 136, 100 % );
-    background:                  rgba ( 58, 76, 84, 100 % );
-    selected-urgent-background:  rgba ( 255, 82, 82, 100 % );
-    active-background:           rgba ( 69, 90, 100, 100 % );
+    urgent-background:           #8d752a;
+    selected-normal-foreground:  #dfdccc;
+    selected-active-background:  #2aa198;
+    background:                  #22404a;
+    selected-urgent-background:  #e75d23;
+    active-background:           #22404a;
     alternate-active-foreground: var(active-foreground);
-    alternate-normal-background: rgba ( 69, 90, 100, 100 % );
-    foreground:                  rgba ( 250, 251, 252, 100 % );
+    alternate-normal-background: #22404a;
+    foreground:                  #dfdccc;
     alternate-urgent-foreground: var(urgent-foreground);
-    selected-urgent-foreground:  rgba ( 253, 246, 227, 100 % );
+    selected-urgent-foreground:  #dfdccc;
     spacing:                     2;
     normal-foreground:           var(foreground);
-    selected-normal-background:  rgba ( 0, 188, 212, 100 % );
+    selected-normal-background:  #268bd2;
 }
 window {
-    padding:          5;
+    padding:          0 0 0 4;
     background-color: var(background);
     border:           1;
 }
@@ -105,7 +105,7 @@ element-text {
 scrollbar {
     width:        4px ;
     padding:      0;
-    handle-width: 8px ;
+    handle-width: 4px ;
     border:       0;
 }
 mode-switcher {
