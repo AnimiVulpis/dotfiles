@@ -76,8 +76,8 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     -- Layout Machi
-    machi.default_layout,
     awful.layout.suit.max,
+    machi.default_layout,
     awful.layout.suit.tile.right,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.fair,
