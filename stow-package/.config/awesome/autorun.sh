@@ -2,12 +2,13 @@
 
 function run_if_not_already_running {
     if ! pgrep -f "$1"; then
-        "$@" &
+        "$@" >> /tmp/$1.log 2>&1 &
     fi
 }
 
-# xset s on
-# xset s 900 7
+xset s on
+xset s 900
+xset dpms 1800 2400 3000
 # run_if_not_already_running xss-lock -n /usr/lib/xsecurelock/dimmer -l -- \
 #     env \
 #     XSECURELOCK_AUTH_TIMEOUT=60 \
@@ -22,7 +23,12 @@ function run_if_not_already_running {
 #     XSECURELOCK_SHOW_HOSTNAME=1 \
 #     xsecurelock -- loginctl lock-session # lock session after screen locking
 
+run_if_not_already_running compton
+run_if_not_already_running nm-applet
 # run_if_not_already_running picom
 # run_if_not_already_running aw-qt
 # run_if_not_already_running redshift-gtk
 # run_if_not_already_running copyq
+
+# autorandr --change >> /temp/autorandr.log 2>&1
+feh --no-fehbg --bg-center $HOME/Pictures/wallpaper-stripes.png
