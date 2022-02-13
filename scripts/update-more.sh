@@ -7,7 +7,7 @@ rustup update
 # List all installed rust crates
 # cargo install --list
 
-echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall bat broot click eva exa fd-find find_unicode genact git-delta hyperfine ncspot tidy-viewer \e[0m"'
+echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall bat broot click eva exa fd-find find_unicode genact git-delta hyperfine jless ncspot tidy-viewer tokei \e[0m"'
 cargo install \
     bat \
     broot \
@@ -19,8 +19,10 @@ cargo install \
     genact \
     git-delta \
     hyperfine \
+    jless \
     ncspot \
-    tidy-viewer
+    tidy-viewer \
+    tokei
 cargo install --version 0.1.0-alpha.5 gobang
 
 # znap generated function (completion) install
