@@ -65,6 +65,7 @@ source ~/zsh-snap/znap.zsh
 
 # run this once on the command line to install via znap
 # znap install ahmetb/kubectx
+# znap install simonwhitaker/gibo
 
 znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
 znap source romkatv/powerlevel10k
