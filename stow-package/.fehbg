@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-center '/home/user/Pictures/wallpaper-stripes.png' 
