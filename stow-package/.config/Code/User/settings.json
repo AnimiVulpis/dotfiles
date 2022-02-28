@@ -37,6 +37,7 @@
     "editor.dragAndDrop": false,
     "editor.find.addExtraSpaceOnTop": false,
     "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.guides.bracketPairs": true,
     "editor.linkedEditing": true,
