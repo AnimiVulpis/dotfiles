@@ -1,0 +1,5 @@
+#!/bin/bash
+
+autorandr --change >> /tmp/autorandr.log 2>&1
+
+~/.fehbg &
