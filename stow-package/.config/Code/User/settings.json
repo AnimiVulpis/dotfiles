@@ -71,7 +71,6 @@
         "gutter",
         "overview"
     ],
-    "gitlens.codeLens.enabled": false,
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm ZZ",
     "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
     "gitlens.defaultGravatarsStyle": "retro",
@@ -79,6 +78,7 @@
     "gitlens.heatmap.locations": [
         "gutter"
     ],
+    "gitlens.hovers.currentLine.over": "line",
     "gitlens.mode.active": "zen",
     "gitlens.statusBar.enabled": false,
     "html.format.endWithNewline": true,
