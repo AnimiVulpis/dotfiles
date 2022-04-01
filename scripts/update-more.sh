@@ -7,11 +7,12 @@ rustup update
 # List all installed rust crates
 # cargo install --list
 
-echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall bat broot click eva exa fd-find find_unicode genact git-delta hyperfine jless ncspot tidy-viewer tokei \e[0m"'
+echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall bat broot click difftastic eva exa fd-find find_unicode genact git-delta hyperfine jless ncspot tidy-viewer tokei zee \e[0m"'
 cargo install \
     bat \
     broot \
     click \
+    difftastic \
     eva \
     exa \
     fd-find \
@@ -22,7 +23,8 @@ cargo install \
     jless \
     ncspot \
     tidy-viewer \
-    tokei
+    tokei \
+    zee
 cargo install --version 0.1.0-alpha.5 gobang
 
 # znap generated function (completion) install
@@ -53,8 +55,3 @@ go install github.com/github/git-sizer@latest
 # Tool to visualize most used cli commands `tsukae`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/irevenko/tsukae@latest\e[0m"'
 go install github.com/irevenko/tsukae@latest
-
-# Python related
-
-echo '\e[34mCheck\e[0m "\e[32mhttps://github.com/fdw/rofimoji/releases/\e[0m" for \e[33mrofimoji\e[0m \e[35m> 5.3.0\e[0m'
-echo '\e[34mThen use\e[0m `\e[32mpip3 \e[33minstall \e[36m--user \e[35m~/Downloads/rofimoji-<VERSION>-py3-none-any.whl\e[0m` \e[34mto install\e[0m'
