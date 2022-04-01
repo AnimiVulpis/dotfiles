@@ -72,7 +72,6 @@ znap source romkatv/powerlevel10k
 znap source lukechilds/zsh-nvm
 znap source hcgraf/zsh-sudo
 znap source ael-code/zsh-colored-man-pages
-znap source b4b4r07/emoji-cli
 znap source marlonrichert/zsh-edit
 znap source zsh-users/zsh-autosuggestions
 znap source AnimiVulpis/zsh-terminal-title
