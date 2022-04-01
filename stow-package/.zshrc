@@ -136,8 +136,6 @@ export GOBIN="$GOPATH/bin"
 export DOCKER_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/docker"
 
 # alias definitions
-alias vi="nvim"
-alias vim="nvim"
 alias ls="ls --color=auto"
 alias ll="ls --color=auto -lh"
 alias lh="ls --color=auto -lhA"
@@ -150,8 +148,8 @@ alias tv="tidy-viewer"
 alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 8601 date:\t' && date -Iseconds"
 
 # More environment variables
-export SUDO_EDITOR="nvim"
-export EDITOR="nvim"
+export SUDO_EDITOR="vim"
+export EDITOR="vim"
 export VISUAL="code -w"
 export LESS="-x4 -Ri"
 
