@@ -44,6 +44,9 @@
 [diff]
 	colorMoved = zebra
 
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+
 [mergetool]
 	keepBackup = false
 
