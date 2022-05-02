@@ -81,3 +81,7 @@ go install github.com/github/git-sizer@latest
 # Tool to visualize most used cli commands `tsukae`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/irevenko/tsukae@latest\e[0m"'
 go install github.com/irevenko/tsukae@latest
+
+echo 'Install VCCode extension updates'
+echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
+
