@@ -7,12 +7,35 @@ rustup update
 # List all installed rust crates
 # cargo install --list
 
-echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall bat broot click difftastic eva exa fd-find find_unicode genact git-delta hyperfine jless ncspot tidy-viewer tokei zee \e[0m"'
+echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall
+    bat \
+    broot \
+    click \
+    difftastic \
+    diskus \
+    du-dust \
+    dua-cli \
+    eva \
+    exa \
+    fd-find \
+    find_unicode \
+    genact \
+    git-delta \
+    hyperfine \
+    jless \
+    ncspot \
+    tidy-viewer \
+    tokei \
+    zee \e[0m"'
+
 cargo install \
     bat \
     broot \
     click \
     difftastic \
+    diskus \
+    du-dust \
+    dua-cli \
     eva \
     exa \
     fd-find \
@@ -43,6 +66,9 @@ go install github.com/awslabs/amazon-ecr-credential-helper/ecr-login/cli/docker-
 # Tool to manage hosts file idempotent `hostess`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/cbednarski/hostess@latest\e[0m"'
 go install github.com/cbednarski/hostess@latest
+# Tool for disk space analysis
+echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/dundee/gdu/v5/cmd/gdu@latest\e[0m"'
+go install github.com/dundee/gdu/v5/cmd/gdu@latest
 # Tool for fast code search `houndd`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/hound-search/hound/cmds/...@latest\e[0m"'
 go install github.com/hound-search/hound/cmds/...@latest
