@@ -61,7 +61,7 @@ cargo install --version 0.1.0-alpha.5 gobang
 # go list ...
 
 # Credential helper for docker to access Amazon ECR
-echo '\e[34mExecuting\e[0m "\e[32mgo \e[37mgithub.com/awslabs/amazon-ecr-credential-helper/ecr-login/cli/docker-credential-ecr-login@latest\e[0m"'
+echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/awslabs/amazon-ecr-credential-helper/ecr-login/cli/docker-credential-ecr-login@latest\e[0m"'
 go install github.com/awslabs/amazon-ecr-credential-helper/ecr-login/cli/docker-credential-ecr-login@latest
 # Tool to manage hosts file idempotent `hostess`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/cbednarski/hostess@latest\e[0m"'
