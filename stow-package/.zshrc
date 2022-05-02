@@ -14,6 +14,15 @@ fi
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history-file"
 HISTSIZE=512000
 SAVEHIST=256000
+
+# Inform about potential history loss
+HISTORY_FILE_SIZE=$(stat -c %s $HISTFILE)
+if (( $HISTORY_FILE_SIZE < 18 )); then
+    echo "History file size suggests (nearly) empty file"
+elif (( $HISTORY_FILE_SIZE < 464000 )); then
+    echo "History file size suggests history loss"
+fi
+
 # ZLE Emacs mode
 bindkey -e
 
