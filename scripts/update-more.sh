@@ -1,4 +1,10 @@
-#!/bin/sh
+#!/bin/zsh
+
+echo '\e[34mExecuting\e[0m "\e[32msudo snap \e[37mrefresh\e[0m"'
+sudo snap refresh
+
+echo '\e[34mExecuting\e[0m "\e[32m flatpak \e[37mupdate\e[0m"'
+flatpak update
 
 # Rust related
 echo '\e[34mExecuting\e[0m "\e[32mrustup \e[37mupdate\e[0m"'
@@ -81,6 +87,19 @@ go install github.com/github/git-sizer@latest
 # Tool to visualize most used cli commands `tsukae`
 echo '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/irevenko/tsukae@latest\e[0m"'
 go install github.com/irevenko/tsukae@latest
+
+echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-software/\e[0m"'
+~/dotfiles/scripts/repository-updates.zsh ~/external-repos/
+
+echo '\e[34mExecuting\e[0m "\e[32msudo fwupdmgr \e[37mrefresh && \e[32msudo fwupdmgr \e[37mget-updates\e[0m"'
+sudo fwupdmgr refresh && sudo fwupdmgr get-updates
+
+# Set znap repository folder and check status
+zstyle ':znap:*' repos-dir ~/zsh-repos
+source ~/zsh-snap/znap.zsh
+
+echo '\e[34mExecuting\e[0m "\e[32mznap \e[37mstatus\e[0m"'
+znap status
 
 echo 'Install VCCode extension updates'
 echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
