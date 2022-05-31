@@ -26,6 +26,7 @@ xset dpms 1800 2400 3000
 run_if_not_already_running picom
 run_if_not_already_running nm-applet
 ~/.fehbg
+sudo modprobe v4l2loopback
 # run_if_not_already_running aw-qt
 # run_if_not_already_running redshift-gtk
 # run_if_not_already_running copyq
