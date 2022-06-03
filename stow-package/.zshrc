@@ -121,6 +121,11 @@ zstyle ':completion:*' verbose true
 # compinit
 # End of lines added by compinstall (but modified)
 
+# Configure line editor
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
 # Use CTRL+(hjkl) besides cursor keys in menu completion
 zmodload zsh/complist
 bindkey -M menuselect '^h' vi-backward-char        # left
