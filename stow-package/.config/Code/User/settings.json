@@ -1,4 +1,5 @@
 {
+    "Lua.telemetry.enable": false,
     "[lua]": {
         "editor.defaultFormatter": "Koihik.vscode-lua-format"
     },
