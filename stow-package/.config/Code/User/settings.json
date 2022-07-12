@@ -62,6 +62,7 @@
         "config": "jsonc"
     },
     "files.enableTrash": false,
+    "git.mergeEditor": true,
     "gitlens.blame.avatars": false,
     "gitlens.blame.highlight.locations": [
         "gutter",
@@ -101,6 +102,7 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontFamily": "Iosevka Fixed",
     "terminal.integrated.scrollback": 4200,
+    "terminal.integrated.shellIntegration.enabled": true,
     "todo-tree.filtering.includeHiddenFiles": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.autoDetectHighContrast": false,
