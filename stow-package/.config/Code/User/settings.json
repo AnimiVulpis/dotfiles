@@ -1,5 +1,8 @@
 {
     "Lua.telemetry.enable": false,
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
     "[lua]": {
         "editor.defaultFormatter": "Koihik.vscode-lua-format"
     },
@@ -14,13 +17,22 @@
     },
     "auto-close-tag.SublimeText3Mode": true,
     "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
+    "blockman.n01LineHeight": 0,
+    "blockman.n04ColorComboPreset": "Classic Dark 1 (Super gradients)",
+    "blockman.n04Sub04RightSideBaseOfBlocks": "Rightmost Edge Of Viewport",
+    "blockman.n23AnalyzeSquareBrackets": true,
+    "blockman.n24AnalyzeRoundBrackets": true,
+    "blockman.n33A01B2FromDepth0ToInwardForAllBackgrounds": "45,0,0,2; none",
+    "blockman.n33A03B1FromDepth0ToInwardForFocusTreeBorders": "30,1,0,2; neutral > linear-gradient(to right, rgb(144, 54, 8), rgb(48, 36, 116))",
     "bookmarks.useWorkaroundForFormatters": true,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
         "animi",
+        "Bialik",
         "fwupd",
         "fwupdmgr",
+        "prisma",
         "saas"
     ],
     "color-highlight.markRuler": false,
@@ -28,6 +40,7 @@
     "color-highlight.matchWords": true,
     "csv-preview.lineNumbers": "ordinal",
     "debug.console.fontFamily": "Iosevka Fixed",
+    "diffEditor.wordWrap": "off",
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.accessibilitySupport": "off",
@@ -40,7 +53,10 @@
     "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
-    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
+    "editor.inlayHints.enabled": false,
     "editor.linkedEditing": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
@@ -55,7 +71,7 @@
     "editor.suggest.showStatusBar": true,
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.wordBasedSuggestionsMode": "allDocuments",
-    "explorer.autoReveal": false,
+    "editor.wordWrap": "off",
     "explorer.incrementalNaming": "smart",
     "extensions.autoUpdate": false,
     "files.associations": {
@@ -84,8 +100,13 @@
     "gitlens.mode.active": "zen",
     "gitlens.statusBar.enabled": false,
     "html.format.endWithNewline": true,
+    "jest.autoRun": "off",
+    "julia.enableTelemetry": false,
+    "julia.symbolCacheDownload": true,
+    "latex-workshop.latex.recipe.default": "lastUsed",
     "liveshare.increasedGuestLimit": false,
     "liveshare.sharedTerminalHeight": 100,
+    "npm.keybindingsChangedWarningShown": true,
     "path-intellisense.showHiddenFiles": true,
     "problems.showCurrentInStatus": true,
     "redhat.telemetry.enabled": false,
@@ -98,6 +119,9 @@
     "shellformat.path": "/home/user/go/bin/shfmt",
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
     "terminal.integrated.confirmOnExit": "hasChildProcesses",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontFamily": "Iosevka Fixed",
@@ -108,7 +132,10 @@
     "window.autoDetectHighContrast": false,
     "window.menuBarVisibility": "toggle",
     "window.title": "VSCode${separator}${rootName}${separator}${activeEditorMedium}${dirty}",
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f"
+    },
     "workbench.commandPalette.preserveInput": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
     "workbench.editor.pinnedTabSizing": "compact",
