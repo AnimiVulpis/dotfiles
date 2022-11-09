@@ -162,7 +162,7 @@ alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 
 
 # More environment variables
 export SUDO_EDITOR="vim"
-export EDITOR="vim"
+export EDITOR="hx"
 export VISUAL="code -w"
 export LESS="-x4 -Ri"
 
