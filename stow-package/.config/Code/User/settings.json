@@ -1,5 +1,8 @@
 {
     "Lua.telemetry.enable": false,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
@@ -118,6 +121,15 @@
     "terminal.integrated.scrollback": 4200,
     "terminal.integrated.shellIntegration.enabled": true,
     "todo-tree.filtering.includeHiddenFiles": true,
+    "totalTypeScript.hiddenTips": [
+        "typing-function-parameters",
+        "basic-types",
+        "interface-declaration",
+        "variable-type-annotation",
+        "passing-generics-to-types"
+    ],
+    "totalTypeScript.hideAllTips": false,
+    "totalTypeScript.hideBasicTips": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.autoDetectHighContrast": false,
     "window.menuBarVisibility": "toggle",
