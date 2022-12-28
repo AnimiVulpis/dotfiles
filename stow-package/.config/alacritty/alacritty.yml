@@ -29,9 +29,9 @@ window:
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 170
+    lines: 25
 
   # Window position (changes require restart)
   #
@@ -50,7 +50,7 @@ window:
   #  y: 0
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -892,6 +892,7 @@ key_bindings:
 
   # AnimiVulpis
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: L, mods: Control|Shift, action: ClearHistory }
 
 #debug:
   # Display the time it takes to redraw each frame.
