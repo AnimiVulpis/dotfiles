@@ -17,22 +17,25 @@ echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall
     bat \
     broot \
     click \
+    #czkawka_gui \
     difftastic \
     diskus \
     du-dust \
     dua-cli \
     eva \
     exa \
+    fclones \
     fd-find \
     find_unicode \
     genact \
     git-delta \
     hyperfine \
     jless \
+    jwt-cli \
     ncspot \
+    sheldon \
     tidy-viewer \
-    tokei \
-    zee \e[0m"'
+    tokei \e[0m"'
 
 cargo install \
     bat \
@@ -44,16 +47,18 @@ cargo install \
     dua-cli \
     eva \
     exa \
+    fclones \
     fd-find \
     find_unicode \
     genact \
     git-delta \
     hyperfine \
     jless \
+    jwt-cli \
     ncspot \
+    sheldon \
     tidy-viewer \
-    tokei \
-    zee
+    tokei
 cargo install --version 0.1.0-alpha.5 gobang
 
 # znap generated function (completion) install
