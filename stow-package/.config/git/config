@@ -14,7 +14,7 @@
 	path = ~/projects/gitconfig
 
 [core]
-	editor = nvim
+	editor = hx
 	pager = delta
 
 [pager]
