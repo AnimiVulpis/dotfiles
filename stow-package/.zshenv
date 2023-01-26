@@ -12,6 +12,9 @@ if [ -n "${ZSH_VERSION-}" ]; then
   #
   #   export GOPATH=$HOME/go
   #
+  # AnimiVulpis
+  # Ubuntu automatically calls compinit in /etc/zshrc, unless $skip_global_compinit has been set.
+  skip_global_compinit=1
   # Do not change anything else in this file.
 
   : ${ZDOTDIR:=~}
