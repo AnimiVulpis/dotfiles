@@ -24,7 +24,10 @@ zstyle ':z4h:' term-shell-integration 'yes'
 zstyle ':z4h:autosuggestions' forward-char 'accept'
 
 # Recursively traverse directories when TAB-completing files.
-zstyle ':z4h:fzf-complete' recurse-dirs 'no'
+zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
+
+# AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/v5/tips.md#completions
+zstyle ':z4h:fzf-complete' fzf-bindings tab:repeat
 
 # Enable direnv to automatically source .envrc files.
 zstyle ':z4h:direnv'         enable 'no'
@@ -47,7 +50,7 @@ zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
 # This doesn't do anything apart from cloning the repository and keeping it
 # up-to-date. Cloned files can be used after `z4h init`. This is just an
 # example. If you don't plan to use Oh My Zsh, delete this line.
-z4h install ohmyzsh/ohmyzsh || return
+# z4h install ohmyzsh/ohmyzsh || return
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
@@ -56,10 +59,23 @@ z4h install ohmyzsh/ohmyzsh || return
 z4h init || return
 
 # Extend PATH.
-path=(~/bin $path)
+# path=(~/bin $path)
 
 # Export environment variables.
 export GPG_TTY=$TTY
+
+# AnimiVulpis
+# Set up history
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history-file"
+HISTSIZE=512000
+SAVEHIST=256000
+# Inform about potential history loss
+HISTORY_FILE_SIZE=$(stat -c %s $HISTFILE)
+if (( $HISTORY_FILE_SIZE < 18 )); then
+    echo "History file size suggests (nearly) empty file"
+elif (( $HISTORY_FILE_SIZE < 464000 )); then
+    echo "History file size suggests history loss"
+fi
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -67,8 +83,8 @@ z4h source ~/.env.zsh
 # Use additional Git repositories pulled in with `z4h install`.
 #
 # This is just an example that you should delete. It does nothing useful.
-z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
-z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
+# z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
+# z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
@@ -90,7 +106,7 @@ function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
 compdef _directories md
 
 # Define named directories: ~w <=> Windows home directory on WSL.
-[[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
+# [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
 # Define aliases.
 alias tree='tree -a -I .git'
@@ -101,3 +117,43 @@ alias ls="${aliases[ls]:-ls} -A"
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
+
+# AnimiVulpis
+# History with timestamps and elapsed time
+setopt EXTENDED_HISTORY
+# Append to history after commands have finished
+setopt INC_APPEND_HISTORY_TIME
+# First remove oldest duplicate history items
+setopt HIST_EXPIRE_DUPS_FIRST
+# Better performance for locking of history file
+setopt HIST_FCNTL_LOCK
+# Don't add the history item consecutively
+setopt HIST_IGNORE_DUPS
+# Don't add history items with leading space
+setopt HIST_IGNORE_SPACE
+# Remove spaces
+setopt HIST_REDUCE_BLANKS
+# Don't execute history item immediately
+setopt HIST_VERIFY
+# List jobs with pid
+setopt LONG_LIST_JOBS
+# Remove no match warning
+setopt NONOMATCH
+# Move cursor to end of completion
+setopt ALWAYS_TO_END
+# Attempt completion if mid-word
+setopt COMPLETE_IN_WORD
+# Allow comments in interactive shell
+setopt INTERACTIVE_COMMENTS
+# Don't push the same directory consecutively
+setopt PUSHD_IGNORE_DUPS
+# zsh autosuggest
+# Set max buffer size zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# Use async suggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+# nvm
+# Set up NVM directory
+export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
+# Don't autoload nvm node
+export NVM_NO_USE=true
