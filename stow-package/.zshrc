@@ -51,6 +51,13 @@ zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
 # up-to-date. Cloned files can be used after `z4h init`. This is just an
 # example. If you don't plan to use Oh My Zsh, delete this line.
 # z4h install ohmyzsh/ohmyzsh || return
+# AnimiVulpis
+# nvm
+z4h install trapd00r/LS_COLORS || return
+z4h install lukechilds/zsh-nvm || return
+z4h install hcgraf/zsh-sudo || return
+z4h install ael-code/zsh-colored-man-pages || return
+z4h install AnimiVulpis/zsh-terminal-title || return
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
@@ -76,6 +83,26 @@ if (( $HISTORY_FILE_SIZE < 18 )); then
 elif (( $HISTORY_FILE_SIZE < 464000 )); then
     echo "History file size suggests history loss"
 fi
+# nvm
+# Set up NVM directory
+export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
+# Don't autoload nvm node
+export NVM_NO_USE=true
+# zsh-users/zsh-autosuggestions
+# Set max buffer size
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# Use async suggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+# More environment variables
+export SUDO_EDITOR="hx"
+export EDITOR="hx"
+export VISUAL="code -w"
+export LESS="-x4 -Ri"
+# Defining go paths
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+# Configure docker to use XDG_CONFIG_DIR
+export DOCKER_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/docker"
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -85,6 +112,13 @@ z4h source ~/.env.zsh
 # This is just an example that you should delete. It does nothing useful.
 # z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
 # z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
+# AnimiVulpis
+# nvm
+z4h source trapd00r/LS_COLORS/lscolors.sh
+z4h load lukechilds/zsh-nvm
+z4h load hcgraf/zsh-sudo
+z4h load ael-code/zsh-colored-man-pages
+z4h load AnimiVulpis/zsh-terminal-title
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
@@ -97,9 +131,16 @@ z4h bindkey z4h-cd-back    Alt+Left   # cd into the previous directory
 z4h bindkey z4h-cd-forward Alt+Right  # cd into the next directory
 z4h bindkey z4h-cd-up      Alt+Up     # cd into the parent directory
 z4h bindkey z4h-cd-down    Alt+Down   # cd into a child directory
+# AnimiVulpis
+z4h bindkey autosuggest-accept Ctrl+Space
+bindkey '^x^e' edit-command-line
 
 # Autoload functions.
-autoload -Uz zmv
+# autoload -Uz zmv
+# AnimiVulpis
+autoload -Uz zmv edit-command-line
+zle -N edit-command-line
+
 
 # Define functions and completions.
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
@@ -110,6 +151,19 @@ compdef _directories md
 
 # Define aliases.
 alias tree='tree -a -I .git'
+# AnimiVulpis
+# alias definitions
+alias ls="ls --color=auto"
+alias ll="ls --color=auto -lh"
+alias lh="ls --color=auto -lhA"
+alias es="exa"
+alias ed="exa -D"
+alias el="exa -l --time-style=long-iso"
+alias eh="exa -la --time-style=long-iso"
+alias et="exa -T"
+alias tv="tidy-viewer"
+alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 8601 date:\t' && date -Iseconds"
+alias t="todo-txt"
 
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
@@ -147,13 +201,3 @@ setopt COMPLETE_IN_WORD
 setopt INTERACTIVE_COMMENTS
 # Don't push the same directory consecutively
 setopt PUSHD_IGNORE_DUPS
-# zsh autosuggest
-# Set max buffer size zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-# Use async suggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-# nvm
-# Set up NVM directory
-export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
-# Don't autoload nvm node
-export NVM_NO_USE=true
