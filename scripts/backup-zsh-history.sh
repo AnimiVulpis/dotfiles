@@ -10,3 +10,5 @@ echo "Currently $lines_in_history lines in $history_location"
 echo "Latest backup has $lines_in_latest_backup lines"
 
 cp -v $history_location $backup_folder$(date -Im)_histfile_L$lines_in_history
+
+cp -pfv $history_location ~/rclone/
