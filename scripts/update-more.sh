@@ -106,6 +106,6 @@ source ~/zsh-snap/znap.zsh
 echo '\e[34mExecuting\e[0m "\e[32mznap \e[37mstatus\e[0m"'
 znap status
 
-echo 'Install VCCode extension updates'
+echo 'Install VSCode extension updates'
 echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
 
