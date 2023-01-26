@@ -4,14 +4,8 @@
 [user]
 	useConfigOnly = true
 
-[includeIf "gitdir:~/work/"]
-	path = ~/work/gitconfig
-
-[includeIf "gitdir:~/projects/"]
-	path = ~/projects/gitconfig
-
-[includeIf "gitdir:~/repos/"]
-	path = ~/projects/gitconfig
+[include]
+	path = ./config.local
 
 [core]
 	editor = hx
