@@ -47,6 +47,13 @@ zstyle ':z4h:ssh:*'                   enable 'no'
 # AnimiVulpis
 zstyle ':z4h:ssh:*' send-extra-files '~/.env.zsh'
 
+# AnimiVulpis
+# Terminal title
+zstyle ':z4h:term-title:ssh'   preexec '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~ ❯ ${1//\%/%%}'
+zstyle ':z4h:term-title:ssh'   precmd  '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~'
+zstyle ':z4h:term-title:local' preexec '%~ ❯ ${1//\%/%%}'
+zstyle ':z4h:term-title:local' precmd  '%~'
+
 # Clone additional Git repositories from GitHub.
 #
 # This doesn't do anything apart from cloning the repository and keeping it
@@ -59,7 +66,6 @@ z4h install trapd00r/LS_COLORS || return
 z4h install lukechilds/zsh-nvm || return
 z4h install hcgraf/zsh-sudo || return
 z4h install ael-code/zsh-colored-man-pages || return
-z4h install AnimiVulpis/zsh-terminal-title || return
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
@@ -120,7 +126,6 @@ z4h source trapd00r/LS_COLORS/lscolors.sh
 z4h load lukechilds/zsh-nvm
 z4h load hcgraf/zsh-sudo
 z4h load ael-code/zsh-colored-man-pages
-z4h load AnimiVulpis/zsh-terminal-title
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
