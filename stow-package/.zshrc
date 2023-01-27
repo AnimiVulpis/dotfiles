@@ -66,6 +66,7 @@ z4h install trapd00r/LS_COLORS || return
 z4h install lukechilds/zsh-nvm || return
 z4h install hcgraf/zsh-sudo || return
 z4h install ael-code/zsh-colored-man-pages || return
+z4h install marlonrichert/zsh-edit || return
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
@@ -126,6 +127,7 @@ z4h source trapd00r/LS_COLORS/lscolors.sh
 z4h load lukechilds/zsh-nvm
 z4h load hcgraf/zsh-sudo
 z4h load ael-code/zsh-colored-man-pages
+z4h load marlonrichert/zsh-edit
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
