@@ -59,12 +59,11 @@ zstyle ':z4h:term-title:local' precmd  '%~'
 # This doesn't do anything apart from cloning the repository and keeping it
 # up-to-date. Cloned files can be used after `z4h init`. This is just an
 # example. If you don't plan to use Oh My Zsh, delete this line.
-# z4h install ohmyzsh/ohmyzsh || return
+z4h install ohmyzsh/ohmyzsh || return
 # AnimiVulpis
 # nvm
 z4h install trapd00r/LS_COLORS || return
 z4h install lukechilds/zsh-nvm || return
-z4h install hcgraf/zsh-sudo || return
 z4h install ael-code/zsh-colored-man-pages || return
 z4h install marlonrichert/zsh-edit || return
 
@@ -125,7 +124,7 @@ z4h source ~/.env.zsh
 # nvm
 z4h source trapd00r/LS_COLORS/lscolors.sh
 z4h load lukechilds/zsh-nvm
-z4h load hcgraf/zsh-sudo
+z4h load ohmyzsh/ohmyzsh/plugins/sudo
 z4h load ael-code/zsh-colored-man-pages
 z4h load marlonrichert/zsh-edit
 
