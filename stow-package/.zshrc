@@ -43,7 +43,9 @@ zstyle ':z4h:ssh:*'                   enable 'no'
 
 # Send these files over to the remote host when connecting over SSH to the
 # enabled hosts.
-zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
+# zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
+# AnimiVulpis
+zstyle ':z4h:ssh:*' send-extra-files '~/.env.zsh'
 
 # Clone additional Git repositories from GitHub.
 #
