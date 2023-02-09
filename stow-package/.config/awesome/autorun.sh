@@ -7,8 +7,10 @@ function run_if_not_already_running {
 }
 
 xset s on
-xset s 900
-xset dpms 1800 2400 3000
+xset s 600 300
+xset dpms 1200 1800 2700
+run_if_not_already_running xss-lock -n ~/dotfiles/scripts/dim-screen.sh -- ~/dotfiles/scripts/lock-and-pixelate.sh
+
 # run_if_not_already_running xss-lock -n /usr/lib/xsecurelock/dimmer -l -- \
 #     env \
 #     XSECURELOCK_AUTH_TIMEOUT=60 \
