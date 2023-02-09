@@ -61,11 +61,6 @@ cargo install \
     tokei
 cargo install --version 0.1.0-alpha.5 gobang
 
-# znap generated function (completion) install
-# `znap fpath _kubectl 'kubectl completion  zsh'`
-# `znap fpath _rustup  'rustup  completions zsh'`
-# `znap fpath _cargo   'rustup  completions zsh cargo'`
-
 # Go related
 
 # List all installed go packages
@@ -99,12 +94,9 @@ echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[3
 echo '\e[34mExecuting\e[0m "\e[32msudo fwupdmgr \e[37mrefresh && \e[32msudo fwupdmgr \e[37mget-updates\e[0m"'
 sudo fwupdmgr refresh && sudo fwupdmgr get-updates
 
-# Set znap repository folder and check status
-zstyle ':znap:*' repos-dir ~/zsh-repos
-source ~/zsh-snap/znap.zsh
 
-echo '\e[34mExecuting\e[0m "\e[32mznap \e[37mstatus\e[0m"'
-znap status
+echo 'To update zsh4humans'
+echo 'zh4 update'
 
 echo 'Install VSCode extension updates'
 echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
