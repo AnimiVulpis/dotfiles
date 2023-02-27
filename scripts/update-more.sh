@@ -96,7 +96,7 @@ sudo fwupdmgr refresh && sudo fwupdmgr get-updates
 
 
 echo 'To update zsh4humans'
-echo 'zh4 update'
+echo 'z4h update'
 
 echo 'Install VSCode extension updates'
 echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
