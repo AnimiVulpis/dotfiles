@@ -29,6 +29,10 @@ zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
 # AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/v5/tips.md#completions
 zstyle ':z4h:fzf-complete' fzf-bindings tab:repeat
 
+# AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/master/tips.md#current-directory
+zstyle ':z4h:fzf-dir-history' fzf-bindings tab:repeat
+zstyle ':z4h:cd-down'         fzf-bindings tab:repeat
+
 # Enable direnv to automatically source .envrc files.
 zstyle ':z4h:direnv'         enable 'no'
 # Show "loading" and "unloading" notifications from direnv.
