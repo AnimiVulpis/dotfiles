@@ -89,11 +89,11 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history-file"
 HISTSIZE=512000
 SAVEHIST=256000
 # Inform about potential history loss
-HISTORY_FILE_SIZE=$(stat -c %s $HISTFILE)
-if (( $HISTORY_FILE_SIZE < 18 )); then
-    echo "History file size suggests (nearly) empty file"
-elif (( $HISTORY_FILE_SIZE < 464000 )); then
-    echo "History file size suggests history loss"
+HISTORY_FILE_LINES=$(wc -l $HISTFILE | cut -d ' ' -f1)
+HISTORY_BACKUP_FOLDER="$HOME/projects/zsh-history-backup/"
+HISTORY_BACKUP_LINES=$(ls -r $HISTORY_BACKUP_FOLDER | head -n 1 | cut -d 'L' -f 2)
+if (( $HISTORY_FILE_LINES < $HISTORY_BACKUP_LINES )); then
+    echo "Backup has more lines than history-file: $HISTORY_BACKUP_LINES vs. $HISTORY_FILE_LINES"
 fi
 # nvm
 # Set up NVM directory
