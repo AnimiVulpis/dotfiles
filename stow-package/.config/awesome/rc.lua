@@ -58,7 +58,8 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 beautiful.layout_machi = machi.get_icon()
 
 -- AnimiVulpis: Notification size configuration
-beautiful.notification_max_height = 300
+beautiful.notification_max_width = 750
+beautiful.notification_max_height = 400
 beautiful.notification_icon_size = 200
 
 -- This is used later as the default terminal and editor to run.
