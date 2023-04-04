@@ -3,7 +3,7 @@
 echo '\e[34mExecuting\e[0m "\e[32msudo snap \e[37mrefresh\e[0m"'
 sudo snap refresh
 
-echo '\e[34mExecuting\e[0m "\e[32m flatpak \e[37mupdate\e[0m"'
+echo '\e[34mExecuting\e[0m "\e[32mflatpak \e[37mupdate\e[0m"'
 flatpak update
 
 # Rust related
