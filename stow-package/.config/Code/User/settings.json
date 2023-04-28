@@ -1,5 +1,4 @@
 {
-    "Lua.telemetry.enable": false,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
@@ -12,15 +11,21 @@
     "[markdown]": {
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
-    "auto-close-tag.SublimeText3Mode": true,
     "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
+    "auto-close-tag.SublimeText3Mode": true,
     "bookmarks.useWorkaroundForFormatters": true,
+    "color-highlight.markerType": "outline",
+    "color-highlight.markRuler": false,
+    "color-highlight.matchWords": true,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "en,de",
     "cSpell.userWords": [
@@ -31,9 +36,6 @@
         "prisma",
         "saas"
     ],
-    "color-highlight.markRuler": false,
-    "color-highlight.markerType": "outline",
-    "color-highlight.matchWords": true,
     "csv-preview.lineNumbers": "ordinal",
     "debug.console.fontFamily": "Iosevka Fixed",
     "diffEditor.wordWrap": "off",
@@ -99,6 +101,7 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "liveshare.increasedGuestLimit": false,
     "liveshare.sharedTerminalHeight": 100,
+    "Lua.telemetry.enable": false,
     "npm.keybindingsChangedWarningShown": true,
     "path-intellisense.showHiddenFiles": true,
     "problems.showCurrentInStatus": true,
