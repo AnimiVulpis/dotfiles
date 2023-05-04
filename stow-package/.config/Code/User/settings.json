@@ -141,7 +141,6 @@
         "editor.lineHighlightBackground": "#1073cf2d",
         "editor.lineHighlightBorder": "#9fced11f"
     },
-    "workbench.colorTheme": "Default Dark+ Experimental",
     "workbench.commandPalette.preserveInput": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
     "workbench.editor.pinnedTabSizing": "compact",
