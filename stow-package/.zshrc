@@ -125,7 +125,6 @@ z4h source ~/.env.zsh
 # z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
 # z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
 # AnimiVulpis
-# nvm
 z4h source trapd00r/LS_COLORS/lscolors.sh
 z4h load lukechilds/zsh-nvm
 z4h load ohmyzsh/ohmyzsh/plugins/sudo
@@ -152,7 +151,6 @@ bindkey '^x^e' edit-command-line
 # AnimiVulpis
 autoload -Uz zmv edit-command-line
 zle -N edit-command-line
-
 
 # Define functions and completions.
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
