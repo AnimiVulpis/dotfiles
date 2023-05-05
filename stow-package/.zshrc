@@ -53,9 +53,9 @@ zstyle ':z4h:ssh:*' send-extra-files '~/.env.zsh'
 
 # AnimiVulpis
 # Terminal title
-zstyle ':z4h:term-title:ssh'   preexec '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~ ❯ ${1//\%/%%}'
+zstyle ':z4h:term-title:ssh'   preexec '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~ » ${1//\%/%%}'
 zstyle ':z4h:term-title:ssh'   precmd  '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~'
-zstyle ':z4h:term-title:local' preexec '%~ ❯ ${1//\%/%%}'
+zstyle ':z4h:term-title:local' preexec '%~ » ${1//\%/%%}'
 zstyle ':z4h:term-title:local' precmd  '%~'
 
 # Clone additional Git repositories from GitHub.
