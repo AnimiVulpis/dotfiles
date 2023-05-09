@@ -32,7 +32,6 @@ echo '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall
     hyperfine \
     jless \
     jwt-cli \
-    ncspot \
     tidy-viewer \
     tokei \e[0m"'
 
@@ -54,7 +53,6 @@ cargo install \
     hyperfine \
     jless \
     jwt-cli \
-    ncspot \
     tidy-viewer \
     tokei
 
