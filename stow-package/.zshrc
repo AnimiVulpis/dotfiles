@@ -3,7 +3,6 @@
 # variables such as PATH) in this file or in files sourced from it.
 #
 # Documentation: https://github.com/romkatv/zsh4humans/blob/v5/README.md.
-
 # Periodic auto-update on Zsh startup: 'ask' or 'no'.
 # You can manually run `z4h update` to update everything.
 zstyle ':z4h:' auto-update      'no'
@@ -170,7 +169,7 @@ alias es="exa --group-directories-first"
 alias ed="exa -D"
 alias el="exa -l --time-style=long-iso --group-directories-first"
 alias eh="exa -la --time-style=long-iso --group-directories-first"
-alias et="exa -T"
+alias et="exa -T --group-directories-first"
 alias tv="tidy-viewer"
 alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 8601 date:\t' && date -Iseconds"
 alias t="todo-txt"
