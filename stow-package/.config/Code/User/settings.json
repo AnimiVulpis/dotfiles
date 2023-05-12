@@ -20,6 +20,9 @@
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
     "auto-close-tag.SublimeText3Mode": true,
     "bookmarks.useWorkaroundForFormatters": true,
@@ -94,6 +97,28 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.mode.active": "zen",
     "gitlens.statusBar.enabled": false,
+    "hediet.vscode-drawio.customLibraries": [
+        {
+            "entryId": "TAM-AD",
+            "file": "~/external-repos/drawio-tam-stencils/build/TAM-AD.xml",
+            "libName": "TAM Block Diagram"
+        },
+        {
+            "entryId": "TAM-Ann",
+            "file": "~/external-repos/drawio-tam-stencils/build/TAM-Ann.xml",
+            "libName": "TAM Activity Diagram"
+        },
+        {
+            "entryId": "TAM-BD",
+            "file": "~/external-repos/drawio-tam-stencils/build/TAM-BD.xml",
+            "libName": "TAM Class Diagram"
+        },
+        {
+            "entryId": "TAM-CD",
+            "file": "~/external-repos/drawio-tam-stencils/build/TAM-CD.xml",
+            "libName": "TAM Annotations"
+        }
+    ],
     "html.format.endWithNewline": true,
     "jest.autoRun": "off",
     "julia.enableTelemetry": false,
