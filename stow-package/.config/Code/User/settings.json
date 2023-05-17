@@ -1,185 +1,46 @@
 {
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
-    "[latex]": {
-        "editor.defaultFormatter": "James-Yu.latex-workshop"
-    },
-    "[lua]": {
-        "editor.defaultFormatter": "Koihik.vscode-lua-format"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-    },
-    "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer"
-    },
-    "[shellscript]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
-    "[toml]": {
-        "editor.defaultFormatter": "tamasfe.even-better-toml"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
-    "auto-close-tag.SublimeText3Mode": true,
-    "bookmarks.useWorkaroundForFormatters": true,
+    "codesnap.showWindowControls": false,
     "color-highlight.markerType": "outline",
     "color-highlight.markRuler": false,
-    "color-highlight.matchWords": true,
-    "cSpell.allowCompoundWords": true,
+    "cSpell.autoFormatConfigFile": true,
     "cSpell.language": "en,de",
-    "cSpell.userWords": [
+    "cSpell.words": [
         "animi",
-        "Bialik",
-        "fwupd",
-        "fwupdmgr",
-        "prisma",
-        "saas"
+        "Bialik"
     ],
-    "csv-preview.lineNumbers": "ordinal",
-    "debug.console.fontFamily": "Iosevka Fixed",
-    "diffEditor.wordWrap": "off",
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.acceptSuggestionOnEnter": "smart",
-    "editor.accessibilitySupport": "off",
-    "editor.bracketPairColorization.enabled": true,
+    "diffEditor.diffAlgorithm": "advanced",
+    "dotnetAcquisitionExtension.enableTelemetry": false,
     "editor.cursorBlinking": "solid",
-    "editor.cursorSurroundingLines": 5,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.cursorSurroundingLines": 3,
+    "editor.defaultColorDecorators": true,
     "editor.dragAndDrop": false,
-    "editor.find.addExtraSpaceOnTop": false,
-    "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.find.autoFindInSelection": "multiline",
+    "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace",
     "editor.guides.bracketPairs": true,
     "editor.linkedEditing": true,
-    "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "boundary",
     "editor.roundedSelection": false,
-    "editor.scrollbar.horizontalScrollbarSize": 8,
-    "editor.scrollbar.verticalScrollbarSize": 8,
-    "editor.semanticHighlighting.enabled": true,
     "editor.showFoldingControls": "always",
-    "editor.suggest.localityBonus": true,
+    "editor.suggest.preview": true,
     "editor.suggest.shareSuggestSelections": true,
     "editor.suggest.showStatusBar": true,
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.wordBasedSuggestionsMode": "allDocuments",
-    "editor.wordWrap": "off",
     "explorer.incrementalNaming": "smart",
-    "extensions.autoUpdate": false,
-    "files.associations": {
-        "config": "jsonc"
-    },
-    "files.enableTrash": false,
-    "git.mergeEditor": true,
-    "gitlens.blame.avatars": false,
-    "gitlens.blame.highlight.locations": [
-        "gutter",
-        "line",
-        "overview"
-    ],
-    "gitlens.changes.locations": [
-        "gutter",
-        "overview"
-    ],
-    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm ZZ",
-    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
-    "gitlens.defaultGravatarsStyle": "retro",
-    "gitlens.defaultTimeFormat": "HH:mm",
-    "gitlens.heatmap.locations": [
-        "gutter"
-    ],
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.mode.active": "zen",
-    "gitlens.statusBar.enabled": false,
-    "hediet.vscode-drawio.customLibraries": [
-        {
-            "entryId": "TAM-AD",
-            "file": "~/external-repos/drawio-tam-stencils/build/TAM-AD.xml",
-            "libName": "TAM Block Diagram"
-        },
-        {
-            "entryId": "TAM-Ann",
-            "file": "~/external-repos/drawio-tam-stencils/build/TAM-Ann.xml",
-            "libName": "TAM Activity Diagram"
-        },
-        {
-            "entryId": "TAM-BD",
-            "file": "~/external-repos/drawio-tam-stencils/build/TAM-BD.xml",
-            "libName": "TAM Class Diagram"
-        },
-        {
-            "entryId": "TAM-CD",
-            "file": "~/external-repos/drawio-tam-stencils/build/TAM-CD.xml",
-            "libName": "TAM Annotations"
-        }
-    ],
-    "html.format.endWithNewline": true,
-    "jest.autoRun": "off",
-    "julia.enableTelemetry": false,
-    "julia.symbolCacheDownload": true,
-    "latex-workshop.latex.recipe.default": "lastUsed",
-    "liveshare.increasedGuestLimit": false,
-    "liveshare.sharedTerminalHeight": 100,
-    "Lua.telemetry.enable": false,
-    "npm.keybindingsChangedWarningShown": true,
-    "path-intellisense.showHiddenFiles": true,
-    "problems.showCurrentInStatus": true,
-    "redhat.telemetry.enabled": false,
-    "scm.inputFontFamily": "editor",
-    "screencastMode.onlyKeyboardShortcuts": true,
-    "search.quickOpen.history.filterSortOrder": "recency",
-    "search.searchEditor.reusePriorSearchConfiguration": true,
-    "search.searchOnTypeDebouncePeriod": 500,
-    "shellformat.flag": "-i 4 -bn -ci -sr",
-    "shellformat.path": "/home/user/go/bin/shfmt",
+    "gitlens.telemetry.enabled": false,
+    "Lua.codeLens.enable": true,
+    "npm.fetchOnlinePackageInfo": false,
+    "screencastMode.hideSingleEditorCursorMoves": true,
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ],
-    "terminal.integrated.confirmOnExit": "hasChildProcesses",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontFamily": "Iosevka Fixed",
     "terminal.integrated.scrollback": 4200,
-    "terminal.integrated.shellIntegration.enabled": true,
-    "todo-tree.filtering.includeHiddenFiles": true,
-    "totalTypeScript.hiddenTips": [
-        "typing-function-parameters",
-        "basic-types",
-        "interface-declaration",
-        "variable-type-annotation",
-        "passing-generics-to-types"
-    ],
-    "totalTypeScript.hideAllTips": false,
-    "totalTypeScript.hideBasicTips": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.autoDetectHighContrast": false,
     "window.menuBarVisibility": "toggle",
     "window.title": "VSCode${separator}${rootName}${separator}${activeEditorMedium}${dirty}",
-    "workbench.colorCustomizations": {
-        "editor.lineHighlightBackground": "#1073cf2d",
-        "editor.lineHighlightBorder": "#9fced11f"
-    },
+    "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.commandPalette.preserveInput": true,
-    "workbench.editor.enablePreviewFromCodeNavigation": true,
-    "workbench.editor.pinnedTabSizing": "compact",
-    "workbench.editor.sharedViewState": true,
-    "workbench.editor.tabCloseButton": "off",
-    "workbench.enableExperiments": false,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.preferredDarkColorTheme": "Solarized Dark",
-    "workbench.preferredLightColorTheme": "Solarized Light",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.openDefaultKeybindings": true,
-    "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-    "workbench.tree.indent": 6,
-    "workbench.tree.renderIndentGuides": "always",
+    "workbench.settings.useSplitJSON": true,
     "zenMode.fullScreen": false,
     "zenMode.restore": false,
     "zenMode.silentNotifications": false
