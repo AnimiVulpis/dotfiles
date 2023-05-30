@@ -3,7 +3,7 @@
     "color-highlight.markerType": "outline",
     "color-highlight.markRuler": false,
     "cSpell.autoFormatConfigFile": true,
-    "cSpell.language": "en,de",
+    "cSpell.language": "en,de,scientific-terms-us",
     "cSpell.words": [
         "animi",
         "Bialik"
@@ -19,13 +19,16 @@
     "editor.guides.bracketPairs": true,
     "editor.linkedEditing": true,
     "editor.minimap.showSlider": "always",
+    "editor.renderLineHighlight": "all",
     "editor.renderWhitespace": "boundary",
     "editor.roundedSelection": false,
     "editor.showFoldingControls": "always",
+    "editor.smoothScrolling": true,
     "editor.suggest.preview": true,
     "editor.suggest.shareSuggestSelections": true,
     "editor.suggest.showStatusBar": true,
     "explorer.incrementalNaming": "smart",
+    "gitlens.mode.active": "zen",
     "gitlens.telemetry.enabled": false,
     "Lua.codeLens.enable": true,
     "npm.fetchOnlinePackageInfo": false,
@@ -41,6 +44,7 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.openDefaultKeybindings": true,
     "workbench.settings.useSplitJSON": true,
+    "workbench.startupEditor": "none",
     "zenMode.fullScreen": false,
     "zenMode.restore": false,
     "zenMode.silentNotifications": false
