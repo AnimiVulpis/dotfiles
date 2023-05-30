@@ -140,8 +140,8 @@ go install github.com/sachaos/viddy@latest
 echo '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-software/\e[0m"'
 ~/dotfiles/scripts/repository-updates.zsh ~/external-repos/
 
-echo '\e[34mExecuting\e[0m "\e[32msudo fwupdmgr \e[37mrefresh && \e[32msudo fwupdmgr \e[37mget-updates\e[0m"'
-sudo fwupdmgr refresh && sudo fwupdmgr get-updates
+echo 'not \e[34mExecuting\e[0m "\e[32msudo fwupdmgr \e[37mrefresh && \e[32msudo fwupdmgr \e[37mget-updates\e[0m"'
+# sudo fwupdmgr refresh && sudo fwupdmgr get-updates
 
 
 echo 'To update zsh4humans'
@@ -150,3 +150,36 @@ echo 'z4h update'
 echo 'Install VSCode extension updates'
 echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
 
+# Even more applications
+# echo 'running kitty install script'
+# curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
+## AppImageLauncher install steps
+
+# sudo apt install software-properties-common
+# sudo add-apt-repository ppa:appimagelauncher-team/stable
+# sudo apt update
+# sudo apt install appimagelauncher
+
+## git
+
+# add-apt-repository ppa:git-core/ppa # apt update; apt install git
+
+## KeePassXC
+
+# sudo add-apt-repository ppa:phoerious/keepassxc
+# sudo apt update; sudo apt install keepassxc
+
+## OBS
+
+# sudo add-apt-repository ppa:obsproject/obs-studio
+# sudo apt update
+# sudo apt-get update && sudo apt-get install obs-studio
+
+## Pipewire
+
+# sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
+
+## Wireplumber
+
+# sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
