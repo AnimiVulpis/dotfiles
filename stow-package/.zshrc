@@ -3,6 +3,7 @@
 # variables such as PATH) in this file or in files sourced from it.
 #
 # Documentation: https://github.com/romkatv/zsh4humans/blob/v5/README.md.
+
 # Periodic auto-update on Zsh startup: 'ask' or 'no'.
 # You can manually run `z4h update` to update everything.
 zstyle ':z4h:' auto-update      'no'
@@ -10,7 +11,7 @@ zstyle ':z4h:' auto-update      'no'
 zstyle ':z4h:' auto-update-days '28'
 
 # Keyboard type: 'mac' or 'pc'.
-zstyle ':z4h:bindkey' keyboard  'pc'
+zstyle ':z4h:bindkey' keyboard  'mac'
 
 # Don't start tmux.
 zstyle ':z4h:' start-tmux       no
@@ -77,7 +78,7 @@ z4h install marlonrichert/zsh-edit || return
 z4h init || return
 
 # Extend PATH.
-# path=(~/bin $path)
+path=(~/bin $path)
 
 # Export environment variables.
 export GPG_TTY=$TTY
@@ -134,13 +135,13 @@ z4h load marlonrichert/zsh-edit
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
 z4h bindkey z4h-backward-kill-zword Ctrl+Alt+Backspace
 
-z4h bindkey undo Ctrl+/ Shift+Tab  # undo the last command line change
-z4h bindkey redo Alt+/             # redo the last undone command line change
+z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
+z4h bindkey redo Option+/            # redo the last undone command line change
 
-z4h bindkey z4h-cd-back    Alt+Left   # cd into the previous directory
-z4h bindkey z4h-cd-forward Alt+Right  # cd into the next directory
-z4h bindkey z4h-cd-up      Alt+Up     # cd into the parent directory
-z4h bindkey z4h-cd-down    Alt+Down   # cd into a child directory
+z4h bindkey z4h-cd-back    Shift+Left   # cd into the previous directory
+z4h bindkey z4h-cd-forward Shift+Right  # cd into the next directory
+z4h bindkey z4h-cd-up      Shift+Up     # cd into the parent directory
+z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
 # AnimiVulpis
 z4h bindkey autosuggest-accept Ctrl+Space
 bindkey '^x^e' edit-command-line
