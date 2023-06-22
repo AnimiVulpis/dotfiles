@@ -4,9 +4,15 @@
     "color-highlight.markRuler": false,
     "cSpell.autoFormatConfigFile": true,
     "cSpell.language": "en,de,scientific-terms-us",
-    "cSpell.words": [
+    "cSpell.userWords": [
+        "alacritty",
         "animi",
-        "Bialik"
+        "Bialik",
+        "codesnap",
+        "dotnet",
+        "Iosevka",
+        "screencast",
+        "scrollback"
     ],
     "diffEditor.diffAlgorithm": "advanced",
     "dotnetAcquisitionExtension.enableTelemetry": false,
@@ -16,6 +22,7 @@
     "editor.dragAndDrop": false,
     "editor.find.autoFindInSelection": "multiline",
     "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 14,
     "editor.guides.bracketPairs": true,
     "editor.linkedEditing": true,
     "editor.minimap.showSlider": "always",
