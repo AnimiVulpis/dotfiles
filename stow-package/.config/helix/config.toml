@@ -1,0 +1,5 @@
+theme = "solarized_dark"
+
+[editor]
+color-modes = true
+
