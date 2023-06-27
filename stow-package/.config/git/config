@@ -25,15 +25,26 @@
 
 [delta]
 	navigate = true
-	features = decorations
+	features = decorations moved-diff
+	line-numbers = true
 	syntax-theme = Solarized (dark)
+
+[delta "moved-diff"]
+	minus-style = syntax "#3f0001"
+	minus-emph-style = syntax "#901011"
+	plus-style = syntax "#002800"
+	plus-emph-style = syntax "#006000"
+	map-styles = \
+		bold purple => syntax "#441100", \
+		bold blue => syntax "#442211", \
+		bold cyan => syntax "#904600", \
+		bold yellow => syntax "#885500"
 
 [delta "interactive"]
 	keep-plus-minus-markers = false
 
 [delta "decorations"]
-	commit-decoration-style = white yellow ol
-	file-decoration-style = white blue ol
+	commit-decoration-style = yellow normal ul
 	hunk-header-style = file line-number syntax
 
 [merge]
