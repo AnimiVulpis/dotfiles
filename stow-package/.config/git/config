@@ -21,14 +21,11 @@
 	date = iso
 
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+	diffFilter = delta --color-only
 
 [delta]
 	features = decorations navigation
 	syntax-theme = Solarized (dark)
-
-[delta "interactive"]
-	keep-plus-minus-markers = false
 
 [delta "decorations"]
 	commit-decoration-style = white yellow ol
