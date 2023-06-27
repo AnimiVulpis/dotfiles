@@ -21,7 +21,7 @@
 	date = iso
 
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = delta
 
 [delta]
 	features = decorations navigation
