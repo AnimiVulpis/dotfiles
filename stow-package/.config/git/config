@@ -36,6 +36,9 @@
 	file-decoration-style = white blue ol
 	hunk-header-style = file line-number syntax
 
+[merge]
+	conflictstyle = diff3
+
 [diff]
 	colorMoved = default
 
