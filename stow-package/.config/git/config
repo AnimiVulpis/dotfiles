@@ -37,7 +37,7 @@
 	hunk-header-style = file line-number syntax
 
 [diff]
-	colorMoved = zebra
+	colorMoved = default
 
 [difftool "difftastic"]
 	cmd = difft "$LOCAL" "$REMOTE"
