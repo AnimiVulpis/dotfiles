@@ -2,8 +2,14 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "codesnap.showWindowControls": false,
     "color-highlight.markerType": "outline",
@@ -46,6 +52,7 @@
     "Lua.codeLens.enable": true,
     "npm.fetchOnlinePackageInfo": false,
     "screencastMode.hideSingleEditorCursorMoves": true,
+    "svelte.enable-ts-plugin": true,
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.scrollback": 4200,
