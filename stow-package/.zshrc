@@ -177,7 +177,7 @@ alias el="exa -l --time-style=long-iso --group-directories-first"
 alias eh="exa -la --time-style=long-iso --group-directories-first"
 alias et="exa -T --group-directories-first"
 alias tv="tidy-viewer"
-alias isodatetime="echo -n 'ISO 8601 week:\t' && date +'%Y-W%V' && echo -n 'ISO 8601 date:\t' && date -Iseconds"
+alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8601 date: ' && date -Iseconds"
 
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
