@@ -35,7 +35,7 @@
 	plus-style = syntax "#002800"
 	plus-emph-style = syntax "#006000"
 	map-styles = \
-		bold purple => syntax "#441100", \
+		bold purple => syntax "#592009", \
 		bold blue => syntax "#442211", \
 		bold cyan => syntax "#904600", \
 		bold yellow => syntax "#885500"
