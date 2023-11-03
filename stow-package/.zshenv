@@ -11,6 +11,7 @@ if [ -n "${ZSH_VERSION-}" ]; then
   # in ~/.zshenv (see comments at the top!), do it here:
   #
   #   export GOPATH=$HOME/go
+  . "$HOME/.cargo/env"
   #
   # Do not change anything else in this file.
 
