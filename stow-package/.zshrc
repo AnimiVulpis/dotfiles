@@ -82,7 +82,7 @@ z4h init || return
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 # Extend PATH.
-path=(~/bin $path $GOBIN)
+path=(~/bin $path $GOBIN ~/dotfiles/scripts)
 
 # Export environment variables.
 export GPG_TTY=$TTY
