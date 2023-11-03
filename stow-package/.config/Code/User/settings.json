@@ -1,12 +1,36 @@
 {
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "codesnap.showWindowControls": false,
     "color-highlight.markerType": "outline",
     "color-highlight.markRuler": false,
     "cSpell.autoFormatConfigFile": true,
     "cSpell.language": "en,de,scientific-terms-us",
-    "cSpell.words": [
+    "cSpell.userWords": [
+        "alacritty",
         "animi",
-        "Bialik"
+        "Bialik",
+        "codesnap",
+        "dotnet",
+        "Iosevka",
+        "screencast",
+        "scrollback"
     ],
     "diffEditor.diffAlgorithm": "advanced",
     "dotnetAcquisitionExtension.enableTelemetry": false,
@@ -16,6 +40,7 @@
     "editor.dragAndDrop": false,
     "editor.find.autoFindInSelection": "multiline",
     "editor.fontFamily": "'Iosevka', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 14,
     "editor.guides.bracketPairs": true,
     "editor.linkedEditing": true,
     "editor.minimap.showSlider": "always",
@@ -33,6 +58,7 @@
     "Lua.codeLens.enable": true,
     "npm.fetchOnlinePackageInfo": false,
     "screencastMode.hideSingleEditorCursorMoves": true,
+    "svelte.enable-ts-plugin": true,
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.scrollback": 4200,

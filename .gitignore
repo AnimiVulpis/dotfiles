@@ -1,6 +1,6 @@
 # znap cached zsh files
 *.zsh.zwc
-# Checked out https://github.com/xinhaoyuan/layout-machi
-stow-package/.config/awesome/layout-machi/
+# klog bookmarks (machine specific)
+stow-package/.config/klog/bookmarks.json
 # local config files not meant to be added to the repo
 *.local
