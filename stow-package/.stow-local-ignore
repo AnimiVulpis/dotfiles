@@ -1,3 +1,2 @@
-.aws/README.md
-.config/broot/README.md
-.config/docker/README.md
+.aws
+.config/docker

@@ -1,4 +1,0 @@
-PATH DEFAULT=${PATH}:/home/@{PAM_USER}/.local/bin:/home/@{PAM_USER}/.cargo/bin:/home/@{PAM_USER}/go/bin:/usr/local/go/bin
-XDG_CURRENT_DESKTOP=Unity
-QT_QPA_PLATFORM=xcb
-_JAVA_AWT_WM_NONREPARENTING=1
