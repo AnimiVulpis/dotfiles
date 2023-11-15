@@ -95,7 +95,7 @@ SAVEHIST=256000
 # Inform about potential history loss
 HISTORY_FILE_LINES=$(wc -l $HISTFILE | cut -w -f2)
 HISTORY_BACKUP_FOLDER="$HOME/projects/zsh-history-backup/"
-HISTORY_BACKUP_LINES=$(ls -r $HISTORY_BACKUP_FOLDER | head -n 1 | cut -d 'L' -f 2)
+HISTORY_BACKUP_LINES=$(exa "$HISTORY_BACKUP_FOLDER" | rg -e 'L(\d+)' -or '$1' | sort -nr | head -n 1)
 if (( ${HISTORY_FILE_LINES:-0} < ${HISTORY_BACKUP_LINES:-1} )); then
     echo "Backup has more lines than history-file: $HISTORY_BACKUP_LINES vs. $HISTORY_FILE_LINES"
 fi
