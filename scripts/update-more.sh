@@ -1,4 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/env bash
+set -e # Exit if a command exits with a non-zero status
+set -u # Treat unset variables as an error
+set -o pipefail # Treat any non-zero status in a pipeline like a total pipeline failure
+shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
 echo '\e[34mExecuting\e[0m "\e[32msudo snap \e[37mrefresh\e[0m"'
 sudo snap refresh
