@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-set -e # Exit if a command exits with a non-zero status
-set -u # Treat unset variables as an error
-set -o pipefail # Treat any non-zero status in a pipeline like a total pipeline failure
+set -e                   # Exit if a command exits with a non-zero status
+set -u                   # Treat unset variables as an error
+set -o pipefail          # Treat any non-zero status in a pipeline like a total pipeline failure
 shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
 # Check if first argument is a valid directory
@@ -16,9 +16,9 @@ echo -ne '\e[?25l'
 trap "echo -e '\e[?25h'" SIGINT
 
 # Fetch updates and print potential errors
-exa -D $1 \
-    | xargs -I@ bash -c "\
-        echo -ne \"\e[34mFetching\e[0m @\e[30G\";\
+exa -D $1 |
+    xargs -S512 -I@ bash -c "\
+        echo -ne \"\e[34mFetching\e[0m @\e[31G\";\
         error_message=\$(git -C $1/@ fetch -q origin 2>&1)\
             && echo -ne '\e[32mOK\e[0m\e[35G';\
                 git -c color.status=always -C $1/@ status --untracked-files=no --short --branch | head -n1 \
