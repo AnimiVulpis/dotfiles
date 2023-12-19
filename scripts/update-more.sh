@@ -5,7 +5,7 @@ set -o pipefail          # Treat any non-zero status in a pipeline like a total 
 shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
 # Rust related
-printf '\e[34mExecuting\e[0m "\e[32mrustup \e[37mupdate\e[0m"'
+printf '\e[34mExecuting\e[0m "\e[32mrustup \e[37mupdate\e[0m"\n'
 rustup update
 
 # List all installed rust crates
