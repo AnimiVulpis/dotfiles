@@ -11,7 +11,7 @@ rustup update
 # List all installed rust crates
 # cargo install --list
 
-printf '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall cracken genact jwt-cli tailspin tlrc \e[0m"'
+printf '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall cracken genact jwt-cli tailspin tlrc\e[0m"\n'
 
 cargo install \
     cracken \
