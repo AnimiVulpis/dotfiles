@@ -50,8 +50,5 @@ printf '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e
 echo 'To update zsh4humans'
 echo 'z4h update'
 
-echo 'To Install VSCode extension updates'
-echo 'code --list-extensions | xargs -n 1 code --force --install-extension'
-
 printf '\e[34mExecuting\e[0m "\e[32mbrew\e[0m update && \e[32mbrew\e[0m upgrade"\n'
 brew update && brew upgrade
