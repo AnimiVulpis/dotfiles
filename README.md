@@ -14,7 +14,7 @@
   - Using [`zsh`](https://www.zsh.org/)
   - Following the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
   - Using [`nvim`](https://github.com/neovim/neovim)
-  - Using [`exa`](https://github.com/ogham/exa)
+  - Using [`eza`](https://github.com/eza-community/eza)
   - Using [`vscode`](https://code.visualstudio.com/)
   - Using [`git`](https://git-scm.com/)
   - Using [`fasd`](https://github.com/clvv/fasd)

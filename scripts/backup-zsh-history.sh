@@ -9,11 +9,11 @@ lines_in_history=$(wc -l "$history_location" | cut -w -f 2)
 
 backup_folder="$HOME/projects/zsh-history-backup/"
 
-latest_backup=$(exa "$backup_folder" -rs newest | head -n 1)
+latest_backup=$(eza "$backup_folder" -rs newest | head -n 1)
 lines_in_latest_backup=$(echo "$latest_backup" | rg -e 'L(\d+)' -or '$1')
 
-lines_in_largest_backup=$(exa "$backup_folder" | rg -e 'L(\d+)' -or '$1' | sort -nr | head -n 1)
-largest_backup=$(exa "$backup_folder" | rg -e "L$lines_in_largest_backup")
+lines_in_largest_backup=$(eza "$backup_folder" | rg -e 'L(\d+)' -or '$1' | sort -nr | head -n 1)
+largest_backup=$(eza "$backup_folder" | rg -e "L$lines_in_largest_backup")
 
 echo "$lines_in_history lines currently in $history_location"
 echo "$lines_in_latest_backup lines in latest backup ($latest_backup)"

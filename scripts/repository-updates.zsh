@@ -16,7 +16,7 @@ echo -ne '\e[?25l'
 trap "echo -e '\e[?25h'" SIGINT
 
 # Fetch updates and print potential errors
-exa -D $1 |
+eza -D $1 |
     xargs -S512 -I@ bash -c "\
         echo -ne \"\e[34mFetching\e[0m @\e[31G\";\
         error_message=\$(git -C $1/@ fetch -q origin 2>&1)\
@@ -26,7 +26,7 @@ exa -D $1 |
     "
 
 # Pretty-print tracking information (summary)
-# exa -D $1 \
+# eza -D $1 \
 #     | xargs -I@ zsh -c "
 #     echo -n '@\t';
 #     git -c color.status=always -C $1/@ status --untracked-files=no --short --branch | head -n1" 2>&1 \
