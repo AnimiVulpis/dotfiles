@@ -95,7 +95,7 @@ SAVEHIST=256000
 # Inform about potential history loss
 HISTORY_FILE_LINES=$(wc -l $HISTFILE | cut -w -f2)
 HISTORY_BACKUP_FOLDER="$HOME/projects/zsh-history-backup/"
-HISTORY_BACKUP_LINES=$(exa "$HISTORY_BACKUP_FOLDER" | rg -e 'L(\d+)' -or '$1' | sort -nr | head -n 1)
+HISTORY_BACKUP_LINES=$(eza "$HISTORY_BACKUP_FOLDER" | rg -e 'L(\d+)' -or '$1' | sort -nr | head -n 1)
 if (( ${HISTORY_FILE_LINES:-0} < ${HISTORY_BACKUP_LINES:-1} )); then
     echo "Backup has more lines than history-file: $HISTORY_BACKUP_LINES vs. $HISTORY_FILE_LINES"
 fi
@@ -171,11 +171,11 @@ alias tree='tree -a -I .git'
 alias ls="ls --color=auto"
 alias ll="ls --color=auto -lh"
 alias lh="ls --color=auto -lhA"
-alias es="exa --group-directories-first"
-alias ed="exa -D"
-alias el="exa -l --time-style=long-iso --group-directories-first"
-alias eh="exa -la --time-style=long-iso --group-directories-first"
-alias et="exa -T --group-directories-first"
+alias es="eza --group-directories-first"
+alias ed="eza -D"
+alias el="eza -l --time-style=long-iso --group-directories-first"
+alias eh="eza -la --time-style=long-iso --group-directories-first"
+alias et="eza -T --group-directories-first"
 alias tv="tidy-viewer"
 alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8601 date: ' && date -Iseconds"
 
