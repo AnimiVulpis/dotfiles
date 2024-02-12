@@ -16,7 +16,7 @@ lines_in_largest_backup=$(eza "$backup_folder" | rg -e 'L(\d+)' -or '$1' | sort 
 largest_backup=$(eza "$backup_folder" | rg -e "L$lines_in_largest_backup")
 
 echo "$lines_in_history lines currently in $history_location"
-echo "$lines_in_latest_backup lines in latest backup ($latest_backup)"
+echo "$lines_in_latest_backup lines in  latest backup ($latest_backup)"
 echo "$lines_in_largest_backup lines in largest backup ($largest_backup)"
 
 cp -v "$history_location" "$backup_folder"L"$lines_in_history"_histfile_"$(date -Iminutes)"
