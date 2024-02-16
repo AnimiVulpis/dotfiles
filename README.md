@@ -13,15 +13,17 @@
 - Needed:
   - Using [`zsh`](https://www.zsh.org/)
   - Following the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
-  - Using [`nvim`](https://github.com/neovim/neovim)
+  - Using Helix [`hx`](https://docs.helix-editor.com/)
   - Using [`eza`](https://github.com/eza-community/eza)
   - Using [`vscode`](https://code.visualstudio.com/)
   - Using [`git`](https://git-scm.com/)
   - Using [`fasd`](https://github.com/clvv/fasd)
+    - This got replaced by [`zoxide`](https://github.com/ajeetdsouza/zoxide)
   - Using [`nvm`](https://github.com/nvm-sh/nvm)
   - Using [`broot`](https://github.com/Canop/broot)
+    - Stopped using this
   - Optional:
-  - [gnu `stow`](https://www.gnu.org/software/stow/)
+    - [gnu `stow`](https://www.gnu.org/software/stow/)
 
 _I recommend using [gnu stow](https://www.gnu.org/software/stow/) to manage the linking from the `dotfiles/` folder to the `~/` folder._  
 _Most of these **dependencies** can be removed._
