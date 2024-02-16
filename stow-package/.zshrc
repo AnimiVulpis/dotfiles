@@ -182,6 +182,9 @@ alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
 
+# Setup zoxide
+eval "$(zoxide init zsh)"
+
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
