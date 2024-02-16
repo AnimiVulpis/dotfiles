@@ -44,7 +44,7 @@ go install github.com/irevenko/tsukae@latest
 
 # ##############################
 
-printf '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-software/\e[0m"\n'
+printf '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-repos/\e[0m"\n'
 ~/dotfiles/scripts/repository-updates.zsh ~/external-repos/
 
 echo 'To update zsh4humans'
