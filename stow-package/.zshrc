@@ -117,8 +117,7 @@ export LESS="-x4 -Ri"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
-export LC_ALL="C"
-export LC_TIME="en_DK.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
