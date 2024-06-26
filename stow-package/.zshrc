@@ -81,8 +81,10 @@ z4h init || return
 # Defining go paths
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
+# Define libpq path (PostgreSQL executables without server)
+export LIBPQ_BIN="/opt/homebrew/opt/libpq/bin"
 # Extend PATH.
-path=(~/bin $path $GOBIN ~/dotfiles/scripts)
+path=(~/bin $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts)
 
 # Export environment variables.
 export GPG_TTY=$TTY
