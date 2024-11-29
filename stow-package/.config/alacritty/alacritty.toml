@@ -1,3 +1,4 @@
+[general]
 live_config_reload = false
 
 [window]
@@ -16,7 +17,7 @@ size = 14.0
 builtin_box_drawing = false
 
 [font.normal]
-family = "Iosevka Term"
+family = "Iosevka Nerd Font"
 
 [colors.primary]
 foreground = "#dfdccc"

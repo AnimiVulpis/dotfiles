@@ -52,20 +52,19 @@
 
 [diff]
 	colorMoved = default
-	tool = difftastic
-
-[difftool "difftastic"]
-	cmd = difft "$LOCAL" "$REMOTE"
+	external = difft
 
 [mergetool]
 	keepBackup = false
 
 [alias]
-	dft = difftool
-	dfts = difftool --staged
-	dftlog = "!f() { GIT_EXTERNAL_DIFF=difft git log -p --ext-diff $@; }; f"
-	dftshow = "!f() { GIT_EXTERNAL_DIFF=difft git show --ext-diff $@; }; f"
+	dlog = log --ext-diff
+	dl = log --ext-diff -p
+	dshow = show --ext-diff
+	ds = show --ext-diff
 	diffs = diff --staged
+	diffn = diff --no-ext-diff
+	diffsn = diff --staged --no-ext-diff
 	ffomerge = merge --ff-only
 	nffmerge = merge --no-ff
 	tmerge = merge --no-commit --no-ff

@@ -178,7 +178,6 @@ alias ed="eza -D"
 alias el="eza -l --time-style=long-iso --group-directories-first"
 alias eh="eza -la --time-style=long-iso --group-directories-first"
 alias et="eza -T --group-directories-first"
-alias tv="tidy-viewer"
 alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8601 date: ' && date -Iseconds"
 
 # Add flags to existing aliases.
