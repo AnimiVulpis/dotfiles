@@ -17,7 +17,8 @@ size = 14.0
 builtin_box_drawing = false
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "IosevkaTerm Nerd Font"
+style = "ExtraLight"
 
 [colors.primary]
 foreground = "#dfdccc"
