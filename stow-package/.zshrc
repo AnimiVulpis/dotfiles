@@ -1,83 +1,59 @@
-# Personal Zsh configuration file. It is strongly recommended to keep all
-# shell customization and configuration (including exported environment
-# variables such as PATH) in this file or in files sourced from it.
-#
-# Documentation: https://github.com/romkatv/zsh4humans/blob/v5/README.md.
+# Basis for this file is https://github.com/romkatv/zsh-bench/blob/master/configs/diy%2B%2B/skel/.zshrc
 
-# Periodic auto-update on Zsh startup: 'ask' or 'no'.
-# You can manually run `z4h update` to update everything.
-zstyle ':z4h:' auto-update      'no'
-# Ask whether to auto-update this often; has no effect if auto-update is 'no'.
-zstyle ':z4h:' auto-update-days '28'
+function zcompile-many() {
+    local f
+    for f; do zcompile -R -- "$f".zwc "$f"; done
+}
 
-# Keyboard type: 'mac' or 'pc'.
-zstyle ':z4h:bindkey' keyboard  'mac'
+# Clone and compile to wordcode missing plugins.
+# if [[ ! -e ~/external-repos/zsh-syntax-highlighting ]]; then
+    # git clone --depth=1 git@github.com:zsh-users/zsh-syntax-highlighting.git ~/external-repos/zsh-syntax-highlighting
+    zcompile-many ~/external-repos/zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
+# fi
+# if [[ ! -e ~/external-repos/zsh-autosuggestions ]]; then
+    # git clone --depth=1 git@github.com:zsh-users/zsh-autosuggestions.git ~/external-repos/zsh-autosuggestions
+    zcompile-many ~/external-repos/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
+# fi
+# if [[ ! -e ~/external-repos/powerlevel10k ]]; then
+    # git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ~/external-repos/powerlevel10k
+    make -C ~/external-repos/powerlevel10k pkg
+# fi
+# if [[ ! -e ~/external-repos/ohmyzsh ]]; then
+    # git clone --depth=1 git@github.com:ohmyzsh/ohmyzsh.git ~/external-repos/ohmyzsh
+    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,colored-man-pages/colored-man-pages.plugin.zsh,asdf/asdf.plugin.zsh}
+# fi
+# if [[ ! -e ~/external-repos/LS_COLORS ]]; then
+    # git clone --depth=1 git@github.com:trapd00r/LS_COLORS.git ~/external-repos/LS_COLORS
+# fi
+# if [[ ! -e ~/external-repos/zsh-nvm ]]; then
+    # git clone --depth=1 git@github.com:lukechilds/zsh-nvm.git ~/external-repos/zsh-nvm
+    zcompile-many ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
+# fi
+# if [[ ! -e ~/external-repos/zsh-edit ]]; then
+    # git clone --depth=1 git@github.com:marlonrichert/zsh-edit.git ~/external-repos/zsh-edit
+    zcompile-many ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
+# fi
 
-# Don't start tmux.
-zstyle ':z4h:' start-tmux       no
+# Activate Powerlevel10k Instant Prompt.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Mark up shell's output with semantic information.
-zstyle ':z4h:' term-shell-integration 'yes'
+# Enable the "new" completion system (compsys).
+autoload -Uz compinit && compinit
+[[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
+unfunction zcompile-many
 
-# Right-arrow key accepts one character ('partial-accept') from
-# command autosuggestions or the whole thing ('accept')?
-zstyle ':z4h:autosuggestions' forward-char 'accept'
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-# Recursively traverse directories when TAB-completing files.
-zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
+# Configure nvm
+# Set up NVM directory
+export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
+# Lazy load nvm
+export NVM_LAZY_LOAD=true
+# Don't autoload nvm node
+export NVM_NO_USE=true
 
-# AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/v5/tips.md#completions
-zstyle ':z4h:fzf-complete' fzf-bindings tab:repeat
-
-# AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/master/tips.md#current-directory
-zstyle ':z4h:fzf-dir-history' fzf-bindings tab:repeat
-zstyle ':z4h:cd-down'         fzf-bindings tab:repeat
-
-# Enable direnv to automatically source .envrc files.
-zstyle ':z4h:direnv'         enable 'no'
-# Show "loading" and "unloading" notifications from direnv.
-zstyle ':z4h:direnv:success' notify 'yes'
-
-# Enable ('yes') or disable ('no') automatic teleportation of z4h over
-# SSH when connecting to these hosts.
-zstyle ':z4h:ssh:example-hostname1'   enable 'yes'
-zstyle ':z4h:ssh:*.example-hostname2' enable 'no'
-# The default value if none of the overrides above match the hostname.
-zstyle ':z4h:ssh:*'                   enable 'no'
-
-# Send these files over to the remote host when connecting over SSH to the
-# enabled hosts.
-# zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
-# AnimiVulpis
-zstyle ':z4h:ssh:*' send-extra-files '~/.env.zsh'
-
-# AnimiVulpis
-# Terminal title
-zstyle ':z4h:term-title:ssh'   preexec '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~ » ${1//\%/%%}'
-zstyle ':z4h:term-title:ssh'   precmd  '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~'
-zstyle ':z4h:term-title:local' preexec '%~ » ${1//\%/%%}'
-zstyle ':z4h:term-title:local' precmd  '%~'
-
-# Clone additional Git repositories from GitHub.
-#
-# This doesn't do anything apart from cloning the repository and keeping it
-# up-to-date. Cloned files can be used after `z4h init`. This is just an
-# example. If you don't plan to use Oh My Zsh, delete this line.
-z4h install ohmyzsh/ohmyzsh || return
-# AnimiVulpis
-# nvm
-z4h install trapd00r/LS_COLORS || return
-z4h install lukechilds/zsh-nvm || return
-z4h install ael-code/zsh-colored-man-pages || return
-z4h install marlonrichert/zsh-edit || return
-
-# Install or update core components (fzf, zsh-autosuggestions, etc.) and
-# initialize Zsh. After this point console I/O is unavailable until Zsh
-# is fully initialized. Everything that requires user interaction or can
-# perform network I/O must be done above. Everything else is best done below.
-z4h init || return
-
-# AnimiVulpis
 # Defining go paths
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
@@ -85,11 +61,9 @@ export GOBIN="$GOPATH/bin"
 export LIBPQ_BIN="/opt/homebrew/opt/libpq/bin"
 # Extend PATH.
 path=(~/bin $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts)
-
-# Export environment variables.
+# Ensure GPG works correctly
 export GPG_TTY=$TTY
 
-# AnimiVulpis
 # Set up history
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history-file"
 HISTSIZE=512000
@@ -102,11 +76,7 @@ HISTORY_BACKUP_LINES=$(echo "$HISTORY_BACKUP_FILE" | rg -e 'L(\d+)' -or '$1')
 if (( ${HISTORY_FILE_LINES:-0} < ${HISTORY_BACKUP_LINES:-1} )); then
     echo "Backup at $HISTORY_BACKUP_FILE has more lines ($HISTORY_BACKUP_LINES) than history-file ($HISTORY_FILE_LINES)"
 fi
-# nvm
-# Set up NVM directory
-export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
-# Don't autoload nvm node
-export NVM_NO_USE=true
+
 # zsh-users/zsh-autosuggestions
 # Set max buffer size
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
@@ -122,49 +92,27 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export LC_CTYPE="en_US.UTF-8"
 
-# Source additional local files if they exist.
-z4h source ~/.env.zsh
-
-# Use additional Git repositories pulled in with `z4h install`.
-#
-# This is just an example that you should delete. It does nothing useful.
-# z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
-# z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
-# AnimiVulpis
-z4h source trapd00r/LS_COLORS/lscolors.sh
-z4h load lukechilds/zsh-nvm
-z4h load ohmyzsh/ohmyzsh/plugins/sudo
-z4h load ohmyzsh/ohmyzsh/plugins/asdf
-z4h load ael-code/zsh-colored-man-pages
-z4h load marlonrichert/zsh-edit
-
-# Define key bindings.
-z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
-z4h bindkey z4h-backward-kill-zword Ctrl+Alt+Backspace
-
-z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
-z4h bindkey redo Option+/            # redo the last undone command line change
-
-z4h bindkey z4h-cd-back    Shift+Left   # cd into the previous directory
-z4h bindkey z4h-cd-forward Shift+Right  # cd into the next directory
-z4h bindkey z4h-cd-up      Shift+Up     # cd into the parent directory
-z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
-# AnimiVulpis
-z4h bindkey autosuggest-accept Ctrl+Space
-bindkey '^x^e' edit-command-line
+# Load plugins.
+source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/external-repos/powerlevel10k/powerlevel10k.zsh-theme
+source ~/external-repos/LS_COLORS/lscolors.sh
+source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
+source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
+source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
+source ~/external-repos/ohmyzsh/plugins/colored-man-pages/colored-man-pages.plugin.zsh
+source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
+source ~/.p10k.zsh
+source <(fzf --zsh)
 
 # Autoload functions.
 # autoload -Uz zmv
-# AnimiVulpis
 autoload -Uz zmv edit-command-line
 zle -N edit-command-line
 
 # Define functions and completions.
-# function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
-# compdef _directories md
-
-# Define named directories: ~w <=> Windows home directory on WSL.
-# [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
+function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
+compdef _directories md
 
 # Define aliases.
 alias tree='tree -a -I .git'
@@ -190,7 +138,6 @@ eval "$(zoxide init zsh)"
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
-# AnimiVulpis
 # History with timestamps and elapsed time
 setopt EXTENDED_HISTORY
 # Append to history after commands have finished
@@ -219,3 +166,55 @@ setopt COMPLETE_IN_WORD
 setopt INTERACTIVE_COMMENTS
 # Don't push the same directory consecutively
 setopt PUSHD_IGNORE_DUPS
+
+# EVERYTHING BELOW IS MISSING?
+
+# Keyboard type: 'mac' or 'pc'.
+
+# zstyle ':z4h:bindkey' keyboard  'mac'
+
+# Not sure what exactly this does, but i'll keep it for now to see
+
+# Right-arrow key accepts one character ('partial-accept') from
+# command autosuggestions or the whole thing ('accept')?
+
+# zstyle ':z4h:autosuggestions' forward-char 'accept'
+
+# Not sure if I need this, but this can easily be done on my own like this
+# typeset -g ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
+#     forward-char
+# )
+# Or something like this
+
+# Recursively traverse directories when TAB-completing files.
+# zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
+
+# AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/v5/tips.md#completions
+# zstyle ':z4h:fzf-complete' fzf-bindings tab:repeat
+
+# AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/master/tips.md#current-directory
+# zstyle ':z4h:fzf-dir-history' fzf-bindings tab:repeat
+# zstyle ':z4h:cd-down'         fzf-bindings tab:repeat
+
+# AnimiVulpis
+# Terminal title
+# This needs re-doing
+# zstyle ':z4h:term-title:ssh'   preexec '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~ » ${1//\%/%%}'
+# zstyle ':z4h:term-title:ssh'   precmd  '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~'
+# zstyle ':z4h:term-title:local' preexec '%~ » ${1//\%/%%}'
+# zstyle ':z4h:term-title:local' precmd  '%~'
+
+# Define key bindings.
+# z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
+# z4h bindkey z4h-backward-kill-zword Ctrl+Alt+Backspace
+
+# z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
+# z4h bindkey redo Option+/            # redo the last undone command line change
+
+# z4h bindkey z4h-cd-back    Shift+Left   # cd into the previous directory
+# z4h bindkey z4h-cd-forward Shift+Right  # cd into the next directory
+# z4h bindkey z4h-cd-up      Shift+Up     # cd into the parent directory
+# z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
+# AnimiVulpis
+# z4h bindkey autosuggest-accept Ctrl+Space
+# bindkey '^x^e' edit-command-line
