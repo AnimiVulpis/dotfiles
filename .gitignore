@@ -1,4 +1,4 @@
-# znap cached zsh files
+# cached zsh files
 *.zsh.zwc
 # klog bookmarks (machine specific)
 stow-package/.config/klog/bookmarks.json
