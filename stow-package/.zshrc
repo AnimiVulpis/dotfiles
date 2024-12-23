@@ -99,6 +99,8 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # More environment variables
+export WORDCHARS=''
+
 export SUDO_EDITOR="hx"
 export EDITOR="hx"
 export VISUAL="code -w"
@@ -204,6 +206,8 @@ bindkey '÷' redo
 # AnimiVulpis as per https://github.com/romkatv/zsh4humans/blob/master/tips.md#current-directory
 # zstyle ':z4h:fzf-dir-history' fzf-bindings tab:repeat
 # zstyle ':z4h:cd-down'         fzf-bindings tab:repeat
+
+# Terminal title fehlt
 
 # AnimiVulpis
 # Terminal title
