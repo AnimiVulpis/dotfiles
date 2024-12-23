@@ -185,24 +185,15 @@ setopt INTERACTIVE_COMMENTS
 # Don't push the same directory consecutively
 setopt PUSHD_IGNORE_DUPS
 
-# EVERYTHING BELOW IS MISSING?
+# Key bindings
+# zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
 
-# Keyboard type: 'mac' or 'pc'.
+bindkey '^x^e' edit-command-line
+bindkey '÷' redo
 
-# zstyle ':z4h:bindkey' keyboard  'mac'
-
-# Not sure what exactly this does, but i'll keep it for now to see
-
-# Right-arrow key accepts one character ('partial-accept') from
-# command autosuggestions or the whole thing ('accept')?
-
-# zstyle ':z4h:autosuggestions' forward-char 'accept'
-
-# Not sure if I need this, but this can easily be done on my own like this
-# typeset -g ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
-#     forward-char
-# )
-# Or something like this
+# FZF is missing some configuration (some of it might be replaced by atuin)
+# Atuin is missing some configuration
 
 # Recursively traverse directories when TAB-completing files.
 # zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
@@ -222,17 +213,8 @@ setopt PUSHD_IGNORE_DUPS
 # zstyle ':z4h:term-title:local' preexec '%~ » ${1//\%/%%}'
 # zstyle ':z4h:term-title:local' precmd  '%~'
 
-# Define key bindings.
-# z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
-# z4h bindkey z4h-backward-kill-zword Ctrl+Alt+Backspace
-
-# z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
-# z4h bindkey redo Option+/            # redo the last undone command line change
-
+# This functionality is currently still missing
 # z4h bindkey z4h-cd-back    Shift+Left   # cd into the previous directory
 # z4h bindkey z4h-cd-forward Shift+Right  # cd into the next directory
 # z4h bindkey z4h-cd-up      Shift+Up     # cd into the parent directory
 # z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
-# AnimiVulpis
-# z4h bindkey autosuggest-accept Ctrl+Space
-# bindkey '^x^e' edit-command-line
