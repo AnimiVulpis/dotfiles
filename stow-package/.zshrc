@@ -6,33 +6,37 @@ function zcompile-many() {
 }
 
 # Clone and compile to wordcode missing plugins.
-# if [[ ! -e ~/external-repos/zsh-syntax-highlighting ]]; then
-    # git clone --depth=1 git@github.com:zsh-users/zsh-syntax-highlighting.git ~/external-repos/zsh-syntax-highlighting
+if [[ ! -e ~/external-repos/zsh-syntax-highlighting ]]; then
+    git clone --depth=1 git@github.com:zsh-users/zsh-syntax-highlighting.git ~/external-repos/zsh-syntax-highlighting
     zcompile-many ~/external-repos/zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
-# fi
-# if [[ ! -e ~/external-repos/zsh-autosuggestions ]]; then
-    # git clone --depth=1 git@github.com:zsh-users/zsh-autosuggestions.git ~/external-repos/zsh-autosuggestions
+fi
+if [[ ! -e ~/external-repos/zsh-autosuggestions ]]; then
+    git clone --depth=1 git@github.com:zsh-users/zsh-autosuggestions.git ~/external-repos/zsh-autosuggestions
     zcompile-many ~/external-repos/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
-# fi
-# if [[ ! -e ~/external-repos/powerlevel10k ]]; then
-    # git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ~/external-repos/powerlevel10k
+fi
+if [[ ! -e ~/external-repos/powerlevel10k ]]; then
+    git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ~/external-repos/powerlevel10k
     make -C ~/external-repos/powerlevel10k pkg
-# fi
-# if [[ ! -e ~/external-repos/ohmyzsh ]]; then
-    # git clone --depth=1 git@github.com:ohmyzsh/ohmyzsh.git ~/external-repos/ohmyzsh
-    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,colored-man-pages/colored-man-pages.plugin.zsh,asdf/asdf.plugin.zsh}
-# fi
-# if [[ ! -e ~/external-repos/LS_COLORS ]]; then
-    # git clone --depth=1 git@github.com:trapd00r/LS_COLORS.git ~/external-repos/LS_COLORS
-# fi
-# if [[ ! -e ~/external-repos/zsh-nvm ]]; then
-    # git clone --depth=1 git@github.com:lukechilds/zsh-nvm.git ~/external-repos/zsh-nvm
+fi
+if [[ ! -e ~/external-repos/LS_COLORS ]]; then
+    git clone --depth=1 git@github.com:trapd00r/LS_COLORS.git ~/external-repos/LS_COLORS
+fi
+if [[ ! -e ~/external-repos/zsh-nvm ]]; then
+    git clone --depth=1 git@github.com:lukechilds/zsh-nvm.git ~/external-repos/zsh-nvm
     zcompile-many ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
-# fi
-# if [[ ! -e ~/external-repos/zsh-edit ]]; then
-    # git clone --depth=1 git@github.com:marlonrichert/zsh-edit.git ~/external-repos/zsh-edit
+fi
+if [[ ! -e ~/external-repos/ohmyzsh ]]; then
+    git clone --depth=1 git@github.com:ohmyzsh/ohmyzsh.git ~/external-repos/ohmyzsh
+    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,asdf/asdf.plugin.zsh}
+fi
+if [[ ! -e ~/external-repos/zsh-edit ]]; then
+    git clone --depth=1 git@github.com:marlonrichert/zsh-edit.git ~/external-repos/zsh-edit
     zcompile-many ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
-# fi
+fi
+if [[ ! -e ~/external-repos/atuin ]]; then
+    git clone --depth=1 git@github.com:atuinsh/atuin.git ~/external-repos/atuin
+    zcompile-many ~/external-repos/atuin/atuin.plugin.zsh
+fi
 
 # Activate Powerlevel10k Instant Prompt.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -82,6 +86,7 @@ fi
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 # More environment variables
 export SUDO_EDITOR="hx"
 export EDITOR="hx"
@@ -90,6 +95,8 @@ export LESS="-x4 -Ri"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANROFFOPT="-c"
 export LC_CTYPE="en_US.UTF-8"
 
 # Load plugins.
@@ -100,7 +107,6 @@ source ~/external-repos/LS_COLORS/lscolors.sh
 source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
-source ~/external-repos/ohmyzsh/plugins/colored-man-pages/colored-man-pages.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
