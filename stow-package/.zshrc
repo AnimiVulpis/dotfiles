@@ -50,6 +50,17 @@ unfunction zcompile-many
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
+# From `/opt/homebrew/bin/brew shellenv`
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
+PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/Users/I526086/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin"; export PATH;
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+
+
+
 # Configure nvm
 # Set up NVM directory
 export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
@@ -64,7 +75,7 @@ export GOBIN="$GOPATH/bin"
 # Define libpq path (PostgreSQL executables without server)
 export LIBPQ_BIN="/opt/homebrew/opt/libpq/bin"
 # Extend PATH.
-path=(~/bin $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts)
+path=(~/bin $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
 # Ensure GPG works correctly
 export GPG_TTY=$TTY
 
@@ -108,6 +119,7 @@ source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
+source ~/external-repos/atuin/atuin.plugin.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
 
