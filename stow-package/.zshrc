@@ -37,6 +37,9 @@ if [[ ! -e ~/external-repos/atuin ]]; then
     git clone --depth=1 git@github.com:atuinsh/atuin.git ~/external-repos/atuin
     zcompile-many ~/external-repos/atuin/atuin.plugin.zsh
 fi
+if [[ ! -e ./scripts/set-terminal-title.zsh.zwc ]]; then
+    zcompile-many ./scripts/set-terminal-title.zsh
+fi
 
 # Activate Powerlevel10k Instant Prompt.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -122,6 +125,7 @@ source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/dircycle/dircycle.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
+source ./scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
 source ~/external-repos/atuin/atuin.plugin.zsh
@@ -221,16 +225,6 @@ bindkey '^[[1;2A' insert-cycledup
 
 # fzf-subfolder search
 bindkey '^[[1;2B' subfolder-search
-
-# Terminal title fehlt
-
-# AnimiVulpis
-# Terminal title
-# This needs re-doing
-# zstyle ':z4h:term-title:ssh'   preexec '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~ » ${1//\%/%%}'
-# zstyle ':z4h:term-title:ssh'   precmd  '%n@${${${Z4H_SSH##*:}//\%/%%}:-%m}: %~'
-# zstyle ':z4h:term-title:local' preexec '%~ » ${1//\%/%%}'
-# zstyle ':z4h:term-title:local' precmd  '%~'
 
 # Fix extra space in rprompt (https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#extra-or-missing-spaces-in-prompt-compared-to-powerlevel9k)
 ZLE_RPROMPT_INDENT=0
