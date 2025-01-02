@@ -27,7 +27,7 @@ if [[ ! -e ~/external-repos/zsh-nvm ]]; then
 fi
 if [[ ! -e ~/external-repos/ohmyzsh ]]; then
     git clone --depth=1 git@github.com:ohmyzsh/ohmyzsh.git ~/external-repos/ohmyzsh
-    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,asdf/asdf.plugin.zsh}
+    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,asdf/asdf.plugin.zsh,dircycle/dircycle.plugin.zsh}
 fi
 if [[ ! -e ~/external-repos/zsh-edit ]]; then
     git clone --depth=1 git@github.com:marlonrichert/zsh-edit.git ~/external-repos/zsh-edit
@@ -120,10 +120,30 @@ source ~/external-repos/LS_COLORS/lscolors.sh
 source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
+source ~/external-repos/ohmyzsh/plugins/dircycle/dircycle.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
-source ~/external-repos/atuin/atuin.plugin.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
+source ~/external-repos/atuin/atuin.plugin.zsh
+
+# Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
+function redraw-prompt() {
+    local f
+    for f in chpwd "${chpwd_functions[@]}" precmd "${precmd_functions[@]}"; do
+        [[ "${+functions[$f]}" == 0 ]] || "$f" &>/dev/null || true
+    done
+    p10k display -r
+}
+
+# Define down arrow subfolder search
+subfolder-search() {
+    local dir
+    dir=$(fd ${1:-.} --type dir --print0 --hidden --exclude .git --follow --max-depth 10 --color=always |
+        fzf --height 40% --ansi --no-sort --reverse --no-multi --cycle --read0 --tiebreak=length,begin,index) &&
+        cd -- "$dir"
+    redraw-prompt
+}
+zle -N subfolder-search
 
 # Autoload functions.
 # autoload -Uz zmv
@@ -193,6 +213,14 @@ bindkey '^ ' autosuggest-accept
 
 bindkey '^x^e' edit-command-line
 bindkey '÷' redo
+
+# dircylce
+bindkey '^[[1;2D' insert-cycledleft
+bindkey '^[[1;2C' insert-cycledright
+bindkey '^[[1;2A' insert-cycledup
+
+# fzf-subfolder search
+bindkey '^[[1;2B' subfolder-search
 
 # FZF is missing some configuration (some of it might be replaced by atuin)
 # Atuin is missing some configuration
