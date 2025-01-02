@@ -37,8 +37,8 @@ if [[ ! -e ~/external-repos/atuin ]]; then
     git clone --depth=1 git@github.com:atuinsh/atuin.git ~/external-repos/atuin
     zcompile-many ~/external-repos/atuin/atuin.plugin.zsh
 fi
-if [[ ! -e ./scripts/set-terminal-title.zsh.zwc ]]; then
-    zcompile-many ./scripts/set-terminal-title.zsh
+if [[ ! -e ~/dotfiles/scripts/set-terminal-title.zsh.zwc ]]; then
+    zcompile-many ~/dotfiles/scripts/set-terminal-title.zsh
 fi
 
 # Activate Powerlevel10k Instant Prompt.
@@ -125,7 +125,7 @@ source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/dircycle/dircycle.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
-source ./scripts/set-terminal-title.zsh
+source ~/dotfiles/scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
 source ~/external-repos/atuin/atuin.plugin.zsh
