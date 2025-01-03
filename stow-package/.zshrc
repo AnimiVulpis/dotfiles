@@ -46,6 +46,49 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Configure the completion system
+# Directly taken from `zsh4humans` `fn/-z4h-init-zle`
+zstyle ':completion:*'               matcher-list      "m:{a-z}={A-Z}"
+zstyle ':completion:*'               menu              "false"
+zstyle ':completion:*'               verbose           "true"
+zstyle ':completion:::::'            insert-tab        "pending"
+zstyle ':completion:*:-subscript-:*' tag-order         "indexes parameters"
+zstyle ':completion:*:-tilde-:*'     tag-order         "directory-stack" "named-directories" "users"
+zstyle ':completion:*'               squeeze-slashes   "true"
+zstyle ':completion:*:rm:*'          ignore-line       "other"
+zstyle ':completion:*:kill:*'        ignore-line       "other"
+zstyle ':completion:*:diff:*'        ignore-line       "other"
+zstyle ':completion:*:rm:*'          file-patterns     "*:all-files"
+zstyle ':completion:*:paths'         accept-exact-dirs "true"
+zstyle ':completion:*'               single-ignored    "show"
+zstyle ':completion:*:functions'     ignored-patterns  "-*|_*"
+zstyle ':completion:*:parameters'    ignored-patterns  \
+    "_(z4h|p9k|_p9k|POWERLEVEL9K|gitstatus|GITSTATUS|zsh_highlight|zsh_autosuggest|ZSH_HIGHLIGHT|ZSH_AUTOSUGGEST)*"
+
+# With a sprinkle of `tips.md`
+zstyle ':completion:*:ssh:argument-1:'       tag-order  hosts users
+zstyle ':completion:*:scp:argument-rest:'    tag-order  hosts files users
+zstyle ':completion:*:(ssh|scp|rdp):*:hosts' hosts
+
+zstyle ':completion:*:git-*:argument-rest:heads'           ignored-patterns '(FETCH_|ORIG_|*/|)HEAD'
+zstyle ':completion:*:git-*:argument-rest:heads-local'     ignored-patterns '(FETCH_|ORIG_|)HEAD'
+zstyle ':completion:*:git-*:argument-rest:heads-remote'    ignored-patterns '*/HEAD'
+zstyle ':completion:*:git-*:argument-rest:commits'         ignored-patterns '*'
+zstyle ':completion:*:git-*:argument-rest:commit-objects'  ignored-patterns '*'
+zstyle ':completion:*:git-*:argument-rest:recent-branches' ignored-patterns '*'
+
+# Make it possible to use completion specifications and functions written for bash.
+autoload -Uz bashcompinit
+bashcompinit
+
+# Add in some more magic from `fn/-z4h-compinit`
+local -aU editors=(
+    vi vim nvim emacs nano gedit hx code kak kate mcedit joe $EDITOR $VISUAL
+    bat cat less more $PAGER)
+zstyle ':completion:*:*:('${(j:|:)editors}'):*:*' ignored-patterns '*.zwc'
+
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+
 # Enable the "new" completion system (compsys).
 autoload -Uz compinit && compinit
 [[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
