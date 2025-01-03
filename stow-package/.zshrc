@@ -51,18 +51,19 @@ autoload -Uz compinit && compinit
 [[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
 unfunction zcompile-many
 
+# Autosuggestion configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 # From `/opt/homebrew/bin/brew shellenv`
-export HOMEBREW_PREFIX="/opt/homebrew";
-export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
-export HOMEBREW_REPOSITORY="/opt/homebrew";
-fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
-PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/Users/I526086/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin"; export PATH;
-[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
-export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
-
-
+export HOMEBREW_PREFIX="/opt/homebrew"
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+export HOMEBREW_REPOSITORY="/opt/homebrew"
+fpath[1,0]="/opt/homebrew/share/zsh/site-functions"
+PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/Users/I526086/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 
 # Configure nvm
 # Set up NVM directory
@@ -107,7 +108,7 @@ export WORDCHARS=''
 export SUDO_EDITOR="hx"
 export EDITOR="hx"
 export VISUAL="code -w"
-export LESS="-x4 -Ri"
+export LESS="-iRFXMx4"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -155,7 +156,7 @@ function y() {
     if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
         builtin cd -- "$cwd"
     fi
-rm -f -- "$tmp"
+    rm -f -- "$tmp"
 }
 
 # Autoload functions.
@@ -188,8 +189,8 @@ alias ls="${aliases[ls]:-ls} -A"
 eval "$(zoxide init zsh)"
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
-setopt glob_dots     # no special treatment for file names with a leading dot
-setopt no_auto_menu  # require an extra TAB press to open the completion menu
+setopt glob_dots    # no special treatment for file names with a leading dot
+setopt no_auto_menu # require an extra TAB press to open the completion menu
 
 # History with timestamps and elapsed time
 setopt EXTENDED_HISTORY
