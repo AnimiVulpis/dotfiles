@@ -235,6 +235,28 @@ eval "$(zoxide init zsh)"
 setopt glob_dots    # no special treatment for file names with a leading dot
 setopt no_auto_menu # require an extra TAB press to open the completion menu
 
+# If command can’t be executed and is the name of a directory, perform the cd command to that directory
+setopt AUTO_CD
+# If a parameter is completed whose content is the name of a directory, then add a trailing slash instead of a space
+setopt AUTO_PARAM_SLASH
+# Make cd push the old directory onto the directory stack
+setopt AUTO_PUSHD
+# Output hexadecimal numbers in the standard C format
+setopt C_BASES
+# Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation
+setopt EXTENDED_GLOB
+# Perform implicit tees or cats when multiple redirections are attempted
+setopt MULTIOS
+# Don't run all background jobs at a lower priority
+setopt NO_BG_NICE
+# Output flow control is disabled in the shell’s editor
+setopt NO_FLOW_CONTROL
+# Don't automatically remove slashes from completions
+setopt NO_AUTO_REMOVE_SLASH
+# When listing files that are possible completions, DON'T show the type of each file
+setopt NO_LIST_TYPES
+# Don't beep on error in ZLE
+setopt NO_BEEP
 # History with timestamps and elapsed time
 setopt EXTENDED_HISTORY
 # Append to history after commands have finished
