@@ -14,6 +14,9 @@ if [[ ! -e ~/external-repos/zsh-autosuggestions ]]; then
     git clone --depth=1 git@github.com:zsh-users/zsh-autosuggestions.git ~/external-repos/zsh-autosuggestions
     zcompile-many ~/external-repos/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
 fi
+if [[ ! -e ~/external-repos/zsh-completions ]]; then
+    git clone --depth=1 git@github.com:zsh-users/zsh-completions.git ~/external-repos/zsh-completions
+fi
 if [[ ! -e ~/external-repos/powerlevel10k ]]; then
     git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ~/external-repos/powerlevel10k
     make -C ~/external-repos/powerlevel10k pkg
@@ -89,10 +92,8 @@ zstyle ':completion:*:*:('${(j:|:)editors}'):*:*' ignored-patterns '*.zwc'
 
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
-# Enable the "new" completion system (compsys).
-autoload -Uz compinit && compinit
-[[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
-unfunction zcompile-many
+# Add zsh-completions to fpath
+fpath=(~/external-repos/zsh-completions/src $fpath)
 
 # Autosuggestion configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
@@ -144,6 +145,11 @@ fi
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # Use async suggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+# Enable the "new" completion system (compsys).
+autoload -Uz compinit && compinit
+[[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
+unfunction zcompile-many
 
 # More environment variables
 export WORDCHARS=''
