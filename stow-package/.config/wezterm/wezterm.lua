@@ -21,6 +21,14 @@ config.font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Light" })
 -- config.show_close_tab_button_in_tabs = false
 config.tab_max_width = 42
 
+config.keys = {
+    {
+        key = 'w',
+        mods = 'CMD',
+        action = wezterm.action.CloseCurrentPane { confirm = true },
+    }
+}
+
 config.window_padding = {
     left = '0.1cell',
     right = '0.1cell',
