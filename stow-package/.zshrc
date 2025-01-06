@@ -99,6 +99,10 @@ fpath=(~/external-repos/zsh-completions/src $fpath)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
+# ZSH-SYNTAX-HIGHLIGHTING configuration
+ZSH_HIGHLIGHT_MAXLENGTH=1024                # don't colorize long command lines (slow)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)  # main syntax highlighting plus matching brackets
+
 # From `/opt/homebrew/bin/brew shellenv`
 export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
@@ -166,7 +170,6 @@ export MANROFFOPT="-c"
 export LC_CTYPE="en_US.UTF-8"
 
 # Load plugins.
-source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/external-repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/external-repos/LS_COLORS/lscolors.sh
@@ -179,6 +182,7 @@ source ~/dotfiles/scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
 source ~/external-repos/atuin/atuin.plugin.zsh
+source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
 function redraw-prompt() {
