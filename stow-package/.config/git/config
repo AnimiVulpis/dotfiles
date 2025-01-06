@@ -24,10 +24,13 @@
 	diffFilter = delta --color-only --features=interactive
 
 [delta]
+	dark = true
 	navigate = true
 	features = decorations moved-diff
 	line-numbers = true
 	syntax-theme = Solarized (dark)
+	max-syntax-highlighting-length = 42000
+	max-line-length = 42000
 
 [delta "moved-diff"]
 	minus-style = syntax "#3f0001"
@@ -48,7 +51,7 @@
 	hunk-header-style = file line-number syntax
 
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 
 [diff]
 	colorMoved = default
