@@ -46,6 +46,10 @@ backup_zsh_history() {
     cp -pfv "$history_location" ~/rclone/
 }
 
+# Until I have my self hosted atuin database running
+echo 'cp -pv ~/.local/share/atuin/history.db ~/rclone/'
+cp -pv ~/.local/share/atuin/history.db ~/rclone/
+
 if $interactive; then
     read -n 1 -s -r -p "abort, skip, or continue backup-zsh-history? [a/s/c]: " choice
     case $choice in
