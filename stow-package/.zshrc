@@ -181,7 +181,9 @@ source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
 source ~/dotfiles/scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
-source ~/external-repos/atuin/atuin.plugin.zsh
+# source ~/external-repos/atuin/atuin.plugin.zsh # This just does `source<(atuin init zsh)`
+# `atuin.init.zsh` is just `atuin init zsh > atuin.init.zsh` (`zcompile -R atuin.init.zsh` for performance)
+source ~/external-repos/atuin/atuin.init.zsh
 source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
