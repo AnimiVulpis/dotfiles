@@ -47,8 +47,5 @@ go install github.com/irevenko/tsukae@latest
 printf '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-repos/\e[0m"\n'
 ~/dotfiles/scripts/repository-updates.zsh ~/external-repos/
 
-echo 'To update zsh4humans'
-echo 'z4h update'
-
 printf '\e[34mExecuting\e[0m "\e[32mbrew\e[0m update && \e[32mbrew\e[0m upgrade"\n'
 brew update && brew upgrade
