@@ -12,7 +12,7 @@ fi
 
 update_subfolder_repos() {
     local git_fetch_error git_status git_diff
-    local subfolder_list=($(eza -D ./))
+    local subfolder_list=($(eza -D "$1"))
     local max_length=40 # Plus one char on each side makes 42^^
     for subfolder in ${subfolder_list[@]}; do
         if (( ${#subfolder} > max_length )); then
@@ -24,13 +24,13 @@ update_subfolder_repos() {
         echo -n "${(r:max_length::╴:: :)subfolder}"
         echo -n " \e[34mFetching\e[0m"
         # If it's not a git repository, git will return an error that needs to be suppressed
-        git_fetch_error=$(git -C $subfolder fetch --quiet origin 2>&1) &&
-            echo -n " \e[32mOK\e[0m" &&
-            git_status=$(git -c color.status=always -C $subfolder status --untracked-files=no --short --branch 2>/dev/null) &&
+        git_fetch_error=$(git -C "$1/${subfolder}" fetch --quiet origin 2>&1) &&
+            echo -n "\e[8D\e[32mOK\e[0m" &&
+            git_status=$(git -c color.status=always -C "$1/${subfolder}" status --untracked-files=no --short --branch 2>/dev/null) &&
             echo " $git_status" | head -n1 | tr -d '\n' &&
-            git_diff=$(git -C $subfolder diff --shortstat | tail -n1) &&
+            git_diff=$(git -C "$1/${subfolder}" diff --shortstat | tail -n1) &&
             echo -e "\e[33m$git_diff\e[m" ||
-            echo -e " \e[31mFAILED\e[0m \e[36m${git_fetch_error}\e[0m"
+            echo -e "\e[8D\e[31mFAILED\e[0m \e[36m${git_fetch_error}\e[0m"
     done
 }
 
