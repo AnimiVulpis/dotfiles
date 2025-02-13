@@ -244,7 +244,7 @@ alias ls="${aliases[ls]:-ls} -A"
 eval "$(zoxide init zsh)"
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
-setopt glob_dots    # no special treatment for file names with a leading dot
+setopt glob_dots    # no special treatment for filenames with a leading dot
 setopt no_auto_menu # require an extra TAB press to open the completion menu
 
 # If command can’t be executed and is the name of a directory, perform the cd command to that directory
@@ -305,7 +305,7 @@ bindkey '^ ' autosuggest-accept
 bindkey '^x^e' edit-command-line
 bindkey '÷' redo
 
-# dircylce
+# dircycle
 bindkey '^[[1;2D' insert-cycledleft
 bindkey '^[[1;2C' insert-cycledright
 bindkey '^[[1;2A' insert-cycledup

@@ -67,8 +67,26 @@ stow --adopt stow-package --target <HOME_FOLDER/PATH>
 
 ## Content
 
-### `zshrc`
+### Notes on `zshrc`
 
 Based on https://github.com/romkatv/zsh-bench `diy++`
+
+### Notes on `asdf`
+
+Based on https://github.com/romkatv/zsh4humans/blob/master/tips.md#homebrew it is always better to rely on `HOMEBREW_PREFIX`, because it is faster
+
+> When referencing files and directories managed by [Homebrew](https://brew.sh/),
+you can rely on `HOMEBREW_PREFIX` being automatically set. This is much faster
+than invoking `brew --prefix`. For example, here's how you can load
+[asdf](https://github.com/asdf-vm/asdf):
+>   ```zsh
+>   z4h source -- ${HOMEBREW_PREFIX:+$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh}
+>   ```
+
+Based on https://asdf-vm.com/guide/getting-started.html the following should be done:
+```bash
+mkdir -pv ~/.asdf/completions/
+asdf completion zsh > ~/.asdf/completions/_asdf"
+```
 
 ## Information
