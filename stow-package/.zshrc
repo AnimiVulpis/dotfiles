@@ -49,6 +49,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Load LS_COLORS earlier because those are also used by the completion system
+source ~/external-repos/LS_COLORS/lscolors.sh
+
 # Configure the completion system
 # Directly taken from `zsh4humans` `fn/-z4h-init-zle`
 zstyle ':completion:*'               matcher-list      "m:{a-z}={A-Z}"
@@ -172,7 +175,6 @@ export LC_CTYPE="en_US.UTF-8"
 # Load plugins.
 source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/external-repos/powerlevel10k/powerlevel10k.zsh-theme
-source ~/external-repos/LS_COLORS/lscolors.sh
 source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
