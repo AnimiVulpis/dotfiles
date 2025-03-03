@@ -30,7 +30,7 @@ if [[ ! -e ~/external-repos/zsh-nvm ]]; then
 fi
 if [[ ! -e ~/external-repos/ohmyzsh ]]; then
     git clone --depth=1 git@github.com:ohmyzsh/ohmyzsh.git ~/external-repos/ohmyzsh
-    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,asdf/asdf.plugin.zsh,dircycle/dircycle.plugin.zsh}
+    zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,dircycle/dircycle.plugin.zsh}
 fi
 if [[ ! -e ~/external-repos/zsh-edit ]]; then
     git clone --depth=1 git@github.com:marlonrichert/zsh-edit.git ~/external-repos/zsh-edit
@@ -116,6 +116,9 @@ export PATH
 [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 
+# asdf data dir path
+export ASDF_DATA_DIR="$HOME/.asdf"
+
 # Configure nvm
 # Set up NVM directory
 export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
@@ -129,8 +132,8 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 # Define libpq path (PostgreSQL executables without server)
 export LIBPQ_BIN="/opt/homebrew/opt/libpq/bin"
-# Extend PATH.
-path=(~/bin $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
+# Extend PATH (including asdf shims)
+path=(~/bin ${ASDF_DATA_DIR:-$HOME/.asdf}/shims $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
 # Ensure GPG works correctly
 export GPG_TTY=$TTY
 
@@ -177,7 +180,6 @@ source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/external-repos/powerlevel10k/powerlevel10k.zsh-theme
 source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
-source ~/external-repos/ohmyzsh/plugins/asdf/asdf.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/dircycle/dircycle.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
 source ~/dotfiles/scripts/set-terminal-title.zsh
