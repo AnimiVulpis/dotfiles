@@ -38,7 +38,9 @@ if [[ ! -e ~/external-repos/zsh-edit ]]; then
 fi
 if [[ ! -e ~/external-repos/atuin ]]; then
     git clone --depth=1 git@github.com:atuinsh/atuin.git ~/external-repos/atuin
-    zcompile-many ~/external-repos/atuin/atuin.plugin.zsh
+    # See below for more information
+    atuin init zsh > ~/external-repos/atuin/atuin.init.zsh
+    zcompile-many ~/external-repos/atuin/atuin.init.zsh
 fi
 if [[ ! -e ~/dotfiles/scripts/set-terminal-title.zsh.zwc ]]; then
     zcompile-many ~/dotfiles/scripts/set-terminal-title.zsh
