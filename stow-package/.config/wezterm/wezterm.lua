@@ -9,6 +9,9 @@ config.check_for_updates = false
 
 config.front_end = "WebGpu"
 
+config.initial_cols = 120
+config.initial_rows = 42
+
 config.animation_fps = 120
 config.max_fps = 120
 

@@ -1,0 +1,125 @@
+{
+    // Tracks the version of the configuration file (automatically written on creation)
+    "config_version": "1.0",
+    // Configures the timezones to be shown
+    "timezones": [
+        // Timezones have a name (Name) and timezone code (TZ)
+        {
+            "Name": "Pacific/Pago Pago",
+            "TZ": "Pacific/Pago_Pago"
+        },
+        {
+            "Name": "America/LA",
+            "TZ": "America/Los_Angeles"
+        },
+        {
+            "Name": "America/NY",
+            "TZ": "America/New_York"
+        },
+        {
+            "Name": "America/Sao Paulo",
+            "TZ": "America/Sao_Paulo"
+        },
+        {
+            "Name": "Home/Berlin",
+            "TZ": "Europe/Berlin"
+        },
+        {
+            "Name": "India",
+            "TZ": "Asia/Kolkata"
+        },
+        {
+            "Name": "Asia/Tokyo",
+            "TZ": "Asia/Tokyo"
+        }
+    ],
+    // Configures the style of the plot
+    "style": {
+        // Select symbols to use for the time blocks
+        // (one of 'mono', 'rectangles', 'blocks', 'sun-moon' or 'custom')
+        "symbols": "blocks",
+        // Define custom symbols (used if 'symbols' is 'custom')
+        // Each symbol is used from its start time (hour in day as int) until the next symbol
+        "custom_symbols": [
+            {
+                "Start": 6,
+                "Symbol": "░"
+            },
+            {
+                "Start": 8,
+                "Symbol": "█"
+            },
+            {
+                "Start": 18,
+                "Symbol": "▄"
+            },
+            {
+                "Start": 22,
+                "Symbol": "▂"
+            }
+        ],
+        // Indicates whether to use coloring at all
+        "colorize": true,
+        // Configures how the day is segmented
+        "day_segments": {
+            // Hour of the morning to start (0-23)
+            "morning": 6,
+            // Hour of the day (business hours / main time) to start (0-23)
+            "day": 8,
+            // Hour of the evening to start (0-23)
+            "evening": 18,
+            // Hour of the night to start (0-23)
+            "night": 22
+        },
+        // Defines the colors for the segments
+        // Static mode colors can be one of:
+        //  - >simple< color names like `red`, `green`, `cyan`, etc.
+        //  - terminal color codes like `\u001b[34m`, `\u001b[32m`, etc.
+        //  - hex codes like #DC143C, #00ff00, etc. (if true color is supported)
+        // Dynamic mode colors 
+        //  - tcell color names like crimson, green, etc.
+        //  - hex codes like #DC143C, #00ff00, etc.
+        // Note that some symbols are not fully opaque and will show the background color, thus,
+        //   making the color appear darker (or lighter for white/light terminal backgrounds)
+        "coloring": {
+            // Color of the morning segment for static mode
+            "StaticColorMorning": "#c98b1a",
+            // Color of the day segment for static mode
+            "StaticColorDay": "#509af6",
+            // Color of the evening segment for static mode
+            "StaticColorEvening": "#f75b72",
+            // Color of the night segment for static mode
+            "StaticColorNight": "#21307c",
+            // Foreground color overriding default for static mode (optional)
+            "StaticColorForeground": "",
+            // Color of the morning segment for dynamic mode
+            "DynamicColorMorning": "#c98b1a",
+            // Color of the day segment for dynamic mode
+            "DynamicColorDay": "#509af6",
+            // Color of the evening segment for dynamic mode
+            "DynamicColorEvening": "#f75b72",
+            // Color of the night segment for dynamic mode
+            "DynamicColorNight": "#21307c",
+            // Foreground color overriding default for dynamic mode (optional)
+            "DynamicColorForeground": "",
+            // Background color overriding default for dynamic mode (optional)
+            "DynamicColorBackground": ""
+        }
+    },
+    // Indicates whether to plot tics for the local time
+    "tics": false,
+    // Indicates whether to stretch across the full terminal width (causes inhomogeneous segment lengths)
+    "stretch": false,
+    // Inline indicates whether location and time info will be plotted on one line with the bars.
+    "inline": true,
+    // Indicates whether to colorize the blocks
+    "hours12": false,
+    // Indicates whether to use 12-hour format
+    "live": false,
+    // Selects the sorting of the timezones
+    // (one of 'name' - lexicographically, 'offset' - TZ offset, 'none' - user defined)
+    // I put the timezones manually in TZ offset order
+    "sorting": "none",
+    // Indicates whether to keep the local timezone on top when using sorting
+    "sort_local_top": true
+}
