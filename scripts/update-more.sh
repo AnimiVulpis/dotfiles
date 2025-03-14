@@ -38,10 +38,6 @@ go install github.com/antonmedv/countdown@latest
 printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/jotaen/klog@latest\e[0m"\n'
 go install github.com/jotaen/klog@latest
 
-# Tool to visualize most used cli commands `tsukae`
-printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/irevenko/tsukae@latest\e[0m"\n'
-go install github.com/irevenko/tsukae@latest
-
 # ##############################
 
 printf '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-repos/\e[0m"\n'
