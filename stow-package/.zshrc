@@ -100,6 +100,9 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 # Add zsh-completions to fpath
 fpath=(~/external-repos/zsh-completions/src $fpath)
 
+# Append other (manually created) completions to the fpath
+fpath+=(~/completions)
+
 # Autosuggestion configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
