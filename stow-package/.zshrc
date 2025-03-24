@@ -111,6 +111,8 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_HIGHLIGHT_MAXLENGTH=1024                # don't colorize long command lines (slow)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)  # main syntax highlighting plus matching brackets
 
+# Changes the path where the applications will be moved by homebrew
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 # From `/opt/homebrew/bin/brew shellenv`
 export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
