@@ -33,10 +33,10 @@ config.keys = {
 }
 
 config.window_padding = {
-    left = '0.1cell',
-    right = '0.1cell',
-    top = '0.1cell',
-    bottom = '0.1cell',
+    left = '0.25cell',
+    right = '0.25cell',
+    top = '0.25cell',
+    bottom = '0.25cell',
 }
 
 -- Root Loops color scheme
