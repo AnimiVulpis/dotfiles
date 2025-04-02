@@ -126,6 +126,9 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 # asdf data dir path
 export ASDF_DATA_DIR="$HOME/.asdf"
 
+# harsh directory
+export HARSHPATH="$HOME/projects/logseq/harsh/"
+
 # Configure nvm
 # Set up NVM directory
 export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
