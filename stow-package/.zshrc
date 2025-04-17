@@ -105,7 +105,7 @@ fpath+=(~/completions)
 
 # Autosuggestion configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+# ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 # ZSH-SYNTAX-HIGHLIGHTING configuration
 ZSH_HIGHLIGHT_MAXLENGTH=1024                # don't colorize long command lines (slow)
@@ -162,7 +162,7 @@ fi
 
 # zsh-users/zsh-autosuggestions
 # Set max buffer size
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30
 # Use async suggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
