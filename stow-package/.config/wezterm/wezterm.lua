@@ -22,6 +22,8 @@ config.font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Light" })
 
 -- Nightly build only
 -- config.show_close_tab_button_in_tabs = false
+config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_max_width = 42
 
 config.keys = {
