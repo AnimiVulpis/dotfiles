@@ -41,14 +41,18 @@ config.window_padding = {
     bottom = '0.25cell',
 }
 
--- Root Loops color scheme
--- via https://rootloops.sh
--- Configs: Sugar: 7, Artificial Colors: 9, Sogginess: 8, Cereal Flavor: Classic, Fruit: Blueberry, Milk: Just a Splash
+-- Copy the configuration below and add it to your
+-- ~/.wezterm.lua or ~/.config/wezterm/wezterm.lua file
 
+-- NOTE: make sure to *not* use any config.color_scheme option
+--       if you want to define your own root loops color scheme
+
+-- Root Loops color scheme
+-- via https://rootloops.sh?sugar=7&colors=9&sogginess=8&flavor=1&fruit=7&milk=1
 config.colors = {
     foreground = "#c9f4fc",
     background = "#05272d",
-    cursor_bg = "#c9f4fc",
+    cursor_bg = "#62daee",
     cursor_border = "#e9fafe",
     cursor_fg = "#05272d",
     selection_bg = "#c9f4fc",
