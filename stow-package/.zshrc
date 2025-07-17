@@ -129,6 +129,16 @@ export ASDF_DATA_DIR="$HOME/.asdf"
 # harsh directory
 export HARSHPATH="$HOME/projects/logseq/harsh/"
 
+# Configure fzf
+# Add the 'export' statement below to your shell's configuration
+# (e.g. ~/.bashrc, ~/.zshrc, or a custom file you load during shell startup)
+
+# Root Loops (https://rootloops.sh?sugar=7&colors=9&sogginess=8&flavor=1&fruit=7&milk=1)
+export FZF_DEFAULT_OPTS="  --color=fg:#c9f4fc,fg+:#e9fafe,bg:#05272d,bg+:#0d4149 \
+    --color=hl:#1faeae,hl+:#24c6c6,info:#c98b1a,marker:#67af34 \
+    --color=prompt:#f75b72,spinner:#ca64f3,pointer:#ca64f3,header:#509af6 \
+    --color=border:#1f7784,label:#62daee,query:#c9f4fc"
+
 # Configure nvm
 # Set up NVM directory
 export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
