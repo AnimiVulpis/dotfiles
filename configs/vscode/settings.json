@@ -1,0 +1,146 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "chat.agent.enabled": true,
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.experimental.useTrueInlineView": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 5,
+  "editor.dragAndDrop": false,
+  "editor.find.autoFindInSelection": "multiline",
+  "editor.fontFamily": "'IosevkaTerm Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveIndentation": "always",
+  "editor.linkedEditing": true,
+  "editor.minimap.showSlider": "always",
+  "editor.renderWhitespace": "boundary",
+  "editor.roundedSelection": false,
+  "editor.showFoldingControls": "always",
+  "editor.smoothScrolling": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.showStatusBar": true,
+  "git.blame.editorDecoration.enabled": false,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.selectedCompletionModel": "",
+  "hediet.vscode-drawio.customLibraries": [
+    {
+      "entryId": "TAM_AD",
+      "file": "<TAM-repo>/build/TAM-AD.xml",
+      "libName": "TAM Activity Diagram"
+    },
+    {
+      "entryId": "TAM_Ann",
+      "file": "<TAM-repo>/build/TAM-Ann.xml",
+      "libName": "TAM Annotations"
+    },
+    {
+      "entryId": "TAM_BD",
+      "file": "<TAM-repo>/build/TAM-BD.xml",
+      "libName": "TAM Block Diagram"
+    },
+    {
+      "entryId": "TAM_CD",
+      "file": "<TAM-repo>/build/TAM-CD.xml",
+      "libName": "TAM Class Diagramm"
+    },
+    {
+      "entryId": "TAM_SeqD",
+      "file": "<TAM-repo>/build/TAM-SeqD.xml",
+      "libName": "TAM Sequence Diagram"
+    }
+  ],
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.theme": "atlas",
+  "keyboard.touchbar.enabled": false,
+  "material-icon-theme.activeIconPack": "none",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "npm.fetchOnlinePackageInfo": false,
+  "scm.diffDecorationsGutterPattern": {
+    "added": true
+  },
+  "search.useIgnoreFiles": false,
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.linuxExec": "wezterm",
+  "terminal.integrated.scrollback": 4200,
+  "window.density.editorTabHeight": "compact",
+  "window.newWindowProfile": "Default",
+  "window.title": "${rootName}${separator}${activeEditorMedium}${dirty}",
+  "workbench.activityBar.location": "top",
+  "workbench.colorCustomizations": {
+    "terminal.ansiBlack": "#0d4149",
+    "terminal.ansiBlue": "#509af6",
+    "terminal.ansiBrightBlack": "#1f7784",
+    "terminal.ansiBrightBlue": "#77b1fb",
+    "terminal.ansiBrightCyan": "#24c6c6",
+    "terminal.ansiBrightGreen": "#75c73b",
+    "terminal.ansiBrightMagenta": "#d68af7",
+    "terminal.ansiBrightRed": "#fb8590",
+    "terminal.ansiBrightWhite": "#e9fafe",
+    "terminal.ansiBrightYellow": "#e49f27",
+    "terminal.ansiCyan": "#1faeae",
+    "terminal.ansiGreen": "#67af34",
+    "terminal.ansiMagenta": "#ca64f3",
+    "terminal.ansiRed": "#f75b72",
+    "terminal.ansiWhite": "#62daee",
+    "terminal.ansiYellow": "#c98b1a",
+    "terminal.background": "#05272d",
+    "terminal.foreground": "#c9f4fc",
+    "terminalCursor.foreground": "#62daee"
+  },
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.settings.openDefaultKeybindings": true,
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "zenMode.fullScreen": false,
+  "zenMode.restore": false,
+  "zenMode.silentNotifications": false
+}
