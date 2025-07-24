@@ -1,2 +1,4 @@
 .aws
 .config/docker
+
+completions/_docker
