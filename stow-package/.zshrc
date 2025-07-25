@@ -57,7 +57,7 @@ source ~/external-repos/LS_COLORS/lscolors.sh
 # Configure the completion system
 # Directly taken from `zsh4humans` `fn/-z4h-init-zle`
 zstyle ':completion:*'               matcher-list      "m:{a-z}={A-Z}"
-zstyle ':completion:*'               menu              "false"
+zstyle ':completion:*'               menu              "true"
 zstyle ':completion:*'               verbose           "true"
 zstyle ':completion:::::'            insert-tab        "pending"
 zstyle ':completion:*:-subscript-:*' tag-order         "indexes parameters"
@@ -323,6 +323,9 @@ setopt INTERACTIVE_COMMENTS
 setopt PUSHD_IGNORE_DUPS
 
 # Key bindings
+# zsh-menu "cycle" backwards (opposite of <tab>)
+bindkey '^[[Z' reverse-menu-complete
+
 # zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
