@@ -57,7 +57,8 @@ source ~/external-repos/LS_COLORS/lscolors.sh
 # Configure the completion system
 # Directly taken from `zsh4humans` `fn/-z4h-init-zle`
 zstyle ':completion:*'               matcher-list      "m:{a-z}={A-Z}"
-zstyle ':completion:*'               menu              "true"
+# "" to make completion of the unambiguous part work while allowing menu completion with tab
+zstyle ':completion:*'               menu              ""
 zstyle ':completion:*'               verbose           "true"
 zstyle ':completion:::::'            insert-tab        "pending"
 zstyle ':completion:*:-subscript-:*' tag-order         "indexes parameters"
@@ -268,9 +269,10 @@ alias ls="${aliases[ls]:-ls} -A"
 eval "$(zoxide init zsh)"
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
-setopt glob_dots    # no special treatment for filenames with a leading dot
-setopt no_auto_menu # require an extra TAB press to open the completion menu
-
+# no special treatment for filenames with a leading dot
+setopt GLOB_DOTS
+# use menu completion [...] by pressing the tab key repeatedly
+setopt AUTO_MENU
 # If command can’t be executed and is the name of a directory, perform the cd command to that directory
 setopt AUTO_CD
 # If a parameter is completed whose content is the name of a directory, then add a trailing slash instead of a space
