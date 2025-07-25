@@ -248,8 +248,6 @@ zle -N edit-command-line
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
 compdef _directories md
 
-# Define aliases.
-alias tree='tree -a -I .git'
 # AnimiVulpis
 # alias definitions
 alias ls="ls --color=auto"
@@ -263,7 +261,7 @@ alias et="eza -T --group-directories-first"
 alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8601 date: ' && date -Iseconds"
 
 # Add flags to existing aliases.
-alias ls="${aliases[ls]:-ls} -A"
+# alias ls="${aliases[ls]:-ls} -A"
 
 # Setup zoxide
 eval "$(zoxide init zsh)"
