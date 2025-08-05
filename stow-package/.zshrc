@@ -56,7 +56,9 @@ source ~/external-repos/LS_COLORS/lscolors.sh
 
 # Configure the completion system
 # Directly taken from `zsh4humans` `fn/-z4h-init-zle`
-zstyle ':completion:*'               matcher-list      "" "+m:{[:lower:]}={[:upper:]}" "+m:{[:upper:]}={[:lower:]}"
+zstyle ':completion:*'               matcher-list      "" \
+    "+m:{[:lower:]}={[:upper:]}" "+m:{[:upper:]}={[:lower:]}" \
+    "+r:|[._-]=* r:|=*" "+l:|=* r:|=*"
 # "" to make completion of the unambiguous part work while allowing menu completion with tab
 zstyle ':completion:*'               menu              ""
 zstyle ':completion:*'               verbose           "true"
