@@ -1,0 +1,20 @@
+[theme]
+name = "animivulpis"
+
+[colors]
+# Current line highlight and unsuccessful commands
+# AlertError = "#fb8590"
+# Match highlight
+AlertWarn = "#62daee"
+# Successful commands
+# AlertInfo = "#67af34"
+# Command display at the bottom
+# Annotation = "#1f7784"
+# Used for age information
+# Guidance = "#509af6"
+# Seems to be unused
+# Important = ""
+# Seems to be unused
+# Muted = ""
+# Default works as expected
+# Base = "#c9f4fc"
