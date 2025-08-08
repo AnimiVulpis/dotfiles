@@ -129,9 +129,6 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 # asdf data dir path
 export ASDF_DATA_DIR="$HOME/.asdf"
 
-# harsh directory
-export HARSHPATH="$HOME/projects/logseq/harsh/"
-
 # Configure fzf
 # Add the 'export' statement below to your shell's configuration
 # (e.g. ~/.bashrc, ~/.zshrc, or a custom file you load during shell startup)
