@@ -1,0 +1,5 @@
+# From https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
+git:
+  pagers:
+    - pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+    - externalDiffCommand: difft --color=always
