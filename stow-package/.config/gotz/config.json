@@ -89,7 +89,7 @@
             // Color of the evening segment for static mode
             "StaticColorEvening": "#f75b72",
             // Color of the night segment for static mode
-            "StaticColorNight": "#21307c",
+            "StaticColorNight": "#0c3e46",
             // Foreground color overriding default for static mode (optional)
             "StaticColorForeground": "",
             // Color of the morning segment for dynamic mode
@@ -99,7 +99,7 @@
             // Color of the evening segment for dynamic mode
             "DynamicColorEvening": "#f75b72",
             // Color of the night segment for dynamic mode
-            "DynamicColorNight": "#21307c",
+            "DynamicColorNight": "#0c3e46",
             // Foreground color overriding default for dynamic mode (optional)
             "DynamicColorForeground": "",
             // Background color overriding default for dynamic mode (optional)

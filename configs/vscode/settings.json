@@ -44,6 +44,38 @@
   "editor.minimap.showSlider": "always",
   "editor.renderWhitespace": "boundary",
   "editor.roundedSelection": false,
+  "editor.semanticTokenColorCustomizations": {
+    "[Default Dark+]": {
+      "rules": {
+        "property.mandatory:xml": {
+          "bold": true
+        },
+        "string.i18n:xml": {
+          "italic": true
+        }
+      }
+    },
+    "[Default High Contrast]": {
+      "rules": {
+        "property.mandatory:xml": {
+          "bold": true
+        },
+        "string.i18n:xml": {
+          "italic": true
+        }
+      }
+    },
+    "[Default Light+]": {
+      "rules": {
+        "property.mandatory:xml": {
+          "bold": true
+        },
+        "string.i18n:xml": {
+          "italic": true
+        }
+      }
+    }
+  },
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.suggest.localityBonus": true,
@@ -109,26 +141,27 @@
   "window.title": "${rootName}${separator}${activeEditorMedium}${dirty}",
   "workbench.activityBar.location": "top",
   "workbench.colorCustomizations": {
-    "terminal.ansiBlack": "#0d4149",
+    "terminal.ansiBlack": "#0c3e46",
     "terminal.ansiBlue": "#509af6",
-    "terminal.ansiBrightBlack": "#1f7784",
+    "terminal.ansiBrightBlack": "#196772",
     "terminal.ansiBrightBlue": "#77b1fb",
     "terminal.ansiBrightCyan": "#24c6c6",
     "terminal.ansiBrightGreen": "#75c73b",
     "terminal.ansiBrightMagenta": "#d68af7",
     "terminal.ansiBrightRed": "#fb8590",
-    "terminal.ansiBrightWhite": "#e9fafe",
+    "terminal.ansiBrightWhite": "#6bdef1",
     "terminal.ansiBrightYellow": "#e49f27",
     "terminal.ansiCyan": "#1faeae",
     "terminal.ansiGreen": "#67af34",
     "terminal.ansiMagenta": "#ca64f3",
     "terminal.ansiRed": "#f75b72",
-    "terminal.ansiWhite": "#62daee",
+    "terminal.ansiWhite": "#36b3c6",
     "terminal.ansiYellow": "#c98b1a",
-    "terminal.background": "#05272d",
-    "terminal.foreground": "#c9f4fc",
-    "terminalCursor.foreground": "#62daee"
+    "terminal.background": "#05262c",
+    "terminal.foreground": "#8ae7f7",
+    "terminalCursor.foreground": "#36b3c6"
   },
+  "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.empty.hint": "hidden",

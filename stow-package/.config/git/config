@@ -33,15 +33,15 @@
 	max-line-length = 42000
 
 [delta "moved-diff"]
-	minus-style = syntax "#3f0001"
-	minus-emph-style = syntax "#901011"
-	plus-style = syntax "#002800"
-	plus-emph-style = syntax "#006000"
+	minus-style = syntax "#631034"
+	minus-emph-style = syntax "#9f2158"
+	plus-style = syntax "#323c0d"
+	plus-emph-style = syntax "#55631b"
 	map-styles = \
-		bold purple => syntax "#592009", \
-		bold blue => syntax "#442211", \
-		bold cyan => syntax "#904600", \
-		bold yellow => syntax "#885500"
+		bold purple => syntax "#5a0f57", \
+		bold blue => syntax "#1f2d76", \
+		bold cyan => syntax "#0e4038", \
+		bold yellow => syntax "#844c15"
 
 [delta "interactive"]
 	keep-plus-minus-markers = false

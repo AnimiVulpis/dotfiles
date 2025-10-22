@@ -86,23 +86,23 @@
 "diagnostic.error" = { underline = { color ="light-red", style = "curl" } }
 
 [palette]
-black = "#0d4149"
+black = "#0c3e46"
 red = "#f75b72"
 green = "#67af34"
 yellow = "#c98b1a"
 blue = "#509af6"
 magenta = "#ca64f3"
 cyan = "#1faeae"
-light-gray = "#62daee"
+light-gray = "#36b3c6"
 
-gray = "#1f7784"
+gray = "#196772"
 light-red = "#fb8590"
 light-green = "#75c73b"
 light-yellow = "#e49f27"
 light-blue = "#77b1fb"
 light-magenta = "#d68af7"
 light-cyan = "#24c6c6"
-white = "#e9fafe"
+white = "#6bdef1"
 
-foreground = "#c9f4fc"
-background = "#05272d"
+foreground = "#8ae7f7"
+background = "#05262c"
