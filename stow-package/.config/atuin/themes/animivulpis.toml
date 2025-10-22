@@ -4,8 +4,8 @@ name = "animivulpis"
 [colors]
 # Current line highlight and unsuccessful commands
 # AlertError = "#fb8590"
-# Match highlight
-AlertWarn = "#36b3c6"
+# Match highlight (Root Loops Kiwi foreground; rest as wezterm config)
+AlertWarn = "#83f29e"
 # Successful commands
 # AlertInfo = "#67af34"
 # Command display at the bottom
