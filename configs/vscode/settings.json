@@ -787,5 +787,8 @@
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.fullScreen": false,
   "zenMode.restore": false,
-  "zenMode.silentNotifications": false
+  "zenMode.silentNotifications": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
