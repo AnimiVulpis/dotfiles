@@ -126,9 +126,6 @@ export PATH
 [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 
-# asdf data dir path
-export ASDF_DATA_DIR="$HOME/.asdf"
-
 # Configure fzf
 # Add the 'export' statement below to your shell's configuration
 # (e.g. ~/.bashrc, ~/.zshrc, or a custom file you load during shell startup)
@@ -152,8 +149,8 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 # Define libpq path (PostgreSQL executables without server)
 export LIBPQ_BIN="/opt/homebrew/opt/libpq/bin"
-# Extend PATH (including asdf shims)
-path=(~/bin ${ASDF_DATA_DIR:-$HOME/.asdf}/shims $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
+# Extend PATH (including mise shims)
+path=(~/bin $HOME/.local/share/mise/shims $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
 # Ensure GPG works correctly
 export GPG_TTY=$TTY
 

@@ -1,0 +1,7 @@
+[tools]
+aws-cli = "latest"
+kubectl = "latest"
+kubectx = "latest"
+kubens = "latest"
+shellcheck = "latest"
+shfmt = "latest"
