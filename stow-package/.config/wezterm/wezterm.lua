@@ -7,6 +7,8 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = false
 config.check_for_updates = false
 
+config.window_decorations = "RESIZE"
+
 config.front_end = "WebGpu"
 
 config.initial_cols = 120
