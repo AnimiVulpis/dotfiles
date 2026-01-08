@@ -38,6 +38,10 @@ go install github.com/antonmedv/countdown@latest
 printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/jotaen/klog@latest\e[0m"\n'
 go install github.com/jotaen/klog@latest
 
+# A Terminal app for RegEx visualization, 🦖 roar!
+printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/samyakbardiya/trex@latest\e[0m"\n'
+go install github.com/samyakbardiya/trex@latest
+
 # ##############################
 
 printf '\e[34mExecuting\e[0m "\e[32m~/dotfiles/scripts/repository-updates.zsh \e[35m~/external-repos/\e[0m"\n'
