@@ -80,8 +80,14 @@
 	loggoa = log --graph --oneline --all
 	logo = log --oneline
 	st = status --short
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[lfs "customtransfer.xet"]
+	path = git-xet
+	args = transfer
+	concurrent = true
