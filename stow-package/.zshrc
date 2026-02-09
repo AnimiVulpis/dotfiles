@@ -255,6 +255,7 @@ alias el="eza -l --time-style=long-iso --group-directories-first"
 alias eh="eza -la --time-style=long-iso --group-directories-first"
 alias et="eza -T --group-directories-first"
 alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8601 date: ' && date -Iseconds"
+alias browsetldr="tldr --list | fzf --preview \"tldr {1} --color=always\" --preview-window=right,70% | xargs tldr"
 
 # Add flags to existing aliases.
 # alias ls="${aliases[ls]:-ls} -A"
