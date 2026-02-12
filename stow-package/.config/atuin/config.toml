@@ -358,5 +358,8 @@ name = "animivulpis"
 ## Make directory expand instead of command:
 # columns = ["duration", "time", { type = "directory", expand = true }, { type = "command", expand = false }]
 
+## Syncing dotfiles
 [dotfiles]
+## In a later release, this will be enabled by default
+## I don't want that (using gnu `stow` instead), therefore I'm disabling any future use already
 enabled = false
