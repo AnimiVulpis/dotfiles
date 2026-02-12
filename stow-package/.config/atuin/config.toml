@@ -200,6 +200,7 @@ common_subcommands = [
   "composer",
   "dnf",
   "docker",
+  "dotnet",
   "git",
   "go",
   "ip",
