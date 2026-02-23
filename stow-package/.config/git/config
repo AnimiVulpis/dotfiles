@@ -52,13 +52,18 @@
 
 [merge]
 	conflictstyle = zdiff3
+	tool = kdiff3
+
+[mergetool]
+	keepBackup = false
+	prompt = true
 
 [diff]
 	colorMoved = default
 	external = difft
 
-[mergetool]
-	keepBackup = false
+[difftool]
+	prompt = true
 
 [alias]
 	dlog = log --ext-diff
@@ -91,3 +96,6 @@
 	path = git-xet
 	args = transfer
 	concurrent = true
+
+[rerere]
+	enabled = true
