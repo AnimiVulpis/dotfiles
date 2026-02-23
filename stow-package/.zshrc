@@ -244,7 +244,6 @@ zle -N edit-command-line
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
 compdef _directories md
 
-# AnimiVulpis
 # alias definitions
 alias ls="ls --color=auto"
 alias ll="ls --color=auto -lh"
@@ -254,6 +253,10 @@ alias ed="eza -D"
 alias el="eza -l --time-style=long-iso --group-directories-first"
 alias eh="eza -la --time-style=long-iso --group-directories-first"
 alias et="eza -T --group-directories-first"
+alias nls="nuls"
+alias nlm="nuls --sort-modified"
+alias nla="nuls --all"
+alias nlg="nuls --git"
 alias isodatetime="echo -n 'ISO 8601 week: ' && date +'%Y-W%V' && echo -n 'ISO 8601 date: ' && date -Iseconds"
 alias browsetldr="tldr --list | fzf --preview \"tldr {1} --color=always\" --preview-window=right,70% | xargs tldr"
 
