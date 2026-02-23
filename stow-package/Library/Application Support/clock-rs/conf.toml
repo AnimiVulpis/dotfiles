@@ -1,0 +1,19 @@
+## From https://github.com/Oughie/clock-rs/blob/main/public/default.toml
+# This is the default configuration for clock-rs.
+# You can also leave out fields to produce the same effect.
+
+# [general]
+# color = "white"
+# interval = 200
+# blink = false
+# bold = false
+
+# [position]
+# horizontal = "center"
+# vertical = "center"
+
+[date]
+fmt = "%F %B, %A"
+# use_12h = false
+# utc = false
+# hide_seconds = false
