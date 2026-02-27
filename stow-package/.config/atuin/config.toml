@@ -1,5 +1,7 @@
 ## Default atuin config located at
 ## `<atuin-repo>/crates/atuin-client/config.toml`
+# Try out experimental sorting
+smart_sort = true
 
 ## Base directory for Atuin data files (databases, keys, session, etc.)
 ## All data file paths default to being relative to this directory.
