@@ -85,7 +85,12 @@
   "editor.suggest.showStatusBar": true,
   "git.blame.editorDecoration.enabled": false,
   "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.selectedCompletionModel": "",
+  "harper.dialect": "British",
+  "harper.excludePatterns": [
+    "*.typ"
+  ],
   "hediet.vscode-drawio.appearance": "light",
   "hediet.vscode-drawio.customLibraries": [
     {
@@ -122,7 +127,13 @@
   "scm.diffDecorationsGutterPattern": {
     "added": true
   },
+  "search.exclude": {
+    "**/build": true,
+    "**/dist": true,
+    "**/target": true
+  },
   "search.useIgnoreFiles": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
   "shellformat.effectLanguages": [
     "shellscript",
     "dockerfile",
@@ -136,6 +147,8 @@
     "azcli",
     "bats"
   ],
+  "telemetry.editStats.enabled": false,
+  "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
   "terminal.external.linuxExec": "wezterm",
   "terminal.integrated.scrollback": 4200,
@@ -177,7 +190,9 @@
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.splitInGroupLayout": "vertical",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.settings.openDefaultKeybindings": true,
   "workbench.settings.openDefaultSettings": true,
