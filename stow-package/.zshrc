@@ -257,6 +257,7 @@ function mtd() {
     fi
     builtin cd -- "$tmpdir"
 }
+compdef '_files -W ~/temp -/' mtd
 
 # alias definitions
 alias ls="ls --color=auto"
