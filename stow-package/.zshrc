@@ -240,9 +240,23 @@ function y() {
 autoload -Uz zmv edit-command-line
 zle -N edit-command-line
 
-# Define functions and completions.
+# Create folder and cd into it
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
 compdef _directories md
+
+# Create a temp folder (inside `~/temp/`) and cd into it
+# if called with one argument, use that name
+function mtd() {
+    local tmpdir
+    if [[ $# == 1 ]]; then
+        local targetdir=~/temp/"$1"
+        mkdir -p -- "$targetdir"
+        tmpdir="$targetdir"
+    else
+        tmpdir="$(mktemp -d ~/temp/temp_XXXXXXXX)"
+    fi
+    builtin cd -- "$tmpdir"
+}
 
 # alias definitions
 alias ls="ls --color=auto"
