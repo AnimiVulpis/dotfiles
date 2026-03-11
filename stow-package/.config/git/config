@@ -28,7 +28,7 @@
 	navigate = true
 	features = decorations moved-diff
 	line-numbers = true
-	syntax-theme = Solarized (dark)
+	syntax-theme = Visual Studio Dark+
 	max-syntax-highlighting-length = 42000
 	max-line-length = 42000
 
