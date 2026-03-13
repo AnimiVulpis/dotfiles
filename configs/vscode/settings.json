@@ -2,6 +2,9 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -30,7 +33,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "chat.agent.enabled": true,
-  "diffEditor.diffAlgorithm": "advanced",
+  "chat.viewSessions.orientation": "stacked",
   "diffEditor.experimental.showMoves": true,
   "diffEditor.experimental.useTrueInlineView": true,
   "docker.extension.enableComposeLanguageServer": false,
@@ -122,7 +125,6 @@
   "hediet.vscode-drawio.resizeImages": null,
   "keyboard.touchbar.enabled": false,
   "material-icon-theme.activeIconPack": "none",
-  "material-icon-theme.hidesExplorerArrows": true,
   "npm.fetchOnlinePackageInfo": false,
   "scm.diffDecorationsGutterPattern": {
     "added": true
@@ -185,19 +187,16 @@
     "terminal.foreground": "#8ae7f7",
     "terminalCursor.foreground": "#36b3c6"
   },
-  "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.splitInGroupLayout": "vertical",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.settings.openDefaultKeybindings": true,
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "none",
-  "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.fullScreen": false,
   "zenMode.restore": false,
