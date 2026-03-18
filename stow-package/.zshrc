@@ -183,7 +183,7 @@ export WORDCHARS=''
 
 export SUDO_EDITOR="hx"
 export EDITOR="hx"
-export VISUAL="code --user-data-dir ~/temp/vscode-data-tmp --new-window --wait"
+export VISUAL="gram --new --wait"
 export LESS="-iRFXMx4"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

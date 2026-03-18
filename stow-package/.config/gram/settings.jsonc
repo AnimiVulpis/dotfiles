@@ -1,0 +1,109 @@
+// Gram settings
+//
+// For information on how to configure Gram, see the Gram
+// documentation: gram://docs/configuring-gram
+//
+// To see all of Gram's default settings without changing your
+// custom settings, run `gram: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "theme": {
+    "mode": "dark",
+    "light": "Rosé Pine Dawn",
+    "dark": "Ayu Mirage",
+  },
+  "icon_theme": "Gram (Default)",
+  "base_keymap": "VSCode",
+  "buffer_font_family": "IosevkaTerm Nerd Font",
+  "buffer_font_fallbacks": [".GramMono"],
+  "buffer_font_features": {
+    "calt": true,
+  },
+  "buffer_font_size": 14.0,
+  "when_closing_with_no_tabs": "close_window",
+  "on_last_window_closed": "quit_app",
+  "cursor_blink": false,
+  "rounded_selection": false,
+  "colorize_brackets": true,
+  "drag_and_drop_selection": {
+    "enabled": false,
+  },
+  "use_autoclose": true,
+  "always_treat_brackets_as_autoclosed": true,
+  "show_whitespaces": "boundary",
+  "title_bar": {
+    "show_branch_icon": true,
+  },
+  "scrollbar": {
+    "show": "always",
+  },
+  "minimap": {
+    "show": "always",
+    "display_in": "all_editors",
+    "thumb": "always",
+    "thumb_border": "none",
+  },
+  "gutter": {
+    "folds": true,
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+    "background_coloring": "indent_aware",
+  },
+  "vertical_scroll_margin": 5,
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "relative_line_numbers": "enabled",
+  "search": {
+    "include_ignored": false,
+  },
+  "seed_search_query_from_cursor": "always",
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "project_panel": {
+    "entry_spacing": "standard",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "auto_fold_dirs": false,
+  },
+  "linked_edits": true,
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_close_button": "hidden",
+  },
+  "remove_trailing_whitespace_on_save": false,
+  "ensure_final_newline_on_save": false,
+  "format_on_save": "off",
+  "load_direnv": "disabled",
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "journal": {
+    "path": "~",
+    "hour_format": "hour24",
+  },
+  "terminal": {
+    "max_scroll_history_lines": 42000,
+  },
+  "node": {
+    "allow_binary_download": true,
+  },
+  "prettier": {
+    "allowed": true,
+  },
+  "lsp": {
+    "json-language-server": {
+      "binary": {
+        "allow_binary_download": true,
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+}
