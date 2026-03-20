@@ -131,10 +131,12 @@
   "harper.linters.NeverMind": false,
   "harper.linters.OhMyGod": false,
   "harper.linters.OrthographicConsistency": false,
+  "harper.linters.PhrasalVerbAsCompoundNoun": false,
   "harper.linters.PleaseTakeALook": false,
   "harper.linters.SentenceCapitalization": false,
   "harper.linters.Spaces": false,
   "harper.linters.SplitWords": false,
+  "harper.linters.UnclosedQuotes": false,
   "harper.userDictPath": "~/.config/harper-ls/dictionary.txt",
   "hediet.vscode-drawio.appearance": "light",
   "hediet.vscode-drawio.customLibraries": [
