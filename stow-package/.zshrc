@@ -203,7 +203,8 @@ source ~/dotfiles/scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
 source <(fzf --zsh)
 # source ~/external-repos/atuin/atuin.plugin.zsh # This just does `source<(atuin init zsh)`
-# `atuin.init.zsh` is just `atuin init zsh > atuin.init.zsh` (`zcompile -R atuin.init.zsh` for performance)
+# `atuin.init.zsh` is just `atuin init --disable-ai zsh > atuin.init.zsh` (`zcompile -R atuin.init.zsh` for performance)
+# `--disable-ai` because it requires an account on Atuin Hub. Reference: https://docs.atuin.sh/cli/ai/introduction/
 source ~/external-repos/atuin/atuin.init.zsh
 source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
