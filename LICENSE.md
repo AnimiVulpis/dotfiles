@@ -1,6 +1,6 @@
 BSD Zero Clause License
 
-Copyright (C) 2016-2021 by contributors to this project
+Copyright (C) this dotfiles repository authors.
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted.
 
