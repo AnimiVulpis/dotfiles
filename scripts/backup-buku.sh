@@ -5,4 +5,4 @@ set -o pipefail          # Treat any non-zero status in a pipeline like a total 
 shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
 echo 'cp -pv ~/.local/share/buku/* ~/rclone/'
-cp -pv ~/.local/share/buku/* ~/rclone/
+cp -pv "$HOME/.local/share/buku/"* "$HOME/rclone/"

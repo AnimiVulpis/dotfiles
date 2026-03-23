@@ -5,4 +5,4 @@ set -o pipefail          # Treat any non-zero status in a pipeline like a total 
 shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
 echo 'rclone --progress --human-readable -v bisync --interactive --compare size,modtime,checksum ~/rclone/ gdrive:rclone/'
-rclone --progress --human-readable -v bisync --interactive --compare size,modtime,checksum ~/rclone/ gdrive:rclone/
+rclone --progress --human-readable -v bisync --interactive --compare size,modtime,checksum "$HOME/rclone/" gdrive:rclone/
