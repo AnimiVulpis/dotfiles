@@ -18,9 +18,9 @@ check_subfolders_repo_status() {
         # Use the Box Drawing Light Left (U+2574) character for padding
         echo -n "${(r:max_length::╴:: :)subfolder}"
         # If it's not a git repository, git will return an error that needs to be suppressed
-        git_status=$(git -c color.status=always -C $subfolder status --untracked-files=no --short --branch 2>/dev/null) &&
+        git_status=$(git -c color.status=always -C "$subfolder" status --untracked-files=no --short --branch 2>/dev/null) &&
             echo " $git_status" | head -n1 | tr -d '\n' &&
-            git_diff=$(git -C $subfolder diff --shortstat | tail -n1) &&
+            git_diff=$(git -C "$subfolder" diff --shortstat | tail -n1) &&
             echo -e "\e[33m$git_diff\e[m" ||
             echo -e ' ## \e[36mNot a git repository\e[m'
     done

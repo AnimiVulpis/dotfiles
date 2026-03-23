@@ -7,7 +7,7 @@ set -o localoptions # Ensure options are local to the function or script
 # Check if first argument is a valid directory
 if [ ! -d "$1" ]; then
     echo "$1 is not valid directory"
-    exit 0
+    exit 1
 fi
 
 update_subfolder_repos() {
