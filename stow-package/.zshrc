@@ -198,6 +198,7 @@ source ~/.p10k.zsh
 # From https://github.com/junegunn/fzf#setting-up-shell-integration to disable key bindings
 FZF_CTRL_R_COMMAND= FZF_CTRL_T_COMMAND= source <(fzf --zsh)
 source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/television/shell/integration.zsh
 
 # Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
 function redraw-prompt() {
