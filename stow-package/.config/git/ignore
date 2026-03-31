@@ -2,3 +2,5 @@
 .DS_Store
 # IntelliJ IDEA
 .idea/
+# Local Claude Code overrides
+**/.claude/settings.local.json
