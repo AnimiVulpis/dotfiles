@@ -195,7 +195,8 @@ source ~/external-repos/ohmyzsh/plugins/dircycle/dircycle.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
 source ~/dotfiles/scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
-source <(fzf --zsh)
+# From https://github.com/junegunn/fzf#setting-up-shell-integration to disable key bindings
+FZF_CTRL_R_COMMAND= FZF_CTRL_T_COMMAND= source <(fzf --zsh)
 source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
