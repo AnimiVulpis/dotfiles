@@ -1,0 +1,242 @@
+{
+  "actions": [
+    {
+      "key": "c",
+      "type": "application",
+      "value": "/Applications/Google Chrome.app"
+    },
+    {
+      "iconPath": "playpause.fill",
+      "key": "p",
+      "label": "Play/Pause",
+      "type": "command",
+      "value": "osascript -e 'tell application \"Spotify\" to playpause'"
+    },
+    {
+      "actions": [
+        {
+          "actions": [
+            {
+              "key": "1",
+              "label": "First third",
+              "type": "url",
+              "value": "rectangle://execute-action?name=first-third"
+            },
+            {
+              "key": "2",
+              "label": "Center third",
+              "type": "url",
+              "value": "rectangle://execute-action?name=center-third"
+            },
+            {
+              "key": "3",
+              "label": "Last third",
+              "type": "url",
+              "value": "rectangle://execute-action?name=last-third"
+            },
+            {
+              "key": "8",
+              "label": "First two-thirds",
+              "type": "url",
+              "value": "rectangle://execute-action?name=first-two-thirds"
+            },
+            {
+              "key": "9",
+              "label": "Last two-thirds",
+              "type": "url",
+              "value": "rectangle://execute-action?name=last-two-thirds"
+            }
+          ],
+          "iconPath": "triangle.fill",
+          "key": "3",
+          "label": "Thirds",
+          "type": "group"
+        },
+        {
+          "actions": [
+            {
+              "key": "1",
+              "label": "First fourth",
+              "type": "url",
+              "value": "rectangle://execute-action?name=first-fourth"
+            },
+            {
+              "key": "2",
+              "label": "Second fourth",
+              "type": "url",
+              "value": "rectangle://execute-action?name=second-fourth"
+            },
+            {
+              "key": "3",
+              "label": "Third fourth",
+              "type": "url",
+              "value": "rectangle://execute-action?name=third-fourth"
+            },
+            {
+              "key": "4",
+              "label": "Last fourth",
+              "type": "url",
+              "value": "rectangle://execute-action?name=last-fourth"
+            },
+            {
+              "key": "6",
+              "label": "Center half",
+              "type": "url",
+              "value": "rectangle://execute-action?name=center-half"
+            },
+            {
+              "key": "8",
+              "label": "First three-fourths",
+              "type": "url",
+              "value": "rectangle://execute-action?name=first-three-fourths"
+            },
+            {
+              "key": "9",
+              "label": "Last three-fourths",
+              "type": "url",
+              "value": "rectangle://execute-action?name=last-three-fourths"
+            }
+          ],
+          "iconPath": "square.fill",
+          "key": "4",
+          "label": "Quarters",
+          "type": "group"
+        }
+      ],
+      "iconPath": "macwindow",
+      "key": "r",
+      "label": "Rectangle",
+      "type": "group"
+    },
+    {
+      "iconPath": "music.quarternote.3",
+      "key": "s",
+      "type": "application",
+      "value": "~/Applications/Spotify.app"
+    },
+    {
+      "actions": [
+        {
+          "iconPath": "cup.and.saucer.fill",
+          "key": "c",
+          "type": "application",
+          "value": "~/Applications/Caffeine.app"
+        },
+        {
+          "key": "s",
+          "type": "application",
+          "value": "/System/Applications/Utilities/Screenshot.app"
+        },
+        {
+          "iconPath": "timer",
+          "key": "t",
+          "type": "application",
+          "value": "~/Applications/Timer.app"
+        }
+      ],
+      "iconPath": "wrench.and.screwdriver.fill",
+      "key": "u",
+      "label": "utils",
+      "type": "group"
+    },
+    {
+      "actions": [
+        {
+          "iconPath": "speaker.badge.exclamationmark.fill",
+          "key": "0",
+          "label": "100%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 100\""
+        },
+        {
+          "iconPath": "speaker.fill",
+          "key": "1",
+          "label": "10%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 10\""
+        },
+        {
+          "iconPath": "speaker.minus.fill",
+          "key": "2",
+          "label": "20%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 20\""
+        },
+        {
+          "iconPath": "speaker.minus.fill",
+          "key": "3",
+          "label": "30%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 30\""
+        },
+        {
+          "iconPath": "speaker.wave.1.fill",
+          "key": "4",
+          "label": "40%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 40\""
+        },
+        {
+          "iconPath": "speaker.wave.1.fill",
+          "key": "5",
+          "label": "50%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 50\""
+        },
+        {
+          "iconPath": "speaker.wave.2.fill",
+          "key": "6",
+          "label": "60%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 60\""
+        },
+        {
+          "iconPath": "speaker.wave.2.fill",
+          "key": "7",
+          "label": "70%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 70\""
+        },
+        {
+          "iconPath": "speaker.wave.3.fill",
+          "key": "8",
+          "label": "80%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 80\""
+        },
+        {
+          "iconPath": "speaker.wave.3.fill",
+          "key": "9",
+          "label": "90%",
+          "type": "command",
+          "value": "osascript -e \"set volume output volume 90\""
+        },
+        {
+          "iconPath": "speaker.slash.fill",
+          "key": "m",
+          "label": "mute",
+          "type": "command",
+          "value": "osascript -e \"set volume with output muted\""
+        },
+        {
+          "iconPath": "speaker.zzz.fill",
+          "key": "u",
+          "label": "unmute",
+          "type": "command",
+          "value": "osascript -e \"set volume without output muted\""
+        }
+      ],
+      "iconPath": "music.quarternote.3",
+      "key": "v",
+      "label": "volume",
+      "type": "group"
+    },
+    {
+      "iconPath": "apple.terminal.fill",
+      "key": "w",
+      "type": "application",
+      "value": "~/Applications/WezTerm.app"
+    }
+  ],
+  "type": "group"
+}
