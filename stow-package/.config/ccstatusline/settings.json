@@ -9,62 +9,94 @@
         "rawValue": true
       },
       {
-        "id": "bdff5026-d80a-4da5-ba85-dd37755560c6",
-        "type": "output-style",
-        "rawValue": true
-      },
-      {
-        "id": "ad1769e6-441c-43ee-91f1-a539b540d64b",
-        "type": "thinking-effort",
-        "rawValue": true
-      },
-      {
         "id": "eaac0b87-4621-4f85-809d-0c4a31fde13f",
         "type": "current-working-dir",
         "rawValue": true,
         "metadata": {
-          "segments": "2"
-        }
+          "segments": "3",
+          "abbreviateHome": "true"
+        },
+        "color": "brightBlack"
+      },
+      {
+        "id": "bdff5026-d80a-4da5-ba85-dd37755560c6",
+        "type": "output-style",
+        "rawValue": true,
+        "color": "green"
+      },
+      {
+        "id": "25309810-72fd-4567-ac22-25ab0fc1bcb9",
+        "type": "custom-text",
+        "customText": " ",
+        "merge": "no-padding",
+        "color": "yellow"
+      },
+      {
+        "id": "ad1769e6-441c-43ee-91f1-a539b540d64b",
+        "type": "thinking-effort",
+        "rawValue": true,
+        "color": "yellow",
+        "bold": false
+      },
+      {
+        "id": "f1ddae66-7a08-43cd-84e3-7e24a5f3af9d",
+        "type": "custom-text",
+        "customText": "",
+        "merge": "no-padding",
+        "color": "brightGreen"
       },
       {
         "id": "5",
         "type": "git-branch",
-        "color": "magenta",
-        "rawValue": false,
+        "color": "brightGreen",
+        "rawValue": true,
         "metadata": {
-          "hideNoGit": "true"
+          "hideNoGit": "false"
         }
       }
     ],
     [
       {
         "id": "302289ac-fcc3-4e0c-bec6-b5d7e351f9b6",
-        "type": "context-bar",
+        "type": "custom-command",
         "rawValue": true,
         "metadata": {
           "display": "progress"
-        }
+        },
+        "color": "blue",
+        "preserveColors": true,
+        "commandPath": "~/.claude/statusLine.sh"
       },
       {
         "id": "1119b3ed-5af6-4ceb-8baa-18393968dd7b",
         "type": "session-cost",
-        "rawValue": true
+        "rawValue": true,
+        "color": "yellow"
+      },
+      {
+        "id": "92208698-1a71-443d-a4c6-9b559b213942",
+        "type": "custom-text",
+        "customText": "󱎫 ",
+        "merge": "no-padding",
+        "color": ""
       },
       {
         "id": "4edc8a08-07a9-441b-886d-3e26ec3bae32",
         "type": "session-clock",
-        "rawValue": true
+        "rawValue": true,
+        "color": ""
       }
     ],
     [
       {
         "id": "fdbb1472-978b-45b5-b15c-1c489bfb448d",
         "type": "skills",
+        "rawValue": true,
         "metadata": {
           "mode": "list",
           "hideWhenEmpty": "true"
         },
-        "rawValue": true
+        "color": "brightMagenta"
       }
     ]
   ],
