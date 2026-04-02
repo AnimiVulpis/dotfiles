@@ -28,7 +28,7 @@
 	navigate = true
 	features = decorations moved-diff
 	line-numbers = true
-	syntax-theme = Visual Studio Dark+
+	syntax-theme = Monokai Extended
 	max-syntax-highlighting-length = 42000
 	max-line-length = 42000
 

@@ -103,6 +103,7 @@
   "harper.linters.BeRightBack": false,
   "harper.linters.ByTheWay": false,
   "harper.linters.Cybersec": false,
+  "harper.linters.Dashes": false,
   "harper.linters.ExpandArgument": false,
   "harper.linters.ExpandBecause": false,
   "harper.linters.ExpandControl": false,
@@ -140,6 +141,7 @@
   "harper.linters.Spaces": false,
   "harper.linters.SplitWords": false,
   "harper.linters.UnclosedQuotes": false,
+  "harper.linters.UseTitleCase": false,
   "harper.userDictPath": "~/.config/harper-ls/dictionary.txt",
   "hediet.vscode-drawio.appearance": "light",
   "hediet.vscode-drawio.customLibraries": [
@@ -207,33 +209,31 @@
   "window.title": "${rootName}${separator}${activeEditorMedium}${dirty}",
   "workbench.activityBar.location": "top",
   // Add the following config to your ~/.config/Code/Usersettings.json file.
-  // Root Loops: https://rootloops.sh?sugar=7&colors=9&sogginess=8&flavor=1&fruit=7&milk=1
+  // Root Loops: https://rootloops.sh?sugar=6&colors=9&sogginess=9&flavor=1&fruit=7&milk=1
   //
-  // NOTE: This will override other UI and syntax highlighting colors you
-  //       might expect to apply from extensions you installed. To use a
-  //       different color scheme installed via extensions, remove the config
-  //       below again.
+  // NOTE: I take only workbench.colorCustomizations.terminal.*
   "workbench.colorCustomizations": {
-    "terminal.ansiBlack": "#0c3e46",
-    "terminal.ansiBlue": "#509af6",
-    "terminal.ansiBrightBlack": "#196772",
-    "terminal.ansiBrightBlue": "#77b1fb",
-    "terminal.ansiBrightCyan": "#24c6c6",
-    "terminal.ansiBrightGreen": "#75c73b",
-    "terminal.ansiBrightMagenta": "#d68af7",
-    "terminal.ansiBrightRed": "#fb8590",
-    "terminal.ansiBrightWhite": "#6bdef1",
-    "terminal.ansiBrightYellow": "#e49f27",
-    "terminal.ansiCyan": "#1faeae",
-    "terminal.ansiGreen": "#67af34",
-    "terminal.ansiMagenta": "#ca64f3",
-    "terminal.ansiRed": "#f75b72",
-    "terminal.ansiWhite": "#36b3c6",
-    "terminal.ansiYellow": "#c98b1a",
-    "terminal.background": "#05262c",
-    "terminal.foreground": "#8ae7f7",
-    "terminalCursor.foreground": "#36b3c6"
+    "terminal.ansiBlack": "#053e46",
+    "terminal.ansiBlue": "#2d83e8",
+    "terminal.ansiBrightBlack": "#0e6774",
+    "terminal.ansiBrightBlue": "#509af6",
+    "terminal.ansiBrightCyan": "#1faeae",
+    "terminal.ansiBrightGreen": "#67af34",
+    "terminal.ansiBrightMagenta": "#ca64f3",
+    "terminal.ansiBrightRed": "#f75b72",
+    "terminal.ansiBrightWhite": "#51e0f7",
+    "terminal.ansiBrightYellow": "#c98b1a",
+    "terminal.ansiCyan": "#1a9696",
+    "terminal.ansiGreen": "#59972d",
+    "terminal.ansiMagenta": "#ba3ce8",
+    "terminal.ansiRed": "#e73359",
+    "terminal.ansiWhite": "#20b4c9",
+    "terminal.ansiYellow": "#ae7714",
+    "terminal.background": "#02272c",
+    "terminal.foreground": "#7ce9fb",
+    "terminalCursor.foreground": "#20b4c9"
   },
+  "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.empty.hint": "hidden",

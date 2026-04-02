@@ -22,7 +22,7 @@
   "buffer_font_size": 14.0,
   "when_closing_with_no_tabs": "close_window",
   "on_last_window_closed": "quit_app",
-  "use_system_path_prompts": false,
+  "use_system_path_prompts": true,
   "use_system_prompts": false,
   "cursor_blink": false,
   "rounded_selection": false,

@@ -6,10 +6,12 @@ ERLANG
 GOLANG
 HASKELL
 JULIA
+Monokai
 PERL
 POSTGRES
 POWERLEVEL9K
 PWD
+TwoDark
 UPGLOB
 Uz
 ZLE
@@ -30,6 +32,8 @@ direnv
 flavor
 fpath
 fzf
+gitignore
+ino
 ip
 js
 json
@@ -51,6 +55,7 @@ powerline
 redirections
 romkatv
 rprompt
+s
 unicode
 v3
 wordcode

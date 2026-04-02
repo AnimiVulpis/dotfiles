@@ -120,15 +120,15 @@ export PATH
 [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 
-# Configure fzf
+# Configure fzf theme
 # Add the 'export' statement below to your shell's configuration
 # (e.g. ~/.bashrc, ~/.zshrc, or a custom file you load during shell startup)
 
-# Root Loops (https://rootloops.sh?sugar=7&colors=9&sogginess=8&flavor=1&fruit=7&milk=1)
-export FZF_DEFAULT_OPTS="  --color=fg:#8ae7f7,fg+:#6bdef1,bg:#05262c,bg+:#0c3e46 \
-    --color=hl:#1faeae,hl+:#24c6c6,info:#c98b1a,marker:#67af34 \
-    --color=prompt:#f75b72,spinner:#ca64f3,pointer:#ca64f3,header:#509af6 \
-    --color=border:#196772,label:#36b3c6,query:#8ae7f7"
+# Root Loops (https://rootloops.sh?sugar=6&colors=9&sogginess=9&flavor=1&fruit=7&milk=1)
+export FZF_DEFAULT_OPTS="  --color=fg:#7ce9fb,fg+:#51e0f7,bg:#02272c,bg+:#053e46 \
+  --color=hl:#1a9696,hl+:#1faeae,info:#ae7714,marker:#59972d \
+  --color=prompt:#e73359,spinner:#ba3ce8,pointer:#ba3ce8,header:#2d83e8 \
+  --color=border:#0e6774,label:#20b4c9,query:#7ce9fb"
 
 # Configure nvm
 # Set up NVM directory

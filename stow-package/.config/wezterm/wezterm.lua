@@ -57,34 +57,34 @@ config.window_padding = {
 --       if you want to define your own root loops color scheme
 
 -- Root Loops color scheme
--- via https://rootloops.sh?sugar=7&colors=9&sogginess=8&flavor=1&fruit=7&milk=1
+-- via https://rootloops.sh?sugar=6&colors=9&sogginess=9&flavor=1&fruit=7&milk=1
 config.colors = {
-    foreground = "#8ae7f7",
-    background = "#05262c",
-    cursor_bg = "#36b3c6",
-    cursor_border = "#6bdef1",
-    cursor_fg = "#05262c",
-    selection_bg = "#8ae7f7",
-    selection_fg = "#05262c",
+    foreground = "#7ce9fb",
+    background = "#02272c",
+    cursor_bg = "#20b4c9",
+    cursor_border = "#51e0f7",
+    cursor_fg = "#02272c",
+    selection_bg = "#7ce9fb",
+    selection_fg = "#02272c",
     ansi = {
-        "#0c3e46",
+        "#053e46",
+        "#e73359",
+        "#59972d",
+        "#ae7714",
+        "#2d83e8",
+        "#ba3ce8",
+        "#1a9696",
+        "#20b4c9"
+    },
+    brights = {
+        "#0e6774",
         "#f75b72",
         "#67af34",
         "#c98b1a",
         "#509af6",
         "#ca64f3",
         "#1faeae",
-        "#36b3c6"
-    },
-    brights = {
-        "#196772",
-        "#fb8590",
-        "#75c73b",
-        "#e49f27",
-        "#77b1fb",
-        "#d68af7",
-        "#24c6c6",
-        "#6bdef1"
+        "#51e0f7"
     },
 }
 
