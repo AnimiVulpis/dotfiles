@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
-set -e              # Exit if a command exits with a non-zero status
+set -e              # Exit if a command exits with a nonzero status
 set -u              # Treat unset variables as an error
-set -o pipefail     # Treat any non-zero status in a pipeline like a total pipeline failure
+set -o pipefail     # Treat any nonzero status in a pipeline like a total pipeline failure
 set -o localoptions # Ensure options are local to the function or script
 
 # Check if first argument is a valid directory
@@ -15,7 +15,7 @@ update_subfolder_repos() {
     local subfolder_list=($(eza -D "$1"))
     local max_length=40 # Plus one char on each side makes 42^^
     for subfolder in ${subfolder_list[@]}; do
-        if (( ${#subfolder} > max_length )); then
+        if ((${#subfolder} > max_length)); then
             max_length=${#subfolder}
         fi
     done
