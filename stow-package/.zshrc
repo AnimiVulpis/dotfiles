@@ -301,8 +301,6 @@ setopt MULTIOS
 setopt NO_BG_NICE
 # Output flow control is disabled in the shell’s editor
 setopt NO_FLOW_CONTROL
-# Don't automatically remove slashes from completions
-setopt NO_AUTO_REMOVE_SLASH
 # When listing files that are possible completions, DON'T show the type of each file
 setopt NO_LIST_TYPES
 # Don't beep on error in ZLE
