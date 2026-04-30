@@ -1,0 +1,3 @@
+# serie config file. Link found here: https://github.com/lusingander/serie
+[core.option]
+initial_selection = "head"
