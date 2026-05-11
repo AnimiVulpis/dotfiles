@@ -1,6 +1,6 @@
 [tools]
 aws-cli = { version = "latest", symlink_bins = "true" }
-kubectl = "latest"
+kubectl = "1.35"
 kubectx = "latest"
 kubens = "latest"
 node = "lts/krypton"
