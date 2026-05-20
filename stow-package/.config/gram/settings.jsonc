@@ -1878,6 +1878,13 @@
         //         }
         //     }
         // }
+        "prettier (default)": {
+            "binary": {
+                "enable_auto_updates": true,
+                "allow_binary_download": true
+            },
+            "enable_lsp_tasks": true
+        },
         "json-language-server": {
             "binary": {
                 "enable_auto_updates": true,
