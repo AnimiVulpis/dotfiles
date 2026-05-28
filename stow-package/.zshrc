@@ -115,7 +115,17 @@ export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
 export HOMEBREW_REPOSITORY="/opt/homebrew"
 fpath[1,0]="/opt/homebrew/share/zsh/site-functions"
-PATH="/Users/I526086/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/I526086/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+path=(
+    /Users/I526086/.local/bin
+    /opt/homebrew/bin
+    /opt/homebrew/sbin
+    /Users/I526086/.cargo/bin
+    /Users/I526086/.local/share/pnpm/bin
+    /usr/bin
+    /bin
+    /usr/sbin
+    /sbin
+)
 export PATH
 [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
