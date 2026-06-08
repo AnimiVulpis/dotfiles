@@ -292,7 +292,7 @@
     "auto_signature_help": false,
     // Whether to show the signature help after completion or a bracket pair inserted.
     // If `auto_signature_help` is enabled, this setting will be treated as enabled also.
-    "show_signature_help_after_edits": false,
+    "show_signature_help_after_edits": true,
     // Whether to show code action button at start of buffer line.
     "inline_code_actions": true,
     // Whether to allow drag and drop text selection in buffer.
@@ -542,7 +542,7 @@
         // Whether to show fold buttons in the gutter.
         "folds": true,
         // Minimum number of characters to reserve space for in the gutter.
-        "min_line_number_digits": 4,
+        "min_line_number_digits": 3,
     },
     "indent_guides": {
         // Whether to show indent guides in the editor.
@@ -1032,7 +1032,7 @@
     // spaces.
     "hard_tabs": false,
     // How many columns a tab should occupy.
-    "tab_size": 4,
+    "tab_size": 2,
     // What debuggers are preferred by default for all languages.
     "debuggers": [],
     // Whether to enable word diff highlighting in the editor.
