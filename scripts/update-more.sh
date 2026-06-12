@@ -47,4 +47,4 @@ printf '\e[34mExecuting\e[0m "\e[32mrepository-updates.zsh \e[35m~/external-repo
 repository-updates.zsh "$HOME/external-repos/"
 
 printf '\e[34mExecuting\e[0m "\e[32mbrew\e[0m update && \e[32mbrew\e[0m upgrade"\n'
-brew update && brew upgrade
+brew update && brew upgrade --yes
