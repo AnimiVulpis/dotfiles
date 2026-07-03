@@ -3,6 +3,6 @@ aws-cli = { version = "latest", symlink_bins = "true" }
 kubectl = "1.35"
 kubectx = "latest"
 kubens = "latest"
-node = "lts/krypton"
+node = "24"
 shellcheck = "latest"
 shfmt = "latest"
