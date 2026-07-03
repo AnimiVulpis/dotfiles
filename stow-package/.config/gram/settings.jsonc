@@ -1032,7 +1032,7 @@
     // spaces.
     "hard_tabs": false,
     // How many columns a tab should occupy.
-    "tab_size": 2,
+    "tab_size": 4,
     // What debuggers are preferred by default for all languages.
     "debuggers": [],
     // Whether to enable word diff highlighting in the editor.
@@ -1878,6 +1878,13 @@
         //         }
         //     }
         // }
+        "package-version-server": {
+            "binary": {
+                "enable_auto_updates": true,
+                "allow_binary_download": true
+            },
+            "enable_lsp_tasks": true
+        },
         "prettier (default)": {
             "binary": {
                 "enable_auto_updates": true,
