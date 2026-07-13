@@ -1878,6 +1878,20 @@
         //         }
         //     }
         // }
+        "bash-language-server": {
+            "binary": {
+                "enable_auto_updates": true,
+                "allow_binary_download": true
+            },
+            "enable_lsp_tasks": true
+        },
+        "lua-language-server": {
+            "binary": {
+                "enable_auto_updates": true,
+                "allow_binary_download": true
+            },
+            "enable_lsp_tasks": true
+        },
         "package-version-server": {
             "binary": {
                 "enable_auto_updates": true,
