@@ -6,10 +6,6 @@ function zcompile-many() {
 }
 
 # Clone and compile to wordcode missing plugins.
-if [[ ! -e ~/external-repos/zsh-syntax-highlighting ]]; then
-    git clone --depth=1 git@github.com:zsh-users/zsh-syntax-highlighting.git ~/external-repos/zsh-syntax-highlighting
-    zcompile-many ~/external-repos/zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
-fi
 if [[ ! -e ~/external-repos/zsh-autosuggestions ]]; then
     git clone --depth=1 git@github.com:zsh-users/zsh-autosuggestions.git ~/external-repos/zsh-autosuggestions
     zcompile-many ~/external-repos/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
@@ -103,10 +99,6 @@ fpath+=(~/completions)
 # Autosuggestion configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 # ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-
-# ZSH-SYNTAX-HIGHLIGHTING configuration
-ZSH_HIGHLIGHT_MAXLENGTH=1024                # don't colorize long command lines (slow)
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)  # main syntax highlighting plus matching brackets
 
 # Changes the path where the applications will be moved by homebrew
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
@@ -207,7 +199,7 @@ source ~/dotfiles/scripts/set-terminal-title.zsh
 source ~/.p10k.zsh
 # From https://github.com/junegunn/fzf#setting-up-shell-integration to disable key bindings
 FZF_CTRL_R_COMMAND= FZF_CTRL_T_COMMAND= source <(fzf --zsh)
-source ~/external-repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(zsh-patina activate)"
 source ~/.config/television/shell/integration.zsh
 
 # Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
