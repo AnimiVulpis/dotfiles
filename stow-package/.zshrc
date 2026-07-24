@@ -232,8 +232,10 @@ function y() {
 
 # Autoload functions.
 # autoload -Uz zmv
-autoload -Uz zmv edit-command-line
+autoload -Uz zmv edit-command-line transpose-words-match
 zle -N edit-command-line
+zle -N transpose-words-shell transpose-words-match
+zstyle ':zle:transpose-words-shell' word-style shell
 
 # Create folder and cd into it
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
@@ -344,6 +346,7 @@ bindkey '^[[Z' reverse-menu-complete
 bindkey '^ ' autosuggest-accept
 
 bindkey '^x^e' edit-command-line
+bindkey '^[s' transpose-words-shell
 bindkey '÷' redo
 
 # dircycle
