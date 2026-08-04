@@ -20,10 +20,6 @@ fi
 if [[ ! -e ~/external-repos/LS_COLORS ]]; then
     git clone --depth=1 git@github.com:trapd00r/LS_COLORS.git ~/external-repos/LS_COLORS
 fi
-if [[ ! -e ~/external-repos/zsh-nvm ]]; then
-    git clone --depth=1 git@github.com:lukechilds/zsh-nvm.git ~/external-repos/zsh-nvm
-    zcompile-many ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
-fi
 if [[ ! -e ~/external-repos/ohmyzsh ]]; then
     git clone --depth=1 git@github.com:ohmyzsh/ohmyzsh.git ~/external-repos/ohmyzsh
     zcompile-many ~/external-repos/ohmyzsh/plugins/{sudo/sudo.plugin.zsh,dircycle/dircycle.plugin.zsh}
@@ -191,7 +187,6 @@ export LC_CTYPE="en_US.UTF-8"
 # Load plugins.
 source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/external-repos/powerlevel10k/powerlevel10k.zsh-theme
-source ~/external-repos/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/sudo/sudo.plugin.zsh
 source ~/external-repos/ohmyzsh/plugins/dircycle/dircycle.plugin.zsh
 source ~/external-repos/zsh-edit/zsh-edit.plugin.zsh
