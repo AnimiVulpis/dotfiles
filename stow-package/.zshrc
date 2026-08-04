@@ -162,8 +162,6 @@ fi
 # zsh-users/zsh-autosuggestions
 # Set max buffer size
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30
-# Use async suggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Enable the "new" completion system (compsys).
 autoload -Uz compinit && compinit
