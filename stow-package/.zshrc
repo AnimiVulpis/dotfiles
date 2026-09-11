@@ -133,7 +133,7 @@ export FZF_DEFAULT_OPTS="  --color=fg:#7ce9fb,fg+:#51e0f7,bg:#02272c,bg+:#053e46
 
 # Configure nvm
 # Set up NVM directory
-export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
+export NVM_DIR="${HOME}/.nvm"
 
 # Defining go paths
 export GOPATH="$HOME/go"
@@ -181,8 +181,9 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-c"
 export LC_CTYPE="en_US.UTF-8"
 
-# Load nvm (from brew)
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" --no-use # but don't use it automatically
+# Load nvm (from NVM_DIR, it's a git repo)
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Load plugins.
 source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
