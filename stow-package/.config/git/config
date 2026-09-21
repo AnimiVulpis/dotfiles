@@ -21,7 +21,7 @@
 	date = iso
 
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+	diffFilter = delta --color-only
 
 [delta]
 	dark = true
@@ -42,9 +42,6 @@
 		bold blue => syntax "#323c0d", \
 		bold cyan => syntax "#91218c", \
 		bold yellow => syntax "#0e4038"
-
-[delta "interactive"]
-	keep-plus-minus-markers = false
 
 [delta "decorations"]
 	commit-decoration-style = yellow normal ul
