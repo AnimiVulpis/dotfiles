@@ -223,7 +223,7 @@ compdef _directories md
 
 # Create a temp folder (inside `~/temp/`) and cd into it
 # if called with one argument, use that name
-function mtd() {
+function mdt() {
     local tmpdir
     if [[ $# == 1 ]]; then
         local targetdir=~/temp/"$1"
