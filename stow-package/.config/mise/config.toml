@@ -1,8 +1,8 @@
 [tools]
-aws-cli = { version = "latest", symlink_bins = "true" }
-kubectl = "1.35"
+kubectl = "latest"
 kubectx = "latest"
 kubens = "latest"
-node = "24"
+node = "lts"
+python = "3"
 shellcheck = "latest"
 shfmt = "latest"
