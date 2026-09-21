@@ -269,7 +269,7 @@ eval "$(atuin init --disable-ai zsh)"
 setopt GLOB_DOTS
 # use menu completion [...] by pressing the tab key repeatedly
 setopt AUTO_MENU
-# If command can’t be executed and is the name of a directory, perform the cd command to that directory
+# If command can't be executed and is the name of a directory, perform the cd command to that directory
 setopt AUTO_CD
 # If a parameter is completed whose content is the name of a directory, then add a trailing slash instead of a space
 setopt AUTO_PARAM_SLASH
@@ -277,13 +277,13 @@ setopt AUTO_PARAM_SLASH
 setopt AUTO_PUSHD
 # Output hexadecimal numbers in the standard C format
 setopt C_BASES
-# Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation
+# Treat the `#`, `~` and `^` characters as part of patterns for filename generation
 setopt EXTENDED_GLOB
 # Perform implicit tees or cats when multiple redirections are attempted
 setopt MULTIOS
 # Don't run all background jobs at a lower priority
 setopt NO_BG_NICE
-# Output flow control is disabled in the shell’s editor
+# Output flow control is disabled in the shell's editor
 setopt NO_FLOW_CONTROL
 # When listing files that are possible completions, DON'T show the type of each file
 setopt NO_LIST_TYPES
