@@ -2,7 +2,8 @@
 kubectl = "latest"
 kubectx = "latest"
 kubens = "latest"
-node = "lts"
+maven = "latest"
+node = ["26", "lts/krypton", "lts/jod", "lts/iron", "lts/hydrogen"]
 python = "3"
 shellcheck = "latest"
 shfmt = "latest"
