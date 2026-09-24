@@ -6,7 +6,6 @@
 |--------|-------------|
 | `anti-virus-testfile-content.sh` | Generates EICAR anti-virus test file content |
 | `backup-buku.sh` | Copies buku bookmark database to rclone sync folder |
-| `backup-zsh-history.sh` | Backs up zsh history file and atuin database to rclone folder |
 | `change-some-colors.sh` | Adjusts LS_COLORS in a given file (used with trapd00r/LS_COLORS) |
 | `check-node.sh` | Prints commands to check for Node.js LTS updates via nvm |
 | `check-subfolders-repo-status.zsh` | Shows git status of all repos in the current directory |
