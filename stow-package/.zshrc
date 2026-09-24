@@ -136,8 +136,8 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 # Define libpq path (PostgreSQL executables without server)
 export LIBPQ_BIN="/opt/homebrew/opt/libpq/bin"
-# Extend PATH (including mise shims)
-path=(~/bin $HOME/.local/share/mise/shims $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
+# Extend PATH
+path=(~/bin $path $GOBIN $LIBPQ_BIN ~/dotfiles/scripts /usr/local/bin /usr/local/go/bin)
 # Ensure GPG works correctly
 export GPG_TTY=$TTY
 
@@ -181,6 +181,9 @@ source ~/.p10k.zsh
 FZF_CTRL_R_COMMAND= FZF_CTRL_T_COMMAND= source <(fzf --zsh)
 eval "$(zsh-patina activate)"
 source ~/.config/television/shell/integration.zsh
+
+# Activate mise
+eval "$(mise activate zsh)"
 
 # Redraw p10k prompt (correctly) (source: https://github.com/romkatv/powerlevel10k/issues/2048#issuecomment-1271186812)
 function redraw-prompt() {
