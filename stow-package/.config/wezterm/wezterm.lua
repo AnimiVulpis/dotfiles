@@ -30,6 +30,9 @@ config.tab_max_width = 42
 
 config.enable_kitty_keyboard = false
 
+-- Fixes `[left Option] + [Shift] + 2`  not producing `€` (and other compositions)
+config.send_composed_key_when_left_alt_is_pressed = true
+
 config.keys = {
     {
         key = 'w',
