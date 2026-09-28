@@ -1,0 +1,21 @@
+[cache]
+auto_update = true
+defer_auto_update = true
+max_age = 336
+
+[output]
+show_title = true
+platform_title = true
+show_hyphens = true
+edit_link = false
+example_prefix = "❯ "
+line_length = 0
+compact = true
+option_style = "both"
+raw_markdown = false
+
+[indent]
+title = 0
+description = 0
+bullet = 0
+example = 2

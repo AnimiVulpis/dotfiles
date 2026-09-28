@@ -169,6 +169,9 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-c"
 export LC_CTYPE="en_US.UTF-8"
 
+# Configure tlrc config location
+export TLRC_CONFIG="$XDG_CONFIG_HOME/tlrc/config.toml"
+
 # Load plugins.
 source ~/external-repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/external-repos/powerlevel10k/powerlevel10k.zsh-theme
