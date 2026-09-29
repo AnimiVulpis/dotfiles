@@ -1,4 +1,5 @@
 [tools]
+go = "latest"
 java = ["corretto-26", "sapmachine-26"]
 kubectl = "latest"
 kubectx = "latest"

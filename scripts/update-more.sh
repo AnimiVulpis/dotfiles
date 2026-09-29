@@ -24,20 +24,16 @@ rustup update
 # go list ... or ls -lA ~/go/bin
 
 # Terminal confetti tool
-printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/maaslalani/confetty@latest\e[0m"\n'
-go install github.com/maaslalani/confetty@latest
+# printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/maaslalani/confetty@latest\e[0m"\n'
+# go install github.com/maaslalani/confetty@latest
 
 # Terminal countdown tool
-printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/antonmedv/countdown@latest\e[0m"\n'
-go install github.com/antonmedv/countdown@latest
-
-# Terminal time tracking tool
-printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/jotaen/klog@latest\e[0m"\n'
-go install github.com/jotaen/klog@latest
+# printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/antonmedv/countdown@latest\e[0m"\n'
+# go install github.com/antonmedv/countdown@latest
 
 # A Terminal app for RegEx visualization, 🦖 roar!
-printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/samyakbardiya/trex@latest\e[0m"\n'
-go install github.com/samyakbardiya/trex@latest
+# printf '\e[34mExecuting\e[0m "\e[32mgo \e[37minstall github.com/samyakbardiya/trex@latest\e[0m"\n'
+# go install github.com/samyakbardiya/trex@latest
 
 # ##############################
 
