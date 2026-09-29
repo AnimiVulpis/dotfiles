@@ -11,13 +11,11 @@ rustup update
 # List all installed rust crates
 # cargo install --list
 
-printf '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall cracken genact jwt-cli tailspin\e[0m"\n'
+# printf '\e[34mExecuting\e[0m "\e[32mcargo \e[37minstall cracken genact jwt-cli tailspin\e[0m"\n'
 
-cargo install \
-    cracken \
-    genact \
-    jwt-cli \
-    tailspin
+# cargo install \
+#     cracken \
+#     jwt-cli \
 
 # ##############################
 # Go related
