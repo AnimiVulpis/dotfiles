@@ -4,5 +4,5 @@ set -u                   # Treat unset variables as an error
 set -o pipefail          # Treat any non-zero status in a pipeline like a total pipeline failure
 shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
-echo 'cp -pv ~/.local/share/buku/* ~/rclone/'
+echo 'cp -pv "$HOME/.local/share/buku/"* "$HOME/rclone/"'
 cp -pv "$HOME/.local/share/buku/"* "$HOME/rclone/"

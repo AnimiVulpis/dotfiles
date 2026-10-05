@@ -5,5 +5,5 @@ set -o pipefail          # Treat any non-zero status in a pipeline like a total 
 shopt -s inherit_errexit # Command substitutions inherit set -e from the parent script
 
 # Until I have my self hosted atuin database running
-echo 'cp -pv ~/.local/share/atuin/history.* ~/rclone/'
-cp -pv "$HOME/.local/share/atuin/history.*" "$HOME/rclone/"
+echo 'cp -pv "$HOME/.local/share/atuin/history."* "$HOME/rclone/"'
+cp -pv "$HOME/.local/share/atuin/history."* "$HOME/rclone/"
