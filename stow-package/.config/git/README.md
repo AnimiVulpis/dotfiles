@@ -70,6 +70,16 @@ For example:
     path = ~/repos/some_git_config_file
 ```
 
+# gh for auth/credentials
+
+When using `gh auth setup-git --hostname <hostname>` 3 lines will be added to the config looking something like this:
+
+```ini
+[credential "<hostname>"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+```
+
 # Related resources
 
 -   https://git-scm.com/docs/git-config#_includes
