@@ -6,6 +6,7 @@ kubectx = "latest"
 kubens = "latest"
 maven = "latest"
 node = ["26", "lts/krypton", "lts/jod", "lts/iron", "lts/hydrogen"]
+pnpm = "latest"
 python = "3"
 shellcheck = "latest"
 shfmt = "latest"
@@ -13,3 +14,4 @@ shfmt = "latest"
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
 auto_install = false
+minimum_release_age = "2d"
