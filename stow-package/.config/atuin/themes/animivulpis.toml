@@ -3,18 +3,27 @@ name = "animivulpis"
 
 [colors]
 # Current line highlight and unsuccessful commands
-# AlertError = "#fb8590"
+# AlertError = ""
 # Match highlight (Root Loops Kiwi foreground; rest as wezterm config)
 AlertWarn = "#60f98d"
 # Successful commands
-# AlertInfo = "#67af34"
+# AlertInfo = ""
 # Command display at the bottom
-# Annotation = "#1f7784"
+# Annotation = ""
 # Used for age information
-# Guidance = "#509af6"
+# Guidance = ""
 # Seems to be unused
 # Important = ""
 # Seems to be unused
 # Muted = ""
 # Default works as expected
-# Base = "#c9f4fc"
+# Base = ""
+# Syntax highlighting uses ANSI palette colors, so they follow
+# the user's terminal color scheme out of the box.
+# SyntaxCommand = "Green"
+# SyntaxFlag = "DarkCyan"
+# SyntaxString = "DarkYellow"
+# SyntaxVariable = "Magenta"
+# Operators keep the terminal's default foreground
+# SyntaxOperator = ""
+# SyntaxComment = "DarkGrey"
