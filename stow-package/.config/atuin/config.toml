@@ -296,10 +296,10 @@ autostart = true
 ## config: everything sourced before it runs again inside the proxy.
 ## Safe to combine with an existing `atuin pty-proxy init` line — the proxy only
 ## starts once.
-enabled = true
+# enabled = false
 
 [output]
-enabled = true
+# enabled = false
 max_output_size = "2MB"
 max_disk_usage = "2GB"
 
@@ -384,6 +384,7 @@ filters = ["global", "host", "workspace", "directory", "session", "session-prelo
 [threads.resume]
 # claude = "claude --resume {id}"
 # codex = "codex resume {id}"
+# grok = "grok --resume {id}"
 # opencode = "opencode --session {id}"
 # pi = "pi --session {id}"
 
