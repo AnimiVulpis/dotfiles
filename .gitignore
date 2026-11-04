@@ -4,3 +4,6 @@
 stow-package/.config/klog/bookmarks.json
 # local config files not meant to be added to the repo
 *.local
+# Only save kubie.yaml config file
+stow-package/.kube/
+!stow-package/.kube/kubie.yaml
