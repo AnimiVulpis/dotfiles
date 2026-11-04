@@ -1486,6 +1486,8 @@
         // existing executables if their version is recent enough. Set this to `true`
         // to prevent this, and force Gram to always download and install its own
         // version of Node.
+        "allow_npm_install": true,
+        "allow_prettier_download": true,
         "allow_binary_download": true,
         "ignore_system_version": false,
         // You can also specify alternative paths to Node and NPM. If you specify
