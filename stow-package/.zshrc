@@ -229,7 +229,7 @@ compdef _directories md
 
 # Create a temp folder (inside `~/temp/`) and cd into it
 # if called with one argument, use that name
-function mdt() {
+function tmd() {
     local tmpdir
     if [[ $# == 1 ]]; then
         local targetdir=~/temp/"$1"
@@ -240,7 +240,7 @@ function mdt() {
     fi
     builtin cd -- "$tmpdir"
 }
-compdef '_files -W ~/temp -/' mtd
+compdef '_files -W ~/temp -/' tmd
 
 # alias definitions
 alias ls="ls --color=auto"
