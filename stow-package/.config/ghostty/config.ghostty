@@ -1,0 +1,14 @@
+# Find by using ghostty +list-fonts
+font-family = "Iosevka Term"
+font-size = "14"
+
+theme = "AnimiVulpis"
+
+cursor-style = "block"
+cursor-style-blink = false
+
+quit-after-last-window-closed = true
+
+shell-integration-features = "no-cursor"
+
+macos-option-as-alt = false

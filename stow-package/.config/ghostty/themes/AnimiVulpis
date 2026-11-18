@@ -1,0 +1,40 @@
+# Copy the configuration below and add it to your
+# ~/.config/ghostty/config file
+
+# Colors (Root Loops)
+# via https://rootloops.sh?sugar=6&colors=9&sogginess=9&flavor=1&fruit=7&milk=1
+
+background = 02272c
+foreground = 7ce9fb
+
+# black
+palette = 0=#053e46
+palette = 8=#0e6774
+
+# red
+palette = 1=#e73359
+palette = 9=#f75b72
+
+# green
+palette = 2=#59972d
+palette = 10=#67af34
+
+# yellow
+palette = 3=#ae7714
+palette = 11=#c98b1a
+
+# blue
+palette = 4=#2d83e8
+palette = 12=#509af6
+
+# purple
+palette = 5=#ba3ce8
+palette = 13=#ca64f3
+
+# aqua
+palette = 6=#1a9696
+palette = 14=#1faeae
+
+# white
+palette = 7=#20b4c9
+palette = 15=#51e0f7

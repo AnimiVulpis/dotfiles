@@ -27,7 +27,7 @@
     // Features that can be globally enabled or disabled
     "features": {},
     // The name of a font to use for rendering text in the editor
-    "buffer_font_family": "IosevkaTerm Nerd Font",
+    "buffer_font_family": "Iosevka Nerd Font",
     // Set the buffer text's font fallbacks, this will be merged with
     // the platform's default fallbacks.
     "buffer_font_fallbacks": [".GramMono"],
@@ -870,7 +870,7 @@
         // Whether or not to show the navigation history buttons.
         "show_nav_history_buttons": true,
         // Whether or not to show the tab bar buttons.
-        "show_tab_bar_buttons": true,
+        "show_tab_bar_buttons": "on_pane_focus",
     },
     // Settings related to the editor's tabs
     "tabs": {
@@ -1705,6 +1705,7 @@
             },
         },
         "Markdown": {
+            "show_whitespaces": "trailing",
             "format_on_save": "off",
             "use_on_type_format": false,
             "remove_trailing_whitespace_on_save": false,
@@ -1880,6 +1881,13 @@
         //         }
         //     }
         // }
+        "zk": {
+            "binary": {
+                "enable_auto_updates": true,
+                "allow_binary_download": true
+            },
+            "enable_lsp_tasks": true
+        },
         "bash-language-server": {
             "binary": {
                 "enable_auto_updates": true,
