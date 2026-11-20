@@ -96,7 +96,7 @@ file_panel_name_percent = 50
 #-- Theme
 # Put your theme's name here!
 # Got the file from https://github.com/yorukot/superfile/tree/main/src/superfile_config/theme
-theme = "onedark"
+theme = "animivulpis"
 
 #-- Code Previewer
 # Whether to use the builtin syntax highlighting with chroma or use bat. Values: "" for builtin chroma, "bat" for bat

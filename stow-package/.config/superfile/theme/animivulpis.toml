@@ -1,0 +1,76 @@
+##############################################
+#                                            #
+#              AnimiVulpis Theme             #
+#                                            #
+##############################################
+
+# This theme was created by AnimiVulpis
+
+# This contains the theme config file for superfile! For more details see:
+# https://superfile.dev/configure/custom-theme/
+
+###############################################################################
+#                           Code Syntax Highlighting                          #
+###############################################################################
+
+# Find one you like at: https://github.com/alecthomas/chroma/blob/master/styles.
+
+code_syntax_highlight = "onedark"
+
+###############################################################################
+#                                 Base Colors                                 #
+###############################################################################
+
+#-- Full Screen
+full_screen_fg = "#7ce9fb"
+full_screen_bg = "#02272c"
+
+#-- Gradient
+# Note: This currently only supports two colors.
+gradient_color = ["#20b4c9", "#ba3ce8"]
+
+#-- File Panel
+file_panel_fg = "#7ce9fb"
+file_panel_bg = "#02272c"
+file_panel_border = "#1a9696"
+file_panel_border_active = "#2d83e8"
+file_panel_top_directory_icon = "#ae7714"
+file_panel_top_path = "#ae7714" 
+file_panel_item_selected_fg = "#1faeae"
+file_panel_item_selected_bg = "#02272c"
+
+#-- Footer
+footer_fg = "#7ce9fb"
+footer_bg = "#02272c"
+footer_border = "#1a9696"
+footer_border_active = "#59972d"
+
+#-- Sidebar
+sidebar_fg = "#7ce9fb"
+sidebar_bg = "#02272c"
+sidebar_title = "#2d83e8"
+sidebar_border = "#1a9696"
+sidebar_border_active = "#f75b72"
+sidebar_item_selected_fg = "#1faeae"
+sidebar_item_selected_bg = "#02272c"
+sidebar_divider = "#51e0f7"
+
+#-- Modals
+modal_fg = "#7ce9fb"
+modal_bg = "#0e6774"
+modal_border_active = "#1faeae"
+modal_cancel_fg = "#509af6"
+modal_cancel_bg = "#f75b72"
+modal_confirm_fg = "#509af6"
+modal_confirm_bg = "#1faeae"
+
+#-- Help Menu
+help_menu_hotkey = "#1faeae"
+help_menu_title = "#ba3ce8"
+
+#-- Special
+cursor = "#20b4c9"
+correct = "#67af34"
+error = "#f75b72"
+hint = "#20b4c9"
+cancel = "#c98b1a"
